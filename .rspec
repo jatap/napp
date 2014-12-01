@@ -2,3 +2,9 @@
 --format documentation
 --require spec_helper
 --require rails_helper
+-rpry
+#--drb 
+#--format nested
+--format Nc
+--format NyanCatFormatter
+#--format RspecAbhakungszeichenFormatter

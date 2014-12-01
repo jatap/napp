@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
+
 ruby '2.1.4'
+
 gem 'rails', '4.1.8'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
@@ -14,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'puma'
 gem 'simple_form'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -27,11 +30,15 @@ group :development do
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
 end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'rspec-nc'
+  gem 'nyan-cat-formatter'
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
