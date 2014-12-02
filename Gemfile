@@ -17,6 +17,7 @@ gem 'high_voltage'
 gem 'puma'
 gem 'simple_form'
 gem 'bootswatch-rails'
+gem 'font-awesome-rails'
 
 group :development do
   gem 'better_errors'
