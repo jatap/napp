@@ -16,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'puma'
 gem 'simple_form'
+gem 'bootswatch-rails'
 
 group :development do
   gem 'better_errors'
@@ -30,7 +31,6 @@ group :development do
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
   gem 'rails_apps_pages'
-  gem 'high_voltage'
 end
 
 group :development, :test do
