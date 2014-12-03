@@ -34,6 +34,8 @@ group :development do
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
   gem 'rails_apps_pages'
+  gem 'colorize'
+  gem 'awesome_print'
 end
 
 group :development, :test do
@@ -42,8 +44,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-nc'
   gem 'nyan-cat-formatter'
+  gem 'byebug'
   gem 'pry'
   gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :test do
