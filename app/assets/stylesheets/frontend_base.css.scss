@@ -37,7 +37,7 @@ section {
     @extend .text-center;
     position: fixed;
     width: 100%;
-    z-index: 1040;
+    z-index: 1029;
 
     ul {
       li {
@@ -80,4 +80,17 @@ img {
 .navbar-fixed-top {
   padding-left: 0;
   padding-right: 0;
+}
+
+/**
+ * Jumbotron
+ * -----------------------------------------------------------------------------
+ */
+.jumbotron {
+  i {
+    padding-right: 0.66em;
+  }
+  a {
+    margin-top: 1em;
+  }
 }
