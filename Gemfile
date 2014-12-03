@@ -19,6 +19,7 @@ gem 'simple_form'
 gem 'bootswatch-rails'
 gem 'font-awesome-rails'
 gem 'figaro'
+gem 'devise'
 
 group :development do
   gem 'better_errors'
@@ -41,6 +42,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-nc'
   gem 'nyan-cat-formatter'
+  gem 'pry'
+  gem 'pry-rails'
 end
 
 group :test do
