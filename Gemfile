@@ -18,6 +18,7 @@ gem 'puma'
 gem 'simple_form'
 gem 'bootswatch-rails'
 gem 'font-awesome-rails'
+gem 'figaro'
 
 group :development do
   gem 'better_errors'
