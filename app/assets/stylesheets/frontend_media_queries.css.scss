@@ -8,6 +8,19 @@
     .navbar-fixed-top {
         padding-left: 0.33em;
         padding-right: 1em;
+
+        .collapse {
+            .nav-page-links {
+                padding-left: 1em;
+            }
+            .nav-user-links {
+                background-color: darken($brand-success, 5%);
+
+                .user-edit {
+                    background-color: darken($brand-success, 10%);
+                }
+            }
+        }
     }
 
     // Wrapper
@@ -61,6 +74,19 @@
     .navbar-fixed-top {
         padding-left: 0.33em;
         padding-right: 1em;
+
+        .collapse {
+            .nav-page-links {
+                padding-left: 1em;
+            }
+            .nav-user-links {
+                background-color: darken($brand-success, 5%);
+
+                .user-edit {
+                    background-color: darken($brand-success, 10%);
+                }
+            }
+        }
     }
 
     // Wrapper
@@ -114,6 +140,19 @@
     .navbar-fixed-top {
         padding-left: 0.33em;
         padding-right: 1em;
+
+        .collapse {
+            .nav-page-links {
+                padding-left: 1em;
+            }
+            .nav-user-links {
+                background-color: darken($brand-success, 5%);
+
+                .user-edit {
+                    background-color: darken($brand-success, 10%);
+                }
+            }
+        }
     }
 
     // Wrapper

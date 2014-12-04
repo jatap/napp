@@ -1,9 +1,1 @@
-<%# add navigation links to this file %>
 <li><%= link_to 'About', frontend_about_path %></li>
-<% if user_signed_in? %>
-  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
-  <li><%= link_to 'Sign out', logout_path, :method => 'delete' %></li>
-<% else %>
-  <li><%= link_to 'Sign in', login_path %></li>
-  <li><%= link_to 'Sign up', register_path %></li>
-<% end %>

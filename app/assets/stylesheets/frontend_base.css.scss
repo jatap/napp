@@ -35,6 +35,29 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-brand {
         font-size: inherit;
     }
+
+    .collapse {
+        .nav-user-links {
+            margin-right: 0%;
+
+            .user-edit {
+                font-size: 0.75em;
+
+                i {
+                    padding-right: 0.5em;
+                    font-size: 1.275em;
+                }
+            }
+
+            a {
+                color: #ffffff;
+                &:hover {
+                    color: #ffffff;
+                    background-color: $brand-warning;
+                }
+            }
+        }
+    }
 }
 
 // Wrapper

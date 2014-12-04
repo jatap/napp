@@ -13,11 +13,11 @@
         <%= f.input_field :email, class: "form-control", autofocus: "autofocus" %>
     <% end %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), wrapper: :vertical_input_group do %>
-        <span class="input-group-addon"><%= fa_icon "lock" %></span>
+        <span class="input-group-addon"><%= fa_icon "key" %></span>
         <%= f.input_field :password, class: "form-control" %>
     <% end %>
     <%= f.input :password_confirmation, required: true, wrapper: :vertical_input_group do %>
-        <span class="input-group-addon"><%= fa_icon "lock" %></span>
+        <span class="input-group-addon"><%= fa_icon "key" %></span>
         <%= f.input_field :password_confirmation, class: "form-control" %>
     <% end %>
   </div>

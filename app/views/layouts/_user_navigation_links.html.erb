@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <li><%= link_to fa_icon("user") + current_user.email, edit_user_registration_path, class: 'user-edit' %></li>
+  <li><%= link_to fa_icon("unlock"), logout_path, :method => 'delete', class: 'user-logout' %></li>
+<% else %>
+  <li><%= link_to fa_icon("lock"), login_path, class: 'user-login' %></li>
+  <li><%= link_to fa_icon("group"), register_path, class: 'user-register' %></li>
+<% end %>

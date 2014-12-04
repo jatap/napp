@@ -11,7 +11,7 @@
         <%= f.input_field :email, class: "form-control", autofocus: "autofocus" %>
     <% end %>
     <%= f.input :password, required: true, wrapper: :vertical_input_group do %>
-        <span class="input-group-addon"><%= fa_icon "lock" %></span>
+        <span class="input-group-addon"><%= fa_icon "key" %></span>
         <%= f.input_field :password, class: "form-control" %>
     <% end %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>

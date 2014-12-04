@@ -11,8 +11,11 @@
       <%= link_to fa_icon("cloud lg"), root_path, class: 'navbar-brand' %>
     </div>
     <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-left nav-page-links">
         <%= render 'layouts/navigation_links' %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right nav-user-links">
+        <%= render 'layouts/user_navigation_links' %>
       </ul>
     </div>
   </div>
