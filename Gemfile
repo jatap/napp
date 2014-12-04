@@ -13,7 +13,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
-gem 'high_voltage'
 gem 'puma'
 gem 'simple_form'
 gem 'bootswatch-rails'
@@ -35,7 +34,6 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
-  gem 'rails_apps_pages'
   gem 'colorize'
   gem 'awesome_print'
 end
