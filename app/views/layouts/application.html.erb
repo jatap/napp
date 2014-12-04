@@ -12,15 +12,26 @@
         <header>
             <%= render 'layouts/navigation' %>
         </header>
-        <main class="main" role="main">
+
+        <div class="wrapper">
             <div class="sidebar">
                 <%= yield(:sidebar) %>
             </div>
 
+            <div class="clearfix"></div>
+
             <div class="content">
                 <%= render 'layouts/messages' %>
-                <%= yield %>
+                <div class="main-content">
+                    <%= yield %>
+                </div>
             </div>
-        </main>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <footer>
+            <p>Copyright @ 2.014 - Julio Antúnez Tarín</p>
+        </footer>
     </body>
 </html>

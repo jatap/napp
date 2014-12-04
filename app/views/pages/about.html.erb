@@ -1,7 +1,11 @@
 <%= render 'layouts/sidebar_main' %>
 
 <% content_for :title do %>About<% end %>
-<h3>About the Website</h3>
+
+<div class="page-header">
+    <h2>About the Website</h2>
+</div>
+
 <p>
 This web application was created with
 <%= link_to('Rails Composer', 'http://railsapps.github.io/rails-composer/') %>

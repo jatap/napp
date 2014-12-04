@@ -1,64 +1,103 @@
 /**
+ * Import google fonts
+ * -----------------------------------------------------------------------------
+ */
+@import url("//fonts.googleapis.com/css?family=Montserrat:400,700");
+
+/**
  * Main HTML elements
  * -----------------------------------------------------------------------------
  */
 h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", Arial, sans-serif;
     font-weight: bold;
+    letter-spacing: -1px;
 }
 
 /**
- * Main layout
+ * Fonts
  * -----------------------------------------------------------------------------
  */
-main {
-    @extend .container-fluid;
-    background-color: #eee;
-    padding-top: 0.63em;
-    padding-bottom: 3em;
-    width: 100%;
-    margin-top: 51px; // accommodate the navbar
-    padding-left: 1em;
+.btn {
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
-section {
-    @extend .row;
-    margin-top: 20px;
-}
-.sidebar {
-    background-color: $brand-primary;
-    @include make-row();
-    height: 100%;
-}
-.sidebar-nav {
-    background-color: $brand-primary;
-    @include make-row();
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    @extend .text-center;
-    position: fixed;
-    width: 100%;
-    z-index: 1029;
 
-    ul {
-      li {
-        display: inline-block;
-        padding: 0.33em 0.66em;
-        a {
-            padding-left: 0;
-            padding-right: 0;
-            color: #FFFFFF;
-            &:hover {
-                color: $brand-success;
-                background: none;
-            }
-        }
-      }
+/**
+ * Layout
+ * -----------------------------------------------------------------------------
+ */
+
+// Navbar
+.navbar-fixed-top {
+    padding-left: 1em;
+    padding-right: 0.66em;
+
+    .navbar-brand {
+        font-size: inherit;
     }
 }
-.content {
-    @extend .col-xs-12;
+
+// Wrapper
+.wrapper {
+    @extend .container-fluid;
+    background-color: #eee;
+    padding: 0.63em 1em 3em;
     width: 100%;
-    margin-top: 4em;
+    margin-top: 51px;
+
+    // Sidebar
+    .sidebar {
+        @include make-row();
+        background-color: $brand-primary;
+        height: 100%;
+
+        .sidebar-nav {
+            background-color: $brand-primary;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            @extend .text-center;
+            position: fixed;
+            width: 100%;
+            z-index: 1029;
+
+            ul {
+                li {
+                    display: inline-block;
+                    padding: 0.33em 0.66em;
+                    a {
+                        padding-left: 0;
+                        padding-right: 0;
+                        color: #FFFFFF;
+                        &:hover {
+                            color: $brand-success;
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Content
+    .content {
+        @include make-row();
+        width: 100%;
+        margin: 4em 0;
+        padding: 0 0.66em 0 0.66em;
+
+        // Flash messages
+        .flash-container {
+            margin: 2.5em 0 0;
+        }
+    }
+}
+
+// Footer
+footer {
+    @include make-xs-column(12);
+    padding: 1em;
+    @extend .text-center;
 }
 
 /**
@@ -71,34 +110,39 @@ img {
 }
 
 /**
- * Navigation
- * -----------------------------------------------------------------------------
- */
-.navbar-brand {
-    font-size: inherit;
-}
-.navbar-fixed-top {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/**
  * Jumbotron
  * -----------------------------------------------------------------------------
  */
 .jumbotron {
-  i {
-    padding-right: 0.66em;
-  }
-  a {
-    margin-top: 1em;
-  }
+    img {
+        padding: 1em 0;
+    }
+    i {
+        padding-right: 0.66em;
+    }
+    a {
+        margin-top: 1em;
+    }
 }
 
 /**
- * Flash messages
+ * Forms
  * -----------------------------------------------------------------------------
  */
-.flash-messages {
-    margin-top: 1.435em;
+.main-content form {
+    margin-bottom: 2em;
+
+    .form-actions {
+        margin-top: 2em;
+    }
+}
+
+/**
+ * Icons
+ * -----------------------------------------------------------------------------
+ */
+.user-actions {
+    i {
+        padding-right: 0.5em;
+    }
 }
