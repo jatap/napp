@@ -4,13 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><%= content_for?(:title) ? yield(:title) : "Napp" %></title>
         <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Napp" %>">
-        <%= stylesheet_link_tag 'frontend', media: 'all', 'data-turbolinks-track' => true %>
-        <%= javascript_include_tag 'frontend', 'data-turbolinks-track' => true %>
+        <%= stylesheet_link_tag 'backend', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'backend', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
     </head>
     <body>
         <header>
-            <%= render 'layouts/navigation' %>
+            <%= render 'layouts/backend_navigation' %>
         </header>
 
         <div class="wrapper">

@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require common_error_flash_messages.js
+//= require common_error_flash_messages

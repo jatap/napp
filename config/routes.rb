@@ -1,21 +1,22 @@
 Rails.application.routes.draw do
 
+  # Frontend
   get 'frontend/home'
   get 'frontend/about'
 
+  # Backend
   get 'admin/dashboard'
 
-  devise_for :users, controllers: { registrations: "registrations" },
-                     path_prefix: 'admin',
-                     path_names: { sign_in: 'login', sign_out: 'logout' }
+  devise_for :users, controllers: {
+                       confirmations:      "devise/custom/confirmations",
+                       passwords:          "devise/custom/passwords",
+                       registrations:      "devise/custom/registrations",
+                       sessions:           "devise/custom/sessions",
+                       unlocks:            "devise/custom/unlocks"
+                     },
+                     path_prefix: 'admin'
 
-  devise_scope :user do
-    get "login"         => "devise/sessions#new"
-    delete "logout"     => "devise/sessions#destroy"
-    get "lost_password" => "devise/passwords#new"
-    get "register"      => "registrations#new"
-  end
-
+  # Root
   root to: 'frontend#home'
 
 end

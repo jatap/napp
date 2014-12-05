@@ -25,41 +25,9 @@
 
     // Wrapper
     .wrapper {
-        padding: 0.63em 0.5em 0em 5em;
+        padding: 0.63em 0.5em 0em 1.5em;
         width: 100%;
         margin-top: 51px;
-
-        // Sidebar
-        .sidebar {
-            @include make-xs-column(12);
-            margin-left: -56px;
-            left: 56px;
-            width: 56px;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-            z-index: 1000;
-
-            .sidebar-nav {
-                position: absolute;
-                left: 0;
-                ul li {
-                    padding: 0;
-                    a {
-                        width: 56px;
-                        color: #FFFFFF;
-                        &:hover {
-                            background: $gray-lighter;
-                            color: $brand-primary;
-                        }
-                    }
-                }
-                ul li.active a {
-                    background: $gray-lighter;
-                    color: $brand-primary;
-                }
-            }
-        }
 
         // Content
         .content {
@@ -91,41 +59,9 @@
 
     // Wrapper
     .wrapper {
-        padding: 0.63em 0.5em 0em 5em;
+        padding: 0.63em 0.5em 0em 1.5em;
         width: 100%;
         margin-top: 51px;
-
-        // Sidebar
-        .sidebar {
-            @include make-xs-column(12);
-            margin-left: -56px;
-            left: 56px;
-            width: 56px;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-            z-index: 1000;
-
-            .sidebar-nav {
-                position: absolute;
-                left: 0;
-                ul li {
-                    padding: 0;
-                    a {
-                        width: 56px;
-                        color: #FFFFFF;
-                        &:hover {
-                            background: $gray-lighter;
-                            color: $brand-primary;
-                        }
-                    }
-                }
-                ul li.active a {
-                    background: $gray-lighter;
-                    color: $brand-primary;
-                }
-            }
-        }
 
         // Content
         .content {
@@ -157,41 +93,9 @@
 
     // Wrapper
     .wrapper {
-        padding: 0.63em 0.5em 0em 5em;
+        padding: 0.63em 0.5em 0em 1.5em;
         width: 100%;
         margin-top: 51px;
-
-        // Sidebar
-        .sidebar {
-            @include make-xs-column(12);
-            margin-left: -56px;
-            left: 56px;
-            width: 56px;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-            z-index: 1000;
-
-            .sidebar-nav {
-                position: absolute;
-                left: 0;
-                ul li {
-                    padding: 0;
-                    a {
-                        width: 56px;
-                        color: #FFFFFF;
-                        &:hover {
-                            background: $gray-lighter;
-                            color: $brand-primary;
-                        }
-                    }
-                }
-                ul li.active a {
-                    background: $gray-lighter;
-                    color: $brand-primary;
-                }
-            }
-        }
 
         // Content
         .content {

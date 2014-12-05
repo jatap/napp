@@ -1,4 +1,13 @@
-class RegistrationsController < Devise::RegistrationsController
+class Devise::Custom::RegistrationsController < Devise::RegistrationsController
+
+  layout 'frontend'
+
+  def edit
+    Devise::Custom::RegistrationsController.layout 'backend'
+    super
+    Devise::Custom::RegistrationsController.layout 'frontend'
+  end
+
   def create
     build_resource(sign_up_params)
 
