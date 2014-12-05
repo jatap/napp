@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'frontend/about'
 
   # Backend
-  get 'admin/dashboard'
+  get 'backend/dashboard'
 
   devise_for :users, controllers: {
                        confirmations:      "users/confirmations",
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
                        sessions:           "users/sessions",
                        unlocks:            "users/unlocks"
                      },
-                     path_prefix: 'admin'
+                     path_prefix: 'backend'
 
   # Root
   root to: 'frontend#home'

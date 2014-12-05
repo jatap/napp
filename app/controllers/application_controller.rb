@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   layout 'frontend'
 
   def after_sign_in_path_for(resource_or_scope)
-     admin_dashboard_path
+     backend_dashboard_path
   end
 
   def after_sign_up_path_for(resource)
