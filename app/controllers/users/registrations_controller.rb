@@ -8,6 +8,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     Users::RegistrationsController.layout 'frontend'
   end
 
+  def update
+    Users::RegistrationsController.layout 'backend'
+    super
+  end
+
   def create
     build_resource(sign_up_params)
 
