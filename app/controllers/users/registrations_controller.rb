@@ -11,6 +11,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def update
     Users::RegistrationsController.layout 'backend'
     super
+    Users::RegistrationsController.layout 'frontend'
   end
 
   def create
