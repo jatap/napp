@@ -8,11 +8,11 @@ Rails.application.routes.draw do
   get 'admin/dashboard'
 
   devise_for :users, controllers: {
-                       confirmations:      "devise/custom/confirmations",
-                       passwords:          "devise/custom/passwords",
-                       registrations:      "devise/custom/registrations",
-                       sessions:           "devise/custom/sessions",
-                       unlocks:            "devise/custom/unlocks"
+                       confirmations:      "users/confirmations",
+                       passwords:          "users/passwords",
+                       registrations:      "users/registrations",
+                       sessions:           "users/sessions",
+                       unlocks:            "users/unlocks"
                      },
                      path_prefix: 'admin'
 

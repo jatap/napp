@@ -1,11 +1,11 @@
-class Devise::Custom::RegistrationsController < Devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController
 
   layout 'frontend'
 
   def edit
-    Devise::Custom::RegistrationsController.layout 'backend'
+    Users::RegistrationsController.layout 'backend'
     super
-    Devise::Custom::RegistrationsController.layout 'frontend'
+    Users::RegistrationsController.layout 'frontend'
   end
 
   def create
@@ -30,4 +30,5 @@ class Devise::Custom::RegistrationsController < Devise::RegistrationsController
       respond_with resource
     end
   end
+
 end
