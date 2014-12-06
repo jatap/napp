@@ -1,10 +1,8 @@
+-rpry
 --color
---format documentation
 --require spec_helper
 --require rails_helper
--rpry
-#--drb 
-#--format nested
+--format documentation
 --format Nc
 --format NyanCatFormatter
 #--format RspecAbhakungszeichenFormatter
