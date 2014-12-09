@@ -1,5 +1,7 @@
 es:
   backend:
+    dashboard:
+      title: "Panel de control"
     link:
       back: "Volver"
       website: "Sitio web"

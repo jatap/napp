@@ -187,6 +187,7 @@ GEM
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     rolify (3.4.1)
+    route_translator (3.2.4)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -303,6 +304,7 @@ DEPENDENCIES
   rb-fsevent
   rb-inotify
   rolify
+  route_translator
   rspec-nc
   rspec-rails
   sass-rails (~> 4.0.3)

@@ -23,6 +23,7 @@ gem 'devise-i18n'
 gem 'pundit'
 gem 'rolify'
 gem 'rails-i18n'
+gem 'route_translator'
 
 group :development do
   gem 'better_errors'

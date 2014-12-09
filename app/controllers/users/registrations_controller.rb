@@ -37,6 +37,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def after_update_path_for(resource)
+    backend_dashboard_path
+  end
+
   def sign_up_params
     params.require(:user).permit(:fullname, :email, :password, :password_confirmation)
   end

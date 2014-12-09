@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'frontend#home'
 
   # Translated routes
-  scope "(:locale)", locale: /es|en/ do
+  localized do
 
     # Frontend
     get 'frontend/home'

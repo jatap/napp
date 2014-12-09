@@ -1,0 +1,16 @@
+en:
+  routes:
+    home: "home"
+    dashboard: "dashboard"
+    user: "user"
+    users: "users"
+    sign_in: "sign_in"
+    sign_out: "sign_out"
+    sign_up: "sign_up"
+    password: "clave"
+    about: "about"
+    frontend: "frontend"
+    backend: "backend"
+    new: "new"
+    edit: "edit"
+    cancel: "cancel"
