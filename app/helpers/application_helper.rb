@@ -16,6 +16,9 @@ module ApplicationHelper
       if current_locale? locale
         html += "<li class='current-locale'>"
         html += "<span class='current-locale'>#{locale.to_s.upcase}</span>"
+      #elsif locale_on_root_path? locale
+        #html += "<li>"
+        #html += locale_on_root_path(locale)
       elsif default_locale_on_path? locale
         html += "<li>"
         html += link.gsub(/\/(#{locales.join('|')})\//, '/')
@@ -38,6 +41,16 @@ module ApplicationHelper
   def locale_root_path
     I18n.locale == I18n.default_locale ? "/" : "/#{I18n.locale}"
   end
+
+  # Set root path with locale included (exclude default locale) from a 
+  # requested.
+  #
+  # @param locale [Symbol] locale
+  # @return [void]
+  #def locale_on_root_path(locale)
+    #locale == I18n.default_locale ? "/" : "/#{locale}"
+  #end
+  #private :locale_on_root_path
 
   # Check if requested locale is current locale.
   #

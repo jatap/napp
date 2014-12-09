@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   localized do
 
     # Frontend
-    get 'frontend/home'
     get 'frontend/about'
 
     # Backend
