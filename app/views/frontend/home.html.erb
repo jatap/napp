@@ -1,7 +1,6 @@
-<%= render 'layouts/sidebar_main' %>
 <div class="jumbotron text-center">
   <%= image_tag "Responsive.png" %>
   <h1>Napp</h1>
-  <p>Rails 4.1 Base Application</p>
-  <p><%= link_to fa_icon("toggle-on", text: "Enjoy it"), root_path, class: "btn btn-primary btn-lg" %></p>
+  <p><%= t "frontend.home.app.name" %></p>
+  <p><%= link_to fa_icon("toggle-on", text: t("frontend.home.button")), locale_root_path, class: "btn btn-primary btn-lg" %></p>
 </div>

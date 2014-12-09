@@ -19,8 +19,10 @@ gem 'bootswatch-rails'
 gem 'font-awesome-rails'
 gem 'figaro'
 gem 'devise'
+gem 'devise-i18n'
 gem 'pundit'
 gem 'rolify'
+gem 'rails-i18n'
 
 group :development do
   gem 'better_errors'

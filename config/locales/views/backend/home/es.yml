@@ -1,0 +1,5 @@
+es:
+  backend:
+    link:
+      back: "Volver"
+      website: "Sitio web"

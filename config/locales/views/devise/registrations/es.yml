@@ -1,0 +1,17 @@
+es:
+  sign_up:
+    title: "Registro"
+    submit:
+      add: "Enviar"
+      edit: "Actualizar"
+    edit:
+      title: "Editar %{model}"
+    cancel_account:
+      title: "Cancelar mi cuenta"
+      question: "¿No eres feliz?"
+      confirm: "¿Estás seguro?"
+  password_length:
+    one: "Mínimo 1 carácter."
+    other: "Mínimo %{count} carácteres."
+  password_blank: "Déjalo en blanco si no quieres modificarlo."
+  current_password_required: "Necesitamos la contraseña actual para confirmar los cambios."

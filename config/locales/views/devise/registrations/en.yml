@@ -1,0 +1,17 @@
+en:
+  sign_up:
+    title: "Sign up"
+    submit:
+      add: "Send"
+      edit: "Update"
+    edit:
+      title: "Edit %{model}"
+    cancel_account:
+      title: "Cancel my account"
+      question: "Unhappy?"
+      confirm: "Are you sure?"
+  password_length:
+    one: "1 char minimum."
+    other: "%{count} characters minimum."
+  password_blank: "Leave it blank if you don't want to change it."
+  current_password_required: "We need your current password to confirm your changes."

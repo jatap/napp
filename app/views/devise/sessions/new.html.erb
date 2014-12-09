@@ -1,7 +1,7 @@
 <%= render 'layouts/sidebar_main' %>
 
 <div class="page-header">
-    <h2>Log in</h2>
+    <h2><%= t "sign_in.title" %></h2>
 </div>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -18,7 +18,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, t("sign_in.submit.add") %>
   </div>
 <% end %>
 

@@ -1,0 +1,7 @@
+es:
+  frontend:
+    home:
+      title: "Inicio"
+      app:
+        name: "Aplicación base para Rails 4.1"
+      button: "Disfrútala"

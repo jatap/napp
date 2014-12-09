@@ -20,6 +20,31 @@
                     background-color: darken($brand-success, 10%);
                 }
             }
+            .nav-lang-links {
+                padding: 1.2em 1em 1.2em 0.66em;
+
+                .btn-group {
+                    .dropdown-menu {
+                        padding: 0.33em 0;
+                        min-width: 2em;
+                        a {
+                            padding-left: 1.33em;
+                            color: $brand-primary;
+                            &:hover {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+
+                .current-locale {
+                    color: $brand-success;
+                    background-color: $gray-lighter;
+                    padding-top: 0;
+                    padding-left: 0.66em;
+                    padding-bottom: 0;
+                }
+            }
         }
     }
 
@@ -86,6 +111,31 @@
                     background-color: darken($brand-success, 10%);
                 }
             }
+            .nav-lang-links {
+                padding: 1.2em 1em 1.2em 0.66em;
+
+                .btn-group {
+                    .dropdown-menu {
+                        padding: 0.33em 0;
+                        min-width: 2em;
+                        a {
+                            padding-left: 1.33em;
+                            color: $brand-primary;
+                            &:hover {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+
+                .current-locale {
+                    color: $brand-success;
+                    background-color: $gray-lighter;
+                    padding-top: 0;
+                    padding-left: 0.66em;
+                    padding-bottom: 0;
+                }
+            }
         }
     }
 
@@ -150,6 +200,31 @@
 
                 .user-edit {
                     background-color: darken($brand-success, 10%);
+                }
+            }
+            .nav-lang-links {
+                padding: 1.2em 1em 1.2em 0.66em;
+
+                .btn-group {
+                    .dropdown-menu {
+                        padding: 0.33em 0;
+                        min-width: 2em;
+                        a {
+                            padding-left: 1.33em;
+                            color: $brand-primary;
+                            &:hover {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+
+                .current-locale {
+                    color: $brand-success;
+                    background-color: $gray-lighter;
+                    padding-top: 0;
+                    padding-left: 0.66em;
+                    padding-bottom: 0;
                 }
             }
         }
