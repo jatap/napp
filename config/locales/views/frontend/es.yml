@@ -1,0 +1,6 @@
+es:
+  frontend:
+    nav:
+      home: "Portada"
+      about: "Acerca de"
+      admin: "Administración"

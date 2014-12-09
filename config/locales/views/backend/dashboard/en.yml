@@ -1,0 +1,7 @@
+en:
+  backend:
+    dashboard:
+      title: "Admin dashboard"
+    link:
+      back: "Back"
+      website: "Website"

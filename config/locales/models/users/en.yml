@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    models:
+      user:
+        one: "User"
+        other: "Users"
+    attributes:
+      user:
+        email: "Email"
+        fullname: "Fullname"
+        password_confirmation: "Confirm password"
+        remember_me: "Rememeber me"
+        current_password: "Current password"

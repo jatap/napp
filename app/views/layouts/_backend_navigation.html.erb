@@ -1,0 +1,25 @@
+<%# navigation styled for Bootstrap 3.0 %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to fa_icon("cloud lg"), backend_dashboard_path, class: 'navbar-brand' %>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left nav-page-links">
+        <%= render 'layouts/backend_navigation_links' %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right nav-user-links">
+        <%= render 'layouts/user_navigation_links' %>
+      </ul>
+      <div class="nav navbar-nav navbar-right nav-lang-links">
+        <%= render 'layouts/backend_language_navigation_links' %>
+      </div>
+    </div>
+  </div>
+</nav>

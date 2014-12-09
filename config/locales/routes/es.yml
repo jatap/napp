@@ -1,0 +1,16 @@
+es:
+  routes:
+    home: "inicio"
+    dashboard: "panel"
+    user: "usuario"
+    users: "usuarios"
+    sign_in: "conectar"
+    sign_out: "desconectar"
+    sign_up: "registro"
+    password: "clave"
+    about: "acerca-de"
+    frontend: "publico"
+    backend: "privado"
+    new: "nuevo"
+    edit: "editar"
+    cancel: "cancelar"

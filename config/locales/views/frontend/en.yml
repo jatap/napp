@@ -1,0 +1,6 @@
+en:
+  frontend:
+    nav:
+      home: "Home"
+      about: "About"
+      admin: "Admin"
