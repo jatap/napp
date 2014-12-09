@@ -1,5 +1,7 @@
 en:
   backend:
+    app:
+      title: "Napp"
     dashboard:
       title: "Admin dashboard"
     link:
