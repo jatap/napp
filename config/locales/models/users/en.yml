@@ -9,5 +9,5 @@ en:
         email: "Email"
         fullname: "Fullname"
         password_confirmation: "Confirm password"
-        remember_me: "Rememeber me"
+        remember_me: "Remember me"
         current_password: "Current password"

@@ -24,6 +24,8 @@ gem 'pundit'
 gem 'rolify'
 gem 'rails-i18n'
 gem 'route_translator'
+gem 'jquery-turbolinks'
+gem 'icheck-rails'
 
 group :development do
   gem 'better_errors'
