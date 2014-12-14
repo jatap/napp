@@ -32,6 +32,7 @@ class UsersController < ApplicationController
       end
     end
   end
+  alias_method :insert, :create
 
   def update
     if user_params[:password].blank?

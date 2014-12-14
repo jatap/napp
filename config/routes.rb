@@ -13,18 +13,19 @@ Rails.application.routes.draw do
     # Backend
     get 'backend/dashboard'
 
-    # CRUD
-    scope '/backend' do
-      resources :users
-    end
-
-    devise_for :users, controllers: {
+    devise_for :users,  path: "backend/users", controllers: {
       confirmations:      "users/confirmations",
       passwords:          "users/passwords",
       registrations:      "users/registrations",
       sessions:           "users/sessions",
       unlocks:            "users/unlocks"
-    },
-    path: "backend/users"
+    }
+
+    # CRUD
+    scope '/backend' do
+      scope '/crud' do
+        resources :users
+      end
+    end
   end
 end
