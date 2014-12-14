@@ -53,6 +53,17 @@ SimpleForm.setup do |config|
     b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
   end
 
+  config.wrappers :vertical_radio_and_checkboxes_inversed, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+    b.use :html5
+    b.optional :readonly
+
+    b.use :label, class: 'control-label control-label-checkbox-inversed'
+    b.use :input, class: "icheck-me", data: { skin: "flat", color: "aero" }
+
+    b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
+    b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+  end
+
   config.wrappers :horizontal_form, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
     b.use :html5
     b.use :placeholder
@@ -158,8 +169,8 @@ SimpleForm.setup do |config|
   # buttons and other elements.
   config.default_wrapper = :vertical_form
   config.wrapper_mappings = {
-    check_boxes: :vertical_radio_and_checkboxes,
-    radio_buttons: :vertical_radio_and_checkboxes,
+    check_boxes: :vertical_radio_and_checkboxes_inversed,
+    radio_buttons: :vertical_radio_and_checkboxes_inversed,
     file: :vertical_file_input,
     boolean: :vertical_radio_and_checkboxes,
   }

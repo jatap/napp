@@ -1,0 +1,23 @@
+es:
+  crud:
+    column:
+      actions: "Acciones"
+    button:
+      new: "Añadir nuevo %{model}"
+    link:
+      show: "Ver"
+      back: "Volver"
+      edit: "Editar"
+    add:
+      title: "Añadir %{model}"
+    edit:
+      title: "Editar %{model}"
+    list:
+      title: "Listar %{model}"
+    show:
+      title: "Ver %{model}"
+    flash:
+      add: "Registro añadido satisfactoriamente."
+      edit: "Registro editado satisfactoriamente."
+      destroy: "Registro eliminado satisfactoriamente."
+

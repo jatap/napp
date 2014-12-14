@@ -26,6 +26,7 @@ gem 'rails-i18n'
 gem 'route_translator'
 gem 'jquery-turbolinks'
 gem 'icheck-rails'
+gem 'twitter-bootstrap-rails-confirm'
 
 group :development do
   gem 'better_errors'

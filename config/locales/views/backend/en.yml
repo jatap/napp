@@ -1,0 +1,23 @@
+en:
+  crud:
+    column:
+      actions: "Actions"
+    button:
+      new: "Add new %{model}"
+    link:
+      show: "Show"
+      back: "Back"
+      edit: "Edit"
+    add:
+      title: "Add %{model}"
+    edit:
+      title: "Edit %{model}"
+    list:
+      title: "List %{model}"
+    show:
+      title: "Show %{model}"
+    flash:
+      add: "Record was successfully added."
+      edit: "Record was successfully updated."
+      destroy: "Record was successfully destroyed."
+

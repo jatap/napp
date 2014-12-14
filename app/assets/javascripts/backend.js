@@ -15,6 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require common_error_flash_messages
+//= require common-error-flash-messages
 //= require icheck
 //= require icheck-app
+//= require backend-crud
+//= require twitter/bootstrap/rails/confirm

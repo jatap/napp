@@ -1,10 +1,9 @@
 <% content_for :sidebar do %>
 <div class="sidebar-nav">
     <ul class="nav">
-        <li class="text-center"><%= link_to fa_icon("code lg"), locale_root_path %></li>
-        <li class="active text-center"><%= link_to fa_icon("code-fork lg"), locale_root_path %></li>
-        <li class="text-center"><%= link_to fa_icon("sitemap lg"), locale_root_path %></li>
-        <li class="text-center"><%= link_to fa_icon("cogs lg"), locale_root_path %></li>
+        <li class="<%= @sidebar_active == 'config' ? 'active' : '' %> text-center"><%= link_to fa_icon("code lg"), locale_root_path %></li>
+        <li class="<%= @sidebar_active == 'code' ? 'active' : '' %> text-center"><%= link_to fa_icon("code-fork lg"), locale_root_path %></li>
+        <li class="<%= @sidebar_active == 'users' ? 'active' : '' %> text-center"><%= link_to fa_icon("group lg"), users_path %></li>
     </ul>
 </div>
 <% end %>

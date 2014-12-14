@@ -1,0 +1,12 @@
+<%= render 'layouts/sidebar_main' %>
+
+<div class="page-header">
+    <h2><%= fa_icon 'edit' %> <%= t "crud.edit.title", model: User.to_s.humanize.constantize.model_name.human %></h2>
+</div>
+
+<%= render 'form' %>
+
+<div class="form-links">
+    <%= link_to fa_icon('ellipsis-h') + t('crud.link.show'), @user, class: 'label label-info' %>
+    <%= link_to fa_icon('link') + t('crud.link.back'), users_path, class: 'label label-primary' %>
+</div>

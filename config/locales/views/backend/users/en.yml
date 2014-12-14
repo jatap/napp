@@ -1,0 +1,5 @@
+en:
+  crud:
+    tabs:
+      general: "General data"
+      roles: "Roles"

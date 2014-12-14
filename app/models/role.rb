@@ -3,4 +3,8 @@ class Role < ActiveRecord::Base
   belongs_to :resource, :polymorphic => true
 
   scopify
+
+  def to_s
+    name
+  end
 end
