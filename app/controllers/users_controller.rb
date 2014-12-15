@@ -7,7 +7,11 @@ class UsersController < ApplicationController
   before_action :set_sidebar_active_action
 
   def index
-    @users = User.all
+    # @users = User.all.references(:roles).page params[:page]
+    respond_to do |format|
+      format.html
+      format.json { render json: UserDatatable.new(view_context) }
+    end
   end
 
   def show

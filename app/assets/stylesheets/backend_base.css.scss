@@ -272,10 +272,23 @@ img {
  * Icons
  * -----------------------------------------------------------------------------
  */
-.user-actions {
-    i {
-        padding-right: 0.5em;
-    }
+.user-actions i {
+  padding-right: 0.5em;
+}
+.table i {
+  padding: 0 0.5em;
+}
+.page-header i,
+.dataTables_filter i {
+  padding-right: 0.33em;
+}
+.dataTables_info i {
+  padding-right: 0.33em;
+  padding-left: 0.33em;
+}
+.dataTables_filter i {
+  color: $brand-default;
+  display: inline-block;
 }
 
 /**
@@ -310,11 +323,45 @@ img {
  * Headers
  * -----------------------------------------------------------------------------
  */
-.page-header {
-    i {
-        padding-right: 0.33em;
-    }
-}
 h4.page-header {
     border-bottom: 1px solid #ffffff;
+}
+
+/**
+ * CRUD DataTables
+ * -----------------------------------------------------------------------------
+ */
+.dataTables_wrapper {
+  .dataTables_paginate {
+    .paginate_button {
+      padding: 0.5em 0;
+      display: inline;
+    }
+  }
+}
+.dataTables_info {
+  @extend .label;
+  @extend .label-default;
+  display: inline-block;
+  color: #FFFFFF !important;
+  padding-top: 0.3em !important;
+  margin-top: 3em !important;
+}
+
+/**
+ * Pagination
+ * -----------------------------------------------------------------------------
+ */
+.pagination-totals {
+  margin-bottom: 2em;
+  @extend .text-right;
+}
+div.dataTables_paginate ul.pagination,
+.dataTables_info {
+  margin-top: 2em;
+}
+ul.pagination {
+  @extend pagination-sm;
+  white-space: normal !important;
+  margin-right: -1em !important;
 }

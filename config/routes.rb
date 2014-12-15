@@ -21,10 +21,16 @@ Rails.application.routes.draw do
       unlocks:            "users/unlocks"
     }
 
+
     # CRUD
+
+    concern :paginatable do
+      get '(page/:page)', action: :index, on: :collection, as: ''
+    end
+
     scope '/backend' do
       scope '/crud' do
-        resources :users
+        resources :users, concerns: :paginatable
       end
     end
   end

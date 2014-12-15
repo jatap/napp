@@ -29,6 +29,7 @@ gem 'twitter-bootstrap-rails-confirm'
 gem 'jquery-datatables-rails', '~> 3.1.1'
 gem 'ajax-datatables-rails'
 gem 'select2-rails'
+gem 'kaminari'
 
 group :development do
   gem 'spring'
