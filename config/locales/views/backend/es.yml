@@ -8,6 +8,8 @@ es:
       show: "Ver"
       back: "Volver"
       edit: "Editar"
+      destroy:
+        confirm: "¿Estás seguro?"
     add:
       title: "Añadir %{model}"
     edit:
@@ -20,4 +22,13 @@ es:
       add: "Registro añadido satisfactoriamente."
       edit: "Registro editado satisfactoriamente."
       destroy: "Registro eliminado satisfactoriamente."
-
+    search:
+      placeholder: "Buscar ..."
+    ajax:
+      processing: "Procesando..."
+      loading: "Cargando..."
+      empty_results: "No se encontraron resultados."
+      empty_table: "Ningún dato disponible en esta tabla."
+      sort_ascending: ": Activar para ordenar la columna de manera ascendente"
+      sort_descending: ": Activar para ordenar la columna de manera descendente"
+      info_filtered: "(registros filtrados)"

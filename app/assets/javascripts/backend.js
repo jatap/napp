@@ -14,6 +14,8 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
+//= require i18n
+//= require i18n/translations
 //= require select2
 //= require bootstrap-sprockets
 //= require twitter/bootstrap/rails/confirm

@@ -1,0 +1,4 @@
+fallbacks: :default_locale
+
+translations:
+   - file: "public/javascripts/translations.js"

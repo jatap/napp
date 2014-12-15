@@ -30,6 +30,7 @@ gem 'jquery-datatables-rails', '~> 3.1.1'
 gem 'ajax-datatables-rails'
 gem 'select2-rails'
 gem 'kaminari'
+gem 'i18n-js', '>= 3.0.0.rc8'
 
 group :development do
   gem 'spring'

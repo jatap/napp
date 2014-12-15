@@ -8,6 +8,8 @@ en:
       show: "Show"
       back: "Back"
       edit: "Edit"
+      destroy:
+        confirm: "Are you sure?"
     add:
       title: "Add %{model}"
     edit:
@@ -20,4 +22,13 @@ en:
       add: "Record was successfully added."
       edit: "Record was successfully updated."
       destroy: "Record was successfully destroyed."
-
+    search:
+      placeholder: "Search ..."
+    ajax:
+      processing: "Processing..."
+      loading: "Loading..."
+      empty_results: "There is no valid results."
+      empty_table: "There is no valid table data."
+      sort_ascending: ": Activate to order column asc"
+      sort_descending: ": Activate to order column des"
+      info_filtered: "(records filtered)"

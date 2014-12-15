@@ -12,13 +12,11 @@ module ApplicationHelper
     html = ''
 
     locales.each_with_index do |locale, index|
-      link = link_to(locale.to_s.upcase, locale: locale.to_s)
+      link = link_to(locale.to_s.upcase, { locale: locale.to_s },
+                                           data: { no_turbolink: true })
       if current_locale? locale
         html += "<li class='current-locale'>"
         html += "<span class='current-locale'>#{locale.to_s.upcase}</span>"
-      #elsif locale_on_root_path? locale
-        #html += "<li>"
-        #html += locale_on_root_path(locale)
       elsif default_locale_on_path? locale
         html += "<li>"
         html += link.gsub(/\/(#{locales.join('|')})\//, '/')

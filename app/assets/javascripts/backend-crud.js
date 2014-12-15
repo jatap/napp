@@ -19,18 +19,18 @@ function form_list_grid(){
         lengthMenu: [5, 10, 25, 50, 100, 200],
         language: {
             url:               "",
-            processing:        "Procesando...",
+            processing:        I18n.t("crud.ajax.processing"),
             search:            "_INPUT_",
-            searchPlaceholder: "...",
+            searchPlaceholder: I18n.t("crud.search.placeholder"),
             lengthMenu:        "_MENU_",
             info:              " _START_/_END_ <i class='fa fa-database'></i> [_TOTAL_]",
             infoEmpty:         "<i class='fa fa-filter'></i> 0/0 [0]",
-            infoFiltered:      "(filtrado de un total de _MAX_ registros)",
+            infoFiltered:      I18n.t("crud.ajax.info_filtered"),
             infoPostFix:       "",
             infoThousands:     ".",
-            loadingRecords:    "Cargando...",
-            zeroRecords:       "No se encontraron resultados",
-            emptyTable:        "Ningún dato disponible en esta tabla",
+            loadingRecords:    I18n.t("crud.ajax.loading"),
+            zeroRecords:       I18n.t("crud.ajax.empty_results"),
+            emptyTable:        I18n.t("crud.ajax.empty_table"),
             paginate: {
                 first:         "<i class='fa fa-angle-left'></i>",
                 previous:      "<i class='fa fa-angle-double-left'></i>",
@@ -38,8 +38,8 @@ function form_list_grid(){
                 last:          "<i class='fa fa-angle-right'></i>"
             },
             aria: {
-                sortAscending:  ": Activar para ordenar la columna de manera ascendente",
-                sortDescending: ": Activar para ordenar la columna de manera descendente"
+                sortAscending:  I18n.t("crud.ajax.sort_ascending"),
+                sortDescending: I18n.t("crud.ajax.sort_descending")
             }
         }
     });
