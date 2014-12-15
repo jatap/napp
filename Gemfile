@@ -11,7 +11,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'puma'
 gem 'simple_form'
@@ -26,8 +25,15 @@ gem 'rails-i18n'
 gem 'route_translator'
 gem 'jquery-turbolinks'
 gem 'icheck-rails'
+gem 'twitter-bootstrap-rails-confirm'
+gem 'jquery-datatables-rails', '~> 3.1.1'
+gem 'ajax-datatables-rails'
+gem 'select2-rails'
+gem 'kaminari'
+gem 'i18n-js', '>= 3.0.0.rc8'
 
 group :development do
+  gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'guard-bundler'

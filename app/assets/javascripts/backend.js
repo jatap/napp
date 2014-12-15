@@ -14,7 +14,16 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
+//= require i18n
+//= require i18n/translations
+//= require select2
 //= require bootstrap-sprockets
-//= require common_error_flash_messages
+//= require twitter/bootstrap/rails/confirm
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require dataTables/extras/dataTables.colReorder
+//= require dataTables/extras/dataTables.responsive
+//= require common-error-flash-messages
 //= require icheck
 //= require icheck-app
+//= require backend-crud

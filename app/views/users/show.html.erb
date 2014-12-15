@@ -1,0 +1,24 @@
+<%= render 'layouts/sidebar_main' %>
+
+<div class="page-header">
+  <h2><%= fa_icon 'ellipsis-h' %> <%= t "crud.show.title", model: User.model_name.human.pluralize %></h2>
+</div>
+
+<h4 class="page-header"><%= t 'crud.tabs.general' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= User.human_attribute_name(:fullname) %></dt>
+  <dd><%= @user.fullname %></dd>
+  <dt><%= User.human_attribute_name(:email) %></dt>
+  <dd><%= @user.email %></dd>
+</dl>
+
+<h4 class="page-header"><%= t 'crud.tabs.roles' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= User.human_attribute_name(:roles) %></dt>
+  <dd><%= @user.roles.join ', ' %></dd>
+</dl>
+
+<div class="form-links">
+  <%= link_to fa_icon('edit') + t('crud.link.edit'), edit_user_path, class: 'label label-info' %>
+  <%= link_to fa_icon('chevron-left') + t('crud.link.back'), users_path, class: 'label label-primary' %>
+</div>

@@ -1,5 +1,10 @@
 @import "font-awesome";
 @import "backend_bootstrap";
 @import "icheck/flat/_all";
+@import "dataTables/jquery.dataTables.css.scss";
+@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
+@import "dataTables/extras/dataTables.responsive";
+@import "select2";
+@import "select2-bootstrap";
 @import "backend_base";
 @import "backend_media_queries";

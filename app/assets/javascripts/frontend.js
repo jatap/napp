@@ -15,6 +15,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require common_error_flash_messages.js
+//= require common-error-flash-messages.js
 //= require icheck
 //= require icheck-app

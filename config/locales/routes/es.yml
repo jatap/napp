@@ -4,6 +4,8 @@ es:
     dashboard: "panel"
     user: "usuario"
     users: "usuarios"
+    member: "miembro"
+    members: "miembros"
     sign_in: "conectar"
     sign_out: "desconectar"
     sign_up: "registro"
