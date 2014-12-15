@@ -1,0 +1,50 @@
+Julio Antúnez Tarín (48):
+      rails_apps_composer: initial commit
+      rails_apps_composer: Gemfile
+      rails_apps_composer: generators
+      rails_apps_composer: testing framework
+      rails_apps_composer: front-end framework
+      rails_apps_composer: add pages
+      rails_apps_composer: add README files
+      rails_apps_composer: set up database
+      rails_apps_composer: extras
+      Add clone data.
+      Fix rspec.
+      Add pages gem.
+      Add bootswatch support.
+      Prepare layouts and assets by area (front and back).
+      Rename application assets to frontend and prepare assets to production.
+      Fix sidebar in small devices.
+      Rename application.
+      Add real data to home page.
+      Add a gem to handle configuration (figaro).
+      Add devise to handle auth.
+      Add devise views.
+      Refactorize devise views (markup).
+      Add ACL with rolify and pundit.
+      Configure devise routes. Add an admin controller.
+      Delete pages gems and create a frontend controller.
+      Refactorize top navbar.
+      Add to areas: frontend and backend.
+      Add new field to User model (fullname).
+      Fix strong params in application controller (devise).
+      Move allowed params from application controller to registration controller (devise).
+      Fix layout in registration errors use case.
+      Rename custom devise views directory.
+      Rename admin controller to backend controller.
+      Fix features.
+      Fix edit registration layout when disconnected.
+      Add Pry doc gem. Refactorize local rspec configuration file.
+      Add translation support.
+      Add support to translate routes.
+      Add support to translate routes.
+      Merge branch 'feature-install' into develop
+      Clean own references.
+      Add custom checkbox and radio form element.
+      Add users CRUD (not devise).
+      Add datatables support (raw mode).
+      Add datatables support (final).
+      Add JS translations.
+      Rebuild doc. Fix crud users back button icon.
+      Merge branch 'feature-crud-users' into develop
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= content_for?(:title) ? yield(:title) : t("frontend.app.title") %></title>
+        <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t("frontend.app.title") %>">
+        <%= stylesheet_link_tag 'frontend', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'frontend', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+
+        <script type="text/javascript">
+            I18n.defaultLocale = "<%= I18n.default_locale %>";
+            I18n.locale = "<%= I18n.locale %>";
+        </script>
+    </head>
+    <body>
+        <header>
+            <%= render 'layouts/frontend_navigation' %>
+        </header>
+
+        <div class="wrapper">
+            <div class="content">
+                <%= render 'layouts/messages' %>
+                <div class="main-content">
+                    <%= yield %>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <footer>
+            <p>Copyright @ 2.014 - Julio Antúnez Tarín</p>
+        </footer>
+    </body>
+</html>

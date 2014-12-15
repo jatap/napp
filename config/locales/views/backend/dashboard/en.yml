@@ -1,0 +1,9 @@
+en:
+  backend:
+    app:
+      title: "Napp"
+    dashboard:
+      title: "Admin dashboard"
+    link:
+      back: "Back"
+      website: "Website"

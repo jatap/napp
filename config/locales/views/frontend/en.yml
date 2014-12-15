@@ -1,0 +1,8 @@
+en:
+  frontend:
+    app:
+      title: "Napp"
+    nav:
+      home: "Home"
+      about: "About"
+      admin: "Admin"

@@ -1,0 +1,52 @@
+<div role="tabpanel" class="backend-crud-tabs">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-pills" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                <%= t 'crud.tabs.general' %>
+                <%= fa_icon 'ellipsis-v' %>
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#roles" aria-controls="roles" role="tab" data-toggle="tab">
+                <%= t 'crud.tabs.roles' %>
+                <%= fa_icon 'toggle-on' %>
+            </a>
+        </li>
+    </ul>
+
+    <%= simple_form_for(@user, html: { class: 'user_crud' }) do |f| %>
+        <%= f.error_notification %>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+
+                <div class="form-inputs">
+                    <%= f.input :fullname, required: false, autofocus: true %>
+                    <%= f.input :email, required: true %>
+                    <%= f.input :password, autocomplete: "off", hint: t(:password_blank), required: false %>
+                    <%= f.input :password_confirmation, required: false %>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="roles">
+                <div class="form-inputs">
+                    <%= f.association :roles, as: :check_boxes, label: false %>
+                </div>
+            </div>
+
+            <div class="label label-default form-actions-header">
+              <%= fa_icon "navicon" %><%= t 'crud.column.actions' %>
+            </div>
+            <div class="form-actions">
+                <%= button_tag(type: 'submit', class: "btn-custom btn-default") do %>
+                    <span class="btn-pre"><%= fa_icon "pencil" %></span>
+                    <span class="btn-content"><%= t("sign_up.submit.edit") %></span>
+                <% end %>
+            </div>
+        </div>
+
+    <% end %>
+</div>

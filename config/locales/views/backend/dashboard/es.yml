@@ -1,0 +1,9 @@
+es:
+  backend:
+    app:
+      title: "Napp"
+    dashboard:
+      title: "Panel de control"
+    link:
+      back: "Volver"
+      website: "Sitio web"
