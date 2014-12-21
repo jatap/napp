@@ -355,6 +355,9 @@ h4.page-header {
     padding: 0.5em;
   }
 }
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border: none !important;
+}
 
 /**
  * Pagination
