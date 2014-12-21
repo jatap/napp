@@ -347,6 +347,14 @@ h4.page-header {
   padding-top: 0.3em !important;
   margin-top: 3em !important;
 }
+.dataTables_wrapper .dataTables_processing {
+  background: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  padding-bottom: 3em;
+  i {
+    padding: 0.5em;
+  }
+}
 
 /**
  * Pagination

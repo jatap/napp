@@ -9,3 +9,8 @@
 ['user', 'editor', 'admin'].each do |role|
     Role.find_or_create_by({name: role})
 end
+
+User.create! fullname: "Administrador", email: "julio.antunez.tarin@gmail.com",
+             password: "Malament", roles: [ Role.find_by_name(:user),
+                                            Role.find_by_name(:editor),
+                                            Role.find_by_name(:admin) ]

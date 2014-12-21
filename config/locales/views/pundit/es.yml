@@ -1,0 +1,11 @@
+es:
+  pundit:
+    default: "No estás autorizado a ejecutar la acción seleccionada."
+    user_policy:
+      show?: "No puedes ver un usuario."
+      edit?: "No puedes editar un usuario."
+      update?: "No puedes actualizar un usuario."
+      destroy?: "No puedes eliminar un usuario."
+      new?: "No puedes crear un usuario."
+      create?: "No puedes añadir un usuario."
+      index?: "No puedes ver los usuarios."

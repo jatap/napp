@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+
+  # Set layout
   layout 'backend'
 
   before_filter :authenticate_user!
@@ -8,8 +10,10 @@ class UsersController < ApplicationController
   # View variables
   before_action :set_sidebar_active_action
 
+  # ACL
+  before_filter :set_authorization
+
   def index
-    # @users = User.all.references(:roles).page params[:page]
     respond_to do |format|
       format.html
       format.json { render json: UserDatatable.new(view_context) }
@@ -75,19 +79,27 @@ class UsersController < ApplicationController
     @sidebar_active = 'users'
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
+  private :set_user
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:fullname, :email, :password,
-                                   :password_confirmation, role_ids: [] )
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_params
+    params.require(:user).permit(:fullname, :email, :password,
+                                 :password_confirmation, role_ids: [] )
+  end
+  private :user_params
 
-    def needs_password?(user, params)
-      params[:password].present?
-    end
+  def needs_password?(user, params)
+    params[:password].present?
+  end
+  private :needs_password?
+
+  def set_authorization
+    @user ||= current_user
+    authorize @user
+  end
+  private :set_authorization
 end
