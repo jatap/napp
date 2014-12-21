@@ -1,0 +1,7 @@
+en:
+  signup:
+    notification:
+      title: "Napp - New user signup"
+      subtitle: "Supplied data"
+      subject: "[Napp] User %{user} has just signup"
+

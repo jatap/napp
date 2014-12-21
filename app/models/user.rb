@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  after_create :admin_notify
+
   def is_admin?
     has_role? :admin
   end
@@ -20,4 +22,8 @@ class User < ActiveRecord::Base
     has_role? :user
   end
   alias_method :user?, :is_user?
+
+  def admin_notify
+    UserMailer.signup_notification(self).deliver
+  end
 end

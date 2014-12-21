@@ -1,0 +1,6 @@
+es:
+  signup:
+    notification:
+      title: "Napp - Nuevo registro de usuario"
+      subtitle: "Datos facilitados"
+      subject: "[Napp] El usuario %{user} acaba de registrarse."
