@@ -19,7 +19,7 @@ function form_list_grid(){
         lengthMenu: [5, 10, 25, 50, 100, 200],
         language: {
             url:               "",
-            processing:        I18n.t("crud.ajax.processing"),
+            processing:        "<i class='fa fa-refresh fa-spin'></i> " + I18n.t("crud.ajax.processing"),
             search:            "_INPUT_",
             searchPlaceholder: I18n.t("crud.search.placeholder"),
             lengthMenu:        "_MENU_",
