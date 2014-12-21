@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  before_create :check_role!
   after_create :admin_notify
 
   def is_admin?
@@ -25,5 +26,10 @@ class User < ActiveRecord::Base
 
   def admin_notify
     UserMailer.signup_notification(self).deliver
+  end
+  private :admin_notify
+
+  def check_role!
+    add_role :user if roles.blank?
   end
 end
