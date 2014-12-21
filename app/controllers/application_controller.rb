@@ -1,10 +1,14 @@
 class ApplicationController < ActionController::Base
-  include Pundit
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  # ACL
+  include Pundit
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
+  # Layout
   layout 'frontend'
 
   # Internationalization
@@ -38,4 +42,13 @@ class ApplicationController < ActionController::Base
       {} :
       { locale: I18n.locale }
   end
+
+  def user_not_authorized(exception)
+    set_locale
+    policy_name = exception.policy.class.to_s.underscore
+    flash[:error] = t("#{policy_name}.#{exception.query}", scope: "pundit",
+                                                           default: :default)
+    redirect_to(request.referrer || root_path)
+  end
+  private :user_not_authorized
 end

@@ -32,4 +32,5 @@ class User < ActiveRecord::Base
   def check_role!
     add_role :user if roles.blank?
   end
+  private :check_role!
 end
