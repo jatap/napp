@@ -1,3 +1,6 @@
+# Application Controller Class.
+#
+# @author julio.antunez.tarin@gmail.com
 class ApplicationController < ActionController::Base
 
   # Prevent CSRF attacks by raising an exception.
@@ -14,14 +17,27 @@ class ApplicationController < ActionController::Base
   # Internationalization
   before_action :set_locale
 
+  # After sign in path.
+  #
+  # @param [String] resource_or_scope the resource or scope.
+  # @return [String] the required path.
   def after_sign_in_path_for(resource_or_scope)
      backend_dashboard_path
   end
 
+  # After sign up path.
+  #
+  # @param [String] resource the resource.
+  # @return [String] the required path.
   def after_sign_up_path_for(resource)
     after_sign_in_path_for(resource)
   end
 
+  # After sign out path.
+  #
+  # @note Default locale is ommited.
+  # @param (see #after_sign_up_path_for)
+  # @return [String] the required path.
   def after_sign_out_path_for(resource)
     I18n.locale == I18n.default_locale ? "/" : "/#{I18n.locale}"
   end
@@ -37,18 +53,29 @@ class ApplicationController < ActionController::Base
   end
   protected :set_locale
 
+  # Set default URL options.
+  #
+  # @return [void]
   def default_url_options()
     I18n.locale.to_sym.eql?(I18n.default_locale.to_sym) ?
       {} :
       { locale: I18n.locale }
   end
 
+  # Rewrite pundit/authorization notification message.
+  #
+  # @param [Pundit::NotAuthorizedError] exception the exception.
+  # @return [void]
   def user_not_authorized(exception)
+    # Prevent wrong link building
     set_locale
+    # Set flash message
     policy_name = exception.policy.class.to_s.underscore
     flash[:error] = t("#{policy_name}.#{exception.query}", scope: "pundit",
                                                            default: :default)
+    # Redirect
     redirect_to(request.referrer || root_path)
   end
   private :user_not_authorized
+
 end

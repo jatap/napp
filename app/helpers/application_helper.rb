@@ -1,13 +1,13 @@
-# AplicationHelper Class
+# AplicationHelper Class.
 #
 # @author julio.antunez.tarin@gmail.com
-#
 module ApplicationHelper
+
   # Create switch locale links.
   #
   # @note Deprecated use of link_to_unless_current
   #
-  # @return [String] the HTML result with switch locale links
+  # @return [String] the HTML result with switch locale links.
   def switch_locale
     html = ''
 
@@ -40,20 +40,10 @@ module ApplicationHelper
     I18n.locale == I18n.default_locale ? "/" : "/#{I18n.locale}"
   end
 
-  # Set root path with locale included (exclude default locale) from a 
-  # requested.
-  #
-  # @param locale [Symbol] locale
-  # @return [void]
-  #def locale_on_root_path(locale)
-    #locale == I18n.default_locale ? "/" : "/#{locale}"
-  #end
-  #private :locale_on_root_path
-
   # Check if requested locale is current locale.
   #
   # @param locale [Symbol] locale
-  # @return [Boolean] the check result
+  # @return [Boolean] the check result.
   def current_locale?(locale)
     locale == I18n.locale
   end
@@ -69,7 +59,8 @@ module ApplicationHelper
 
   # Check if requested locale is available.
   #
-  # @return [Boolean] the check result
+  # @param (see #current_locale?)
+  # @return (see #current_locale?)
   def in_locales?(locale)
     locales.include? locale
   end
@@ -77,8 +68,8 @@ module ApplicationHelper
 
   # Check if requested locale is default locale and is included in path.
   #
-  # @param locale [Symbol] locale
-  # @return [Boolean] the check result
+  # @param (see #current_locale?)
+  # @return (see #current_locale?)
   def default_locale_on_path?(locale)
     in_locales?(locale) && default_locale?(locale) && locale_on_path?(locale)
   end
@@ -86,17 +77,18 @@ module ApplicationHelper
 
   # Check if requested locale is default locale and is included in root path.
   #
-  # @param locale [Symbol] locale
-  # @return [Boolean] the check result
+  # @param (see #current_locale?)
+  # @return (see #current_locale?)
   def default_locale_on_root_path?(locale)
-    in_locales?(locale) && default_locale?(locale) && locale_on_root_path?(locale)
+    in_locales?(locale) && default_locale?(locale) \
+      && locale_on_root_path?(locale)
   end
   private :default_locale_on_root_path?
 
   # Check if requested locale is included in root path.
   #
-  # @param locale [Symbol] locale
-  # @return [Boolean] the check result
+  # @param (see #current_locale?)
+  # @return (see #current_locale?)
   def locale_on_root_path?(locale)
     in_locales?(locale) && (request.original_fullpath.size == 3)
   end
@@ -104,8 +96,8 @@ module ApplicationHelper
 
   # Check if requested locale is included in path.
   #
-  # @param locale [Symbol] locale
-  # @return [Boolean] the check result
+  # @param (see #current_locale?)
+  # @return (see #current_locale?)
   def locale_on_path?(locale)
     in_locales?(locale) && (request.original_fullpath.size > 3)
   end
@@ -113,8 +105,8 @@ module ApplicationHelper
 
   # Check if requested locale is default locale.
   #
-  # @param locale [Symbol] locale
-  # @return [Boolean] the check result
+  # @param (see #current_locale?)
+  # @return (see #current_locale?)
   def default_locale?(locale)
     in_locales?(locale) && (locale == I18n.default_locale)
   end

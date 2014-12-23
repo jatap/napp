@@ -1,3 +1,6 @@
+/**
+ * Functions
+ */
 function icheck(){
   if($(".icheck-me").length > 0){
     $(".icheck-me").each(function(){
@@ -13,7 +16,12 @@ function icheck(){
   }
 }
 
+/**
+ * Loader
+ */
 $(function(){
+
   icheck();
+
 })
 

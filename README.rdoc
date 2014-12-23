@@ -1,0 +1,3 @@
+== Napp
+
+Base Rails 4.1 Application.

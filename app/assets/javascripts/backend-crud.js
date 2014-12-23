@@ -1,3 +1,6 @@
+/**
+ * Functions
+ */
 function form_actions(){
     $(".fa-navicon").click(function() {
         $(".form-actions").toggle();
@@ -51,8 +54,13 @@ function custom_select2(){
     });
 }
 
+/**
+ * Loader
+ */
 $(function(){
+
     form_actions();
     form_list_grid();
     custom_select2();
+
 });
