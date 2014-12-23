@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>ApplicationController</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            ApplicationController 
+            
+                <span class="parent">&lt; 
+                    
+                    ActionController::Base
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/application_controller_rb.html">app/controllers/application_controller.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Application Controller Class.</p>
+
+<p>@author julio.antunez.tarin@gmail.com</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="ApplicationController/Pundit.html">ApplicationController::Pundit</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-after_sign_in_path_for">after_sign_in_path_for</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-after_sign_out_path_for">after_sign_out_path_for</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-after_sign_up_path_for">after_sign_up_path_for</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-default_url_options">default_url_options</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_locale">set_locale</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="ApplicationController/Pundit.html">
+              ApplicationController::Pundit
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-after_sign_in_path_for">
+            
+              <b>after_sign_in_path_for</b>(resource_or_scope)
+            
+            <a href="../classes/ApplicationController.html#method-i-after_sign_in_path_for" name="method-i-after_sign_in_path_for" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>After sign in path.</p>
+
+<p>@param [String] resource_or_scope the resource or scope. @return [String]
+the required path.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-after_sign_in_path_for_source')" id="l_method-i-after_sign_in_path_for_source">show</a>
+                
+              </p>
+              <div id="method-i-after_sign_in_path_for_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">after_sign_in_path_for</span>(<span class="ruby-identifier">resource_or_scope</span>)
+   <span class="ruby-identifier">backend_dashboard_path</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-after_sign_out_path_for">
+            
+              <b>after_sign_out_path_for</b>(resource)
+            
+            <a href="../classes/ApplicationController.html#method-i-after_sign_out_path_for" name="method-i-after_sign_out_path_for" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>After sign out path.</p>
+
+<p>@note Default locale is ommited. @param (see <a
+href="ApplicationController.html#method-i-after_sign_up_path_for">after_sign_up_path_for</a>)
+@return [String] the required path.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-after_sign_out_path_for_source')" id="l_method-i-after_sign_out_path_for_source">show</a>
+                
+              </p>
+              <div id="method-i-after_sign_out_path_for_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">after_sign_out_path_for</span>(<span class="ruby-identifier">resource</span>)
+  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">locale</span> <span class="ruby-operator">==</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">default_locale</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;/&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;/#{I18n.locale}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-after_sign_up_path_for">
+            
+              <b>after_sign_up_path_for</b>(resource)
+            
+            <a href="../classes/ApplicationController.html#method-i-after_sign_up_path_for" name="method-i-after_sign_up_path_for" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>After sign up path.</p>
+
+<p>@param [String] resource the resource. @return [String] the required path.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-after_sign_up_path_for_source')" id="l_method-i-after_sign_up_path_for_source">show</a>
+                
+              </p>
+              <div id="method-i-after_sign_up_path_for_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">after_sign_up_path_for</span>(<span class="ruby-identifier">resource</span>)
+  <span class="ruby-identifier">after_sign_in_path_for</span>(<span class="ruby-identifier">resource</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-default_url_options">
+            
+              <b>default_url_options</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-default_url_options" name="method-i-default_url_options" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set default URL options.</p>
+
+<p>@return [void]</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-default_url_options_source')" id="l_method-i-default_url_options_source">show</a>
+                
+              </p>
+              <div id="method-i-default_url_options_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">default_url_options</span>()
+  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">locale</span>.<span class="ruby-identifier">to_sym</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">default_locale</span>.<span class="ruby-identifier">to_sym</span>) <span class="ruby-operator">?</span>
+    {} <span class="ruby-operator">:</span>
+    { <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">locale</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+              
+      <div class="sectiontitle">Instance Protected methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-set_locale">
+            
+              <b>set_locale</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-set_locale" name="method-i-set_locale" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Reads locale param in the url and setup the language, if empty sets to
+default language.</p>
+
+<p>@visibility protected</p>
+
+<p>@return [Symbol] the locale, `:en` or `:es` as default ones</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_locale_source')" id="l_method-i-set_locale_source">show</a>
+                
+              </p>
+              <div id="method-i-set_locale_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_locale</span>
+  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">locale</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:locale</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">default_locale</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

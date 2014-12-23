@@ -60,6 +60,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+  gem 'redcarpet', '~> 2.1.1'
+  gem 'sdoc-templates-42floors'
 end
 
 group :test do

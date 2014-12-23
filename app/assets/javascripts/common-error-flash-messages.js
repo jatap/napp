@@ -1,9 +1,3 @@
-$(document).ready(function() {
-
-    error_flash_messages();
-
-});
-
 /**
  * Functions
  */
@@ -28,3 +22,12 @@ function error_flash_messages()
     // Set new decorated HTML
     $(".error_notification").replaceWith(newHtml);
 }
+
+/**
+ * Loader
+ */
+$(function(){
+
+    error_flash_messages();
+
+});

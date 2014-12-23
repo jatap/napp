@@ -1,3 +1,6 @@
+# UserDatatable Class.
+#
+# @author julio.antunez.tarin@gmail.com
 class UserDatatable < AjaxDatatablesRails::Base
 
   include AjaxDatatablesRails::Extensions::Kaminari
@@ -5,16 +8,23 @@ class UserDatatable < AjaxDatatablesRails::Base
   def_delegators :@view, :link_to, :user_path, :edit_user_path, :fa_icon,
                  :content_tag, :t
 
+  # Set sortable columns.
+  #
+  # @return [void]
   def sortable_columns
     @sortable_columns ||= [ 'users.fullname', 'users.email', 'roles.name' ]
   end
 
+  # Set searchable columns.
+  #
+  # @return [void]
   def searchable_columns
     @searchable_columns ||= [ 'users.fullname', 'users.email', 'roles.name' ]
   end
 
-  private
-
+  # Set data.
+  #
+  # @return [void]
   def data
     records.map do |record|
       [
@@ -29,10 +39,15 @@ class UserDatatable < AjaxDatatablesRails::Base
       ]
     end
   end
+  private :data
 
+  # Get raw records.
+  #
+  # @return [User::ActiveRecord_Relation] the query result data.
   def get_raw_records
     User.joins(:roles).references(:roles).distinct
   end
+  private :get_raw_records
 
   # ==== Insert 'presenter'-like methods below if necessary
 end

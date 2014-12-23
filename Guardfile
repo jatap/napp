@@ -18,6 +18,11 @@ guard 'rails' do
   watch(%r{^(config|lib)/.*})
 end
 
+# Yard
+guard 'yard' do
+  watch(%r{lib/.+\.rb})
+  watch(%r{vendor/.+\.rb})
+end
 
 # Note: The cmd option is now required due to the increasing number of ways
 #       rspec may be run, below are examples of the most common uses.
