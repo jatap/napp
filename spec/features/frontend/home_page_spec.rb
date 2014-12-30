@@ -9,7 +9,7 @@ feature 'Home page' do
   #   When I visit the home page
   #   Then I see "Welcome"
   scenario 'visit the home page' do
-    visit root_path
+    visit root_en_path
     expect(page).to have_content 'Rails 4.1 Base Application'
   end
 

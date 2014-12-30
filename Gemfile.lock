@@ -119,6 +119,7 @@ GEM
     formatador (0.2.5)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
+    growl (1.0.3)
     guard (2.10.5)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -137,6 +138,9 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    guard-yard (2.1.4)
+      guard (>= 1.1.0)
+      yard (>= 0.7.0)
     hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.7.0)
@@ -374,9 +378,11 @@ DEPENDENCIES
   faker
   figaro
   font-awesome-rails
+  growl
   guard-bundler
   guard-rails
   guard-rspec
+  guard-yard
   i18n-js (>= 3.0.0.rc8)
   icheck-rails
   jbuilder (~> 2.0)
