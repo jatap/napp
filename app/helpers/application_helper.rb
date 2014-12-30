@@ -14,6 +14,8 @@ module ApplicationHelper
     locales.each_with_index do |locale, index|
       link = link_to(locale.to_s.upcase, { locale: locale.to_s },
                                            data: { no_turbolink: true })
+      link = link.gsub(/\/(\?locale=)/, '/')
+
       if current_locale? locale
         html += "<li class='current-locale'>"
         html += "<span class='current-locale'>#{locale.to_s.upcase}</span>"

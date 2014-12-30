@@ -55,11 +55,12 @@ class ApplicationController < ActionController::Base
 
   # Set default URL options.
   #
+  # @param [Hash] the options.
   # @return [void]
-  def default_url_options()
+  def default_url_options(options = {})
     I18n.locale.to_sym.eql?(I18n.default_locale.to_sym) ?
       {} :
-      { locale: I18n.locale }
+      { locale: I18n.locale }.merge(options)
   end
 
   # Rewrite pundit/authorization notification message.

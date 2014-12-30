@@ -33,7 +33,9 @@ module Napp
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.default_locale = :es
     config.i18n.available_locales = [ :es, :en ]
-    Rails.configuration.i18n.fallbacks = [ :es, :en ]
+    config.i18n.fallbacks = [ :es, :en ]
+    config.i18n.enforce_available_locales = true
+    I18n.enforce_available_locales = true
 
     # ActiveJob (Beanstalk)
     config.active_job.queue_adapter = :backburner
