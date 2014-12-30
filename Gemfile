@@ -31,6 +31,8 @@ gem 'ajax-datatables-rails'
 gem 'select2-rails'
 gem 'kaminari'
 gem 'i18n-js', '>= 3.0.0.rc8'
+gem 'backburner'
+gem 'beanstalkd_view'
 
 group :development do
   gem 'spring'

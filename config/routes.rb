@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   get '/:locale' => 'frontend#home'
   root to: 'frontend#home'
 
+  # Beanstalkd
+  scope '/backend' do
+    mount BeanstalkdView::Server, at: "/jobs"
+  end
+
   # Translated routes
   localized do
 

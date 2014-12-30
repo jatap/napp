@@ -6,4 +6,6 @@ en:
       title: "Admin dashboard"
     link:
       back: "Back"
+    nav:
       website: "Website"
+      jobs: "Jobs"

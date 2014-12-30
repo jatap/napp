@@ -34,5 +34,8 @@ module Napp
     config.i18n.default_locale = :es
     config.i18n.available_locales = [ :es, :en ]
     Rails.configuration.i18n.fallbacks = [ :es, :en ]
+
+    # ActiveJob (Beanstalk)
+    config.active_job.queue_adapter = :backburner
   end
 end

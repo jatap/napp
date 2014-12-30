@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
   #
   # @return [void]
   def admin_notify
-    UserMailer.signup_notification(self).deliver
+    UserMailer.signup_notification(self).deliver_later!(wait: 1.minute)
   end
   private :admin_notify
 

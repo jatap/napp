@@ -6,4 +6,6 @@ es:
       title: "Panel de control"
     link:
       back: "Volver"
+    nav:
       website: "Sitio web"
+      jobs: "Trabajos"

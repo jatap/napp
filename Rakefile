@@ -5,4 +5,7 @@ require 'rubygems'
 # Main
 require 'rake'
 
+# Backburner
+require 'backburner/tasks'
+
 Rails.application.load_tasks
