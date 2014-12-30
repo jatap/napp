@@ -9,7 +9,7 @@ feature 'About page' do
   #   When I visit the 'about' page
   #   Then I see "About the Website"
   scenario 'Visit the about page' do
-    visit 'frontend/about'
+    visit 'en/frontend/about'
     expect(page).to have_content 'About the Website'
   end
 
