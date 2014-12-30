@@ -1,38 +1,34 @@
-# A sample Guardfile
-# More info at https://github.com/guard/guard#readme
+notification :growl
 
-## Uncomment and set this to only include directories you want to watch
-# directories %(app lib config test spec feature)
-
-## Uncomment to clear the screen before every task
-# clearing :on
-
+# Bundler
 guard :bundler do
   watch('Gemfile')
-  # Uncomment next line if your Gemfile contains the `gemspec' command.
   # watch(/^.+\.gemspec/)
 end
 
-guard 'rails' do
+# Rails
+guard :rails,
+  start_on_start: false do
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
 end
 
-# Yard
-guard 'yard' do
+# Yard (documentation)
+guard :yard,
+  stdout: 'log/yard.log' do
+
+  watch(%r{app/.+\.rb})
   watch(%r{lib/.+\.rb})
   watch(%r{vendor/.+\.rb})
 end
 
-# Note: The cmd option is now required due to the increasing number of ways
-#       rspec may be run, below are examples of the most common uses.
-#  * bundler: 'bundle exec rspec'
-#  * bundler binstubs: 'bin/rspec'
-#  * spring: 'bin/rsspec' (This will use spring if running and you have
-#                          installed the spring binstubs per the docs)
-#  * zeus: 'zeus rspec' (requires the server to be started separetly)
-#  * 'just' rspec: 'rspec'
-guard :rspec, cmd: 'bundle exec rspec' do
+# RSpec
+guard :rspec,
+  cmd:              'bin/spring rspec -f html -o ./tmp/spec_results.html --fail-fast',
+  launchy:          './tmp/spec_results.html',
+  all_on_start:     false,
+  failed_mode:      :focus,
+  notification:     true do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
