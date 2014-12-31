@@ -1,0 +1,32 @@
+# Base Rails configuration
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - script/**/*
+    - tmp/**/*
+    - app/assets/stylesheets/config.rb
+    - bin/**/*
+    # TODO Remove this files when tests are done
+    - features/step_definitions/email_steps.rb
+    - features/support/paths.rb
+
+# Avoid methods longer than 30 lines of code
+MethodLength:
+  Max: 30
+
+Encoding:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+  Max: 80
+
+Metrics/AbcSize:
+  Max: 30
+
+Style/AccessorMethodName:
+  Enabled: false

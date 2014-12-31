@@ -1,4 +1,4 @@
 <li><%= link_to t("backend.nav.website"), locale_root_path %></li>
-<% if current_user.is_admin? %>
+<% if current_user.admin? %>
     <li><%= link_to_unless_current t("backend.nav.jobs"), beanstalkd_view_server_path %></li>
 <% end %>

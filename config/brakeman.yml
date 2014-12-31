@@ -1,0 +1,4 @@
+:rails3: true
+:rails4: true
+:output_files:
+- tmp/brakeman_results.html

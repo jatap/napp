@@ -2,7 +2,6 @@
 #
 # @author julio.antunez.tarin@gmail.com
 module ApplicationHelper
-
   # Create switch locale links.
   #
   # @note Deprecated use of link_to_unless_current
@@ -11,22 +10,22 @@ module ApplicationHelper
   def switch_locale
     html = ''
 
-    locales.each_with_index do |locale, index|
+    locales.each_with_index do |locale, _index|
       link = link_to(locale.to_s.upcase, { locale: locale.to_s },
-                                           data: { no_turbolink: true })
+                     data: { no_turbolink: true })
       link = link.gsub(/\/(\?locale=)/, '/')
 
       if current_locale? locale
         html += "<li class='current-locale'>"
         html += "<span class='current-locale'>#{locale.to_s.upcase}</span>"
       elsif default_locale_on_path? locale
-        html += "<li>"
-        html += link.gsub(/\/(#{locales.join('|')})\//, '/')
+        html += '<li>'
+        html += link.gsub(%r{/(#{locales.join('|')})/}, '/')
       elsif default_locale_on_root_path? locale
-        html += "<li>"
+        html += '<li>'
         html += link.gsub(/\/(#{locales.join('|')})/, '/')
       else
-        html += "<li>"
+        html += '<li>'
         html += link
       end
 
@@ -39,7 +38,7 @@ module ApplicationHelper
   #
   # @return [void]
   def locale_root_path
-    I18n.locale == I18n.default_locale ? "/" : "/#{I18n.locale}"
+    I18n.locale == I18n.default_locale ? '/' : "/#{I18n.locale}"
   end
 
   # Check if requested locale is current locale.
@@ -113,5 +112,4 @@ module ApplicationHelper
     in_locales?(locale) && (locale == I18n.default_locale)
   end
   private :default_locale?
-
 end

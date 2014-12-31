@@ -4,7 +4,6 @@
 #   @return [User] the current user
 # @author julio.antunez.tarin@gmail.com
 class UserPolicy < ApplicationPolicy
-
   attr_reader :user
 
   # Show method policy.
@@ -60,14 +59,11 @@ class UserPolicy < ApplicationPolicy
   #
   # @author julio.antunez.tarin@gmail.com
   class Scope < Scope
-
     # Resolve.
     #
     # @return [Scope] the scope.
     def resolve
       scope
     end
-
   end
-
 end

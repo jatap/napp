@@ -2,7 +2,6 @@
 #
 # @author julio.antunez.tarin@gmail.com
 class UsersController < ApplicationController
-
   # Layout
   layout 'backend'
 
@@ -117,20 +116,20 @@ class UsersController < ApplicationController
   end
   private :set_user
 
-  # Never trust parameters from the scary internet, only allow the white list 
+  # Never trust parameters from the scary internet, only allow the white list
   # through.
   #
   # @return [void]
   def user_params
     params.require(:user).permit(:fullname, :email, :password,
-                                 :password_confirmation, role_ids: [] )
+                                 :password_confirmation, role_ids: [])
   end
   private :user_params
 
   # Check if user has write some date in password form element.
   #
   # @return [Boolean] the check result.
-  def needs_password?(user, params)
+  def needs_password?(_user, params)
     params[:password].present?
   end
   private :needs_password?
@@ -143,5 +142,4 @@ class UsersController < ApplicationController
     authorize @user
   end
   private :set_authorization
-
 end
