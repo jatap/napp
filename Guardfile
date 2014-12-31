@@ -6,11 +6,14 @@ guard :bundler do
   # watch(/^.+\.gemspec/)
 end
 
-# Rails
-guard :rails,
-  start_on_start: false do
-  watch('Gemfile.lock')
-  watch(%r{^(config|lib)/.*})
+# Rubocop (code style checker)
+guard :rubocop,
+  all_on_start: false,
+  cli: ['--format', 'clang', '--rails'],
+  notification: true do
+
+  watch(%r{.+\.rb$})
+  watch(%r{(?:.+/)?\.rubocop\.yml$}) { |m| File.dirname(m[0]) }
 end
 
 # Yard (documentation)
@@ -20,6 +23,25 @@ guard :yard,
   watch(%r{app/.+\.rb})
   watch(%r{lib/.+\.rb})
   watch(%r{vendor/.+\.rb})
+end
+
+# Brakeman (security issues)
+guard :brakeman,
+  output_files:   %w(tmp/brakeman_results.html),
+  notifications:  true,
+  run_on_start:   false,
+  min_confidence: 1,
+  chatty:         true do
+
+  watch(%r{^app/.+\.(erb|haml|rhtml|rb)$})
+  watch(%r{^config/.+\.rb$})
+  watch(%r{^lib/.+\.rb$})
+  watch('Gemfile')
+end
+
+# Cane (code metrics)
+guard :cane do
+  watch(%r{^(.+)\.rb$})
 end
 
 # RSpec

@@ -40,9 +40,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
         sign_up(resource_name, resource)
         respond_with resource, location: after_sign_up_path_for(resource)
       else
-        set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_flashing_format?
+        if is_flashing_format?
+          set_flash_message :notice,
+            :"signed_up_but_#{resource.inactive_message}"
+        end
         expire_data_after_sign_in!
-        respond_with resource, location: after_inactive_sign_up_path_for(resource)
+        respond_with resource,
+          location: after_inactive_sign_up_path_for(resource)
       end
     else
       clean_up_passwords resource
@@ -61,7 +65,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #
   # @return [void]
   def sign_up_params
-    params.require(:user).permit(:fullname, :email, :password, :password_confirmation)
+    params.require(:user).permit(:fullname, :email, :password,
+                                 :password_confirmation)
   end
   private :sign_up_params
 
@@ -69,7 +74,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #
   # @return [void]
   def account_update_params
-    params.require(:user).permit(:fullname, :email, :password, :password_confirmation, :current_password)
+    params.require(:user).permit(:fullname, :email, :password,
+                                 :password_confirmation, :current_password)
   end
   private :account_update_params
 

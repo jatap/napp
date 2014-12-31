@@ -40,7 +40,10 @@ GEM
     ajax-datatables-rails (0.2.1)
       railties (>= 3.1)
     arel (6.0.0)
-    awesome_print (1.2.0)
+    ast (2.0.0)
+    astrolabe (1.3.0)
+      parser (>= 2.2.0.pre.3, < 3.0)
+    awesome_print (1.6.0)
     backburner (0.4.6)
       beaneater (~> 0.3.1)
       dante (~> 0.1.5)
@@ -63,11 +66,24 @@ GEM
       sass (~> 3.2)
     bootswatch-rails (3.2.4)
       railties (>= 3.1)
+    brakeman (2.6.3)
+      erubis (~> 2.6)
+      fastercsv (~> 1.5)
+      haml (>= 3.0, < 5.0)
+      highline (~> 1.6.20)
+      multi_json (~> 1.2)
+      ruby2ruby (~> 2.1.1)
+      ruby_parser (~> 3.5.0)
+      sass (~> 3.0)
+      slim (>= 1.3.6, < 3.0)
+      terminal-table (~> 1.4)
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    cane (2.6.2)
+      parallel
     capybara (2.4.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -111,12 +127,23 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
+    fastercsv (1.5.5)
+    fastri (0.3.1.1)
     ffi (1.9.6)
     figaro (1.0.0)
       thor (~> 0.14)
+    flay (2.5.0)
+      ruby_parser (~> 3.0)
+      sexp_processor (~> 4.0)
+    flog (4.3.0)
+      ruby_parser (~> 3.1, > 3.1.0)
+      sexp_processor (~> 4.4)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
     formatador (0.2.5)
+    fuubar (2.0.0)
+      rspec (~> 3.0)
+      ruby-progressbar (~> 1.4)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     growl (1.0.3)
@@ -127,9 +154,16 @@ GEM
       nenv (~> 0.1)
       pry (>= 0.9.12)
       thor (>= 0.18.1)
+    guard-brakeman (0.8.3)
+      brakeman (>= 2.1.1)
+      guard (>= 2.0.0)
     guard-bundler (2.1.0)
       bundler (~> 1.0)
       guard (~> 2.2)
+      guard-compat (~> 1.1)
+    guard-cane (0.2.1)
+      cane
+      guard (>= 2.10.0)
       guard-compat (~> 1.1)
     guard-compat (1.2.0)
     guard-rails (0.7.0)
@@ -138,9 +172,15 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    guard-rubocop (1.2.0)
+      guard (~> 2.0)
+      rubocop (~> 0.20)
     guard-yard (2.1.4)
       guard (>= 1.1.0)
       yard (>= 0.7.0)
+    haml (4.0.6)
+      tilt
+    highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.7.0)
@@ -158,7 +198,7 @@ GEM
       jquery-rails
       railties (>= 3.1)
       sass-rails
-    jquery-rails (4.0.2)
+    jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
@@ -182,7 +222,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.4.3)
-    mini_portile (0.6.1)
+    mini_portile (0.6.2)
     minitest (5.5.0)
     multi_json (1.10.1)
     nenv (0.1.1)
@@ -191,6 +231,11 @@ GEM
     nyan-cat-formatter (0.11)
       rspec (>= 2.99, >= 2.14.2, < 4)
     orm_adapter (0.5.0)
+    parallel (1.3.3)
+    parser (2.2.0.1)
+      ast (>= 1.1, < 3.0)
+      slop (~> 3.4, >= 3.4.5)
+    powerpack (0.0.9)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -242,12 +287,14 @@ GEM
       activesupport (= 4.2.0)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (2.0.0)
     rake (10.4.2)
     rb-fchange (0.0.6)
       ffi
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    rcodetools (0.8.5.0)
     rdoc (4.2.0)
       json (~> 1.4)
     redcarpet (2.1.1)
@@ -280,6 +327,18 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
+    rubocop (0.28.0)
+      astrolabe (~> 1.3)
+      parser (>= 2.2.0.pre.7, < 3.0)
+      powerpack (~> 0.0.6)
+      rainbow (>= 1.99.1, < 3.0)
+      ruby-progressbar (~> 1.4)
+    ruby-progressbar (1.7.1)
+    ruby2ruby (2.1.3)
+      ruby_parser (~> 3.1)
+      sexp_processor (~> 4.0)
+    ruby_parser (3.5.0)
+      sexp_processor (~> 4.1)
     rubyzip (1.1.6)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -299,6 +358,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    sexp_processor (4.4.4)
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -318,6 +378,9 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (~> 1.3)
+    slim (2.1.0)
+      temple (~> 0.6.9)
+      tilt (>= 1.3.3, < 2.1)
     slop (3.6.0)
     spring (1.2.0)
     spring-commands-rspec (1.0.4)
@@ -332,7 +395,9 @@ GEM
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.10)
+    temple (0.6.10)
     terminal-notifier (1.6.2)
+    terminal-table (1.4.5)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -367,7 +432,9 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   bootswatch-rails
+  brakeman
   byebug
+  cane
   capybara
   coffee-rails (~> 4.0.0)
   colorize
@@ -376,12 +443,19 @@ DEPENDENCIES
   devise-i18n
   factory_girl_rails
   faker
+  fastri
   figaro
+  flay
+  flog
   font-awesome-rails
+  fuubar
   growl
+  guard-brakeman
   guard-bundler
+  guard-cane
   guard-rails
   guard-rspec
+  guard-rubocop
   guard-yard
   i18n-js (>= 3.0.0.rc8)
   icheck-rails
@@ -405,11 +479,13 @@ DEPENDENCIES
   rb-fchange
   rb-fsevent
   rb-inotify
+  rcodetools
   redcarpet (~> 2.1.1)
   rolify
   route_translator
   rspec-nc
   rspec-rails
+  rubocop
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   sdoc-templates-42floors
@@ -423,3 +499,4 @@ DEPENDENCIES
   turbolinks
   twitter-bootstrap-rails-confirm
   uglifier (>= 1.3.0)
+  yard

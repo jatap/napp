@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.4'
+ruby '2.1.5'
 
 gem 'rails', '~> 4.2'
 gem 'sqlite3'
@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'puma'
 gem 'simple_form'
@@ -38,10 +38,21 @@ group :development do
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'rubocop'
+  gem 'brakeman', require: false
+  gem 'cane'
+  gem 'rcodetools'
+  gem 'fastri'
+  gem 'flay'
+  gem 'flog'
+  gem 'yard'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-yard'
+  gem 'guard-rubocop'
+  gem 'guard-brakeman'
+  gem 'guard-cane'
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'rb-fchange', :require=>false
@@ -58,6 +69,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-nc'
   gem 'nyan-cat-formatter'
+  gem 'fuubar'
   gem 'byebug'
   gem 'pry'
   gem 'pry-rails'

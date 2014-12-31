@@ -1,0 +1,7 @@
+--color
+--no-doc
+--abc-max 20
+--style-glob {app,lib,spec}/**/*.rb
+--style-exclude spec/**/*
+--style-measure 80
+--abc-glob **/*.rb

@@ -117,7 +117,7 @@ class UsersController < ApplicationController
   end
   private :set_user
 
-  # Never trust parameters from the scary internet, only allow the white list 
+  # Never trust parameters from the scary internet, only allow the white list
   # through.
   #
   # @return [void]

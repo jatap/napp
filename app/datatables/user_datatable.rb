@@ -31,11 +31,13 @@ class UserDatatable < AjaxDatatablesRails::Base
           record.fullname,
           record.email,
           record.roles.join(', '),
-          content_tag(:span, link_to(fa_icon('ellipsis-h'), user_path(record))) +
+          content_tag(:span, link_to(fa_icon('ellipsis-h'), user_path(record)))+
           content_tag(:span, link_to(fa_icon('edit'), edit_user_path(record))) +
           content_tag(:span, link_to(fa_icon('remove'), user_path(record),
                                      method: :delete,
-                                     data: { confirm: t('crud.link.destroy.confirm') }))
+                                     data: {
+                                       confirm: t('crud.link.destroy.confirm')
+                                     }))
       ]
     end
   end
