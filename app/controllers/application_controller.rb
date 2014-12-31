@@ -2,7 +2,6 @@
 #
 # @author julio.antunez.tarin@gmail.com
 class ApplicationController < ActionController::Base
-
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -21,8 +20,8 @@ class ApplicationController < ActionController::Base
   #
   # @param [String] resource_or_scope the resource or scope.
   # @return [String] the required path.
-  def after_sign_in_path_for(resource_or_scope)
-     backend_dashboard_path
+  def after_sign_in_path_for(_resource_or_scope)
+    backend_dashboard_path
   end
 
   # After sign up path.
@@ -38,8 +37,8 @@ class ApplicationController < ActionController::Base
   # @note Default locale is ommited.
   # @param (see #after_sign_up_path_for)
   # @return [String] the required path.
-  def after_sign_out_path_for(resource)
-    I18n.locale == I18n.default_locale ? "/" : "/#{I18n.locale}"
+  def after_sign_out_path_for(_resource)
+    I18n.locale == I18n.default_locale ? '/' : "/#{I18n.locale}"
   end
 
   # Reads locale param in the url and setup the language, if empty sets to
@@ -58,9 +57,11 @@ class ApplicationController < ActionController::Base
   # @param [Hash] the options.
   # @return [void]
   def default_url_options(options = {})
-    I18n.locale.to_sym.eql?(I18n.default_locale.to_sym) ?
-      {} :
+    if I18n.locale.to_sym.eql?(I18n.default_locale.to_sym)
+      {}
+    else
       { locale: I18n.locale }.merge(options)
+    end
   end
 
   # Rewrite pundit/authorization notification message.
@@ -72,11 +73,10 @@ class ApplicationController < ActionController::Base
     set_locale
     # Set flash message
     policy_name = exception.policy.class.to_s.underscore
-    flash[:error] = t("#{policy_name}.#{exception.query}", scope: "pundit",
+    flash[:error] = t("#{policy_name}.#{exception.query}", scope: 'pundit',
                                                            default: :default)
     # Redirect
     redirect_to(request.referrer || root_path)
   end
   private :user_not_authorized
-
 end

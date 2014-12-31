@@ -2,7 +2,6 @@
 #
 # @author julio.antunez.tarin@gmail.com
 class BackendController < ApplicationController
-
   # Authentication
   before_filter :authenticate_user!
 
@@ -14,5 +13,4 @@ class BackendController < ApplicationController
   # @return [void]
   def dashboard
   end
-
 end

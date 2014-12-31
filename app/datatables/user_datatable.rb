@@ -2,7 +2,6 @@
 #
 # @author julio.antunez.tarin@gmail.com
 class UserDatatable < AjaxDatatablesRails::Base
-
   include AjaxDatatablesRails::Extensions::Kaminari
 
   def_delegators :@view, :link_to, :user_path, :edit_user_path, :fa_icon,
@@ -12,14 +11,14 @@ class UserDatatable < AjaxDatatablesRails::Base
   #
   # @return [void]
   def sortable_columns
-    @sortable_columns ||= [ 'users.fullname', 'users.email', 'roles.name' ]
+    @sortable_columns ||= ['users.fullname', 'users.email', 'roles.name']
   end
 
   # Set searchable columns.
   #
   # @return [void]
   def searchable_columns
-    @searchable_columns ||= [ 'users.fullname', 'users.email', 'roles.name' ]
+    @searchable_columns ||= ['users.fullname', 'users.email', 'roles.name']
   end
 
   # Set data.
@@ -28,10 +27,10 @@ class UserDatatable < AjaxDatatablesRails::Base
   def data
     records.map do |record|
       [
-          record.fullname,
-          record.email,
-          record.roles.join(', '),
-          content_tag(:span, link_to(fa_icon('ellipsis-h'), user_path(record)))+
+        record.fullname,
+        record.email,
+        record.roles.join(', '),
+        content_tag(:span, link_to(fa_icon('ellipsis-h'), user_path(record))) +
           content_tag(:span, link_to(fa_icon('edit'), edit_user_path(record))) +
           content_tag(:span, link_to(fa_icon('remove'), user_path(record),
                                      method: :delete,

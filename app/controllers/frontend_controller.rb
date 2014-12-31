@@ -2,7 +2,6 @@
 #
 # @author julio.antunez.tarin@gmail.com
 class FrontendController < ApplicationController
-
   # Layout
   layout 'frontend'
 
@@ -17,5 +16,4 @@ class FrontendController < ApplicationController
   # @return [void]
   def about
   end
-
 end

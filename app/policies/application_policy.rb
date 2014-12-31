@@ -6,7 +6,6 @@
 #   @return [ActiveRecord::Base] the model to handle.
 # @author julio.antunez.tarin@gmail.com
 class ApplicationPolicy
-
   attr_reader :user, :record
 
   # Constructor.
@@ -28,7 +27,7 @@ class ApplicationPolicy
   #
   # @return [Boolean] the permission.
   def show?
-    scope.where(:id => record.id).exists?
+    scope.where(id: record.id).exists?
   end
 
   # Create method policy.
@@ -81,7 +80,6 @@ class ApplicationPolicy
   #   @return [Scope] the policy scope
   # @author julio.antunez.tarin@gmail.com
   class Scope
-
     attr_reader :user, :scope
 
     # Constructor.
@@ -98,8 +96,5 @@ class ApplicationPolicy
     def resolve
       scope
     end
-
   end
-
 end
-

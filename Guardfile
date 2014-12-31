@@ -20,7 +20,7 @@ guard :brakeman,
   output_files:   %w(tmp/brakeman_results.html),
   notifications:  true,
   run_on_start:   false,
-  min_confidence: 1,
+  min_confidence: 3,
   chatty:         true do
 
   watch(%r{^app/.+\.(erb|haml|rhtml|rb)$})
@@ -67,7 +67,7 @@ group :red_green_refactor, halt_on_fail: true do
     guard :rubocop,
       all_on_start: false,
       hide_stdout: false,
-      cli: ['--out', 'tmp/rubocop_results.html', '--format', 'html', '--rails'],
+      cli: ['--out tmp/rubocop_results.html', '--format html', '--rails'],
       notification: true do
 
       watch(%r{.+\.rb$})

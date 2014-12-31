@@ -1,9 +1,12 @@
-# Users Passwords Controller Class.
+# Users Module Class.
 #
 # @author julio.antunez.tarin@gmail.com
-class Users::PasswordsController < Devise::PasswordsController
-
-  # Layout
-  layout 'frontend'
-
+module Users
+  # Passwords Controller Class.
+  #
+  # @author julio.antunez.tarin@gmail.com
+  class PasswordsController < Devise::PasswordsController
+    # Layout
+    layout 'frontend'
+  end
 end

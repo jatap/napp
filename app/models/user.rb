@@ -2,7 +2,6 @@
 #
 # @author julio.antunez.tarin@gmail.com
 class User < ActiveRecord::Base
-
   # Roles
   rolify
 
@@ -12,7 +11,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Check role
-  before_create :check_role!
+  after_create :check_role!
 
   # Mail notification to main admin user
   after_create :admin_notify
@@ -20,26 +19,23 @@ class User < ActiveRecord::Base
   # Check if user has admin role.
   #
   # @return [Boolean] the check result.
-  def is_admin?
+  def admin?
     has_role? :admin
   end
-  alias_method :admin?, :is_admin?
 
   # Check if user has editor role.
   #
   # @return (see #is_admin?)
-  def is_editor?
+  def editor?
     has_role? :editor
   end
-  alias_method :editor?, :is_editor?
 
   # Check if user has user role.
   #
   # @return (see #is_admin?)
-  def is_user?
+  def user?
     has_role? :user
   end
-  alias_method :user?, :is_user?
 
   # Send a notification mail when a user signs up.
   #
