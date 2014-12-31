@@ -1,13 +1,13 @@
 # Base Rails configuration
 AllCops:
-  Includes:
+  Include:
     - Rakefile
     - config.ru
-  Excludes:
-    - db/**
-    - config/**
-    - script/**
-    - tmp/**
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - script/**/*
+    - tmp/**/*
     - app/assets/stylesheets/config.rb
     # TODO Remove this files when tests are done
     - features/step_definitions/email_steps.rb
@@ -22,4 +22,4 @@ Encoding:
 
 LineLength:
   Enabled: false
-  # Max: 80
+  Max: 80
