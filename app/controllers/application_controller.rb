@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
   # Internationalization
   before_action :set_locale
 
+  # Avoid set up locale automaticallty from url param when available
+  # @see route_translator
+  skip_around_filter :set_locale_from_url
+
   # After sign in path.
   #
   # @param [String] resource_or_scope the resource or scope.
@@ -58,7 +62,7 @@ class ApplicationController < ActionController::Base
   # @return [void]
   def default_url_options(options = {})
     if I18n.locale.to_sym.eql?(I18n.default_locale.to_sym)
-      {}
+      {}.merge(options)
     else
       { locale: I18n.locale }.merge(options)
     end
