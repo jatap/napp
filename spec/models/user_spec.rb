@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe User do
   before do
@@ -37,8 +37,7 @@ describe User do
       let(:bad_user) { @user.dup }
 
       before :each do
-        @user.save
-        bad_user.fullname = @user.fullname
+        bad_user.fullname = ''
         bad_user.email    = Faker::Internet.email
       end
 
@@ -47,7 +46,6 @@ describe User do
       end
 
       it 'has 1 error on fullname' do
-        bad_user.fullname = ''
         bad_user.save
         expect(bad_user.errors[:fullname]).to include("can't be blank")
       end
@@ -67,8 +65,7 @@ describe User do
       let(:bad_user) { @user.dup }
 
       before :each do
-        @user.save
-        bad_user.email = @user.email
+        bad_user.email = ''
       end
 
       it 'is invalid' do
@@ -76,7 +73,6 @@ describe User do
       end
 
       it 'has 1 error on email' do
-        bad_user.email = ''
         bad_user.save
         expect(bad_user.errors[:email]).to include("can't be blank")
       end
