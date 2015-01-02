@@ -1,5 +1,5 @@
 app/models/role.rb 82fdcffc6584004e99ef260de51ac81578c3586e
-app/models/user.rb 1631437b3ccee29b5a3e1ba0ffed9f27badfac64
+app/models/user.rb 741f7ec4f1a699d1fbe05677eaee5aeeb447b7c1
 app/mailers/user_mailer.rb 8af4c6bc62447ffb8acb9247eb2cbed007510442
 app/policies/user_policy.rb 183cad9762f9e3be39b9008db10713ba26d4c42d
 app/datatables/user_datatable.rb 1ea2235bb4a63d41085afbbc649cc87ec3e9046b
