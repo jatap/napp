@@ -24,7 +24,7 @@ describe User do
     end
   end
 
-  describe '.fullname' do
+  describe '#fullname' do
     context 'when empty' do
       before { @user.fullname = '' }
 
@@ -52,7 +52,7 @@ describe User do
     end
   end
 
-  describe '.email' do
+  describe '#email' do
     context 'when empty' do
       before { @user.email = '' }
 
@@ -65,7 +65,8 @@ describe User do
       let(:bad_user) { @user.dup }
 
       before :each do
-        bad_user.email = ''
+        @user.save
+        bad_user.email = @user.email
       end
 
       it 'is invalid' do
@@ -74,12 +75,12 @@ describe User do
 
       it 'has 1 error on email' do
         bad_user.save
-        expect(bad_user.errors[:email]).to include("can't be blank")
+        expect(bad_user.errors[:email]).to include("has already been taken")
       end
     end
   end
 
-  context '.role' do
+  context '#role' do
     before :each do
       @user.roles.destroy_all
       @user.save
@@ -115,7 +116,7 @@ describe User do
     end
   end
 
-  context '.editor?' do
+  context '#editor?' do
     before :each do
       @user.add_role :editor
     end
@@ -125,7 +126,7 @@ describe User do
     end
   end
 
-  context '.user?' do
+  context '#user?' do
     before :each do
       @user.add_role :user
     end
@@ -135,7 +136,7 @@ describe User do
     end
   end
 
-  context '.admin?' do
+  context '#admin?' do
     before :each do
       @user.add_role :admin
     end
@@ -145,13 +146,13 @@ describe User do
     end
   end
 
-  describe '.to_s' do
+  describe '#to_s' do
     it 'shows :fullname' do
       expect(@user.to_s).to eq @user.fullname
     end
   end
 
-  describe '.update_with_password' do
+  describe '#update_with_password' do
     context 'when user has valid password' do
       let(:old_fullname) { @user.fullname }
       let(:new_fullname) { @user.fullname + 'test' }
