@@ -19,7 +19,7 @@ FactoryGirl.define do
     roles { [build(:role, name: 'admin')] }
   end
 
-  factory :user_without_password, parent: :user_with_guest_role do
+  factory :user_without_password, parent: :user_with_editor_role do
     password nil
     password_confirmation nil
   end
