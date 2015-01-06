@@ -58,7 +58,7 @@ class ApplicationController < ActionController::Base
 
   # Set default URL options.
   #
-  # @param [Hash] the options.
+  # @param [Hash] options.
   # @return [void]
   def default_url_options(options = {})
     if I18n.locale.to_sym.eql?(I18n.default_locale.to_sym)
