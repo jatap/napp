@@ -173,4 +173,78 @@ RSpec.describe UsersController, type: :controller do
       expect(response).to redirect_to users_en_url
     end
   end
+
+  describe 'user role access' do
+    describe 'GET #new' do
+      it 'requires login' do
+        get :new, locale: :en
+        expect(response).to redirect_to new_user_session_en_url
+      end
+    end
+
+    describe 'GET #edit' do
+      it 'requires login' do
+        user = create(:user_with_user_role)
+        get :edit, locale: :en, id: user
+        expect(response).to redirect_to new_user_session_en_url
+      end
+    end
+
+    describe 'GET #create' do
+      it 'requires login' do
+        post :create, locale: :en, id: create(:user_with_user_role),
+                      user: attributes_for(:user_with_user_role)
+        expect(response).to redirect_to new_user_session_en_url
+      end
+    end
+
+    describe 'GET #update' do
+      it 'requires login' do
+        put :update, locale: :en, id: create(:user_with_user_role),
+                     user: attributes_for(:user_with_user_role)
+        expect(response).to redirect_to new_user_session_en_url
+      end
+    end
+
+    describe 'GET #destroy' do
+      it 'requires login' do
+        delete :destroy, locale: :en, id: create(:user_with_user_role)
+        expect(response).to redirect_to new_user_session_en_url
+      end
+    end
+  end
+
+  describe 'editor role access' do
+    describe 'GET #edit' do
+      it 'requires login' do
+        user = create(:user_with_editor_role)
+        get :edit, locale: :en, id: user
+        expect(response).to redirect_to new_user_session_en_url
+      end
+    end
+
+    describe 'GET #create' do
+      it 'requires login' do
+        post :create, locale: :en, id: create(:user_with_editor_role),
+                      user: attributes_for(:user_with_editor_role)
+        expect(response).to redirect_to new_user_session_en_url
+      end
+    end
+
+    describe 'GET #update' do
+      it 'requires login' do
+        put :update, locale: :en, id: create(:user_with_editor_role),
+                     user: attributes_for(:user_with_editor_role)
+        expect(response).to redirect_to new_user_session_en_url
+      end
+    end
+
+    describe 'GET #destroy' do
+      it 'requires login' do
+        delete :destroy, locale: :en, id: create(:user_with_editor_role)
+        expect(response).to redirect_to new_user_session_en_url
+      end
+    end
+  end
 end
+
