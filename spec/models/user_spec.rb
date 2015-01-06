@@ -75,7 +75,7 @@ describe User do
 
       it 'has 1 error on email' do
         bad_user.save
-        expect(bad_user.errors[:email]).to include("has already been taken")
+        expect(bad_user.errors[:email]).to include('has already been taken')
       end
     end
   end
