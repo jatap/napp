@@ -23,4 +23,9 @@ FactoryGirl.define do
     password nil
     password_confirmation nil
   end
+
+  factory :invalid_user, parent: :user do
+    fullname ''
+    roles { [build(:role, name: 'user')] }
+  end
 end
