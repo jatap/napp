@@ -32,6 +32,7 @@ class ApplicationPolicy
 
   # Create method policy.
   #
+
   # @return [Boolean] the permission.
   def create?
     false
