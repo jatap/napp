@@ -41,7 +41,7 @@ RSpec.describe Users::RegistrationsController, type: :controller do
         patch :update, locale: :en, id: @user,
                        user: admin_user_attributes
         @user.reload
-        expect(@user.fullname).to eq admin_user_attributes["fullname"]
+        expect(@user.fullname).to eq admin_user_attributes['fullname']
       end
 
       it 'redirects to the updated user' do

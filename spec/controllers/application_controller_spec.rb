@@ -20,7 +20,7 @@ RSpec.describe ApplicationController, type: :controller do
       user         = create(:user_with_admin_role)
       sign_in user
       path         = root_path
-      expect(response.request.env["rack.session.options"][:path]).to eq path
+      expect(response.request.env['rack.session.options'][:path]).to eq path
     end
   end
 end
