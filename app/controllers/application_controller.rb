@@ -70,6 +70,7 @@ class ApplicationController < ActionController::Base
 
   # Rewrite pundit/authorization notification message.
   #
+  # :nocov:
   # @param [Pundit::NotAuthorizedError] exception the exception.
   # @return [void]
   def user_not_authorized(exception)
@@ -83,4 +84,5 @@ class ApplicationController < ActionController::Base
     redirect_to(request.referrer || root_path)
   end
   private :user_not_authorized
+  # :nocov:
 end
