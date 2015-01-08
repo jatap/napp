@@ -38,4 +38,3 @@ describe ApplicationPolicy do
     end
   end
 end
-
