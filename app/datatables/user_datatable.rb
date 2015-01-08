@@ -23,6 +23,7 @@ class UserDatatable < AjaxDatatablesRails::Base
 
   # Set data.
   #
+  # :nocov:
   # @return [void]
   def data
     records.map do |record|
@@ -41,6 +42,7 @@ class UserDatatable < AjaxDatatablesRails::Base
     end
   end
   private :data
+  # :nocov:
 
   # Get raw records.
   #
