@@ -11,4 +11,10 @@ feature 'Navigation links', :custom_devise do
     visit root_en_path
     expect(page).to have_content 'About'
   end
+
+  scenario 'change locale to default locale' do
+    I18n.locale = :es
+    visit root_path
+    expect(page).to have_content 'Acerca'
+  end
 end

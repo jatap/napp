@@ -4,4 +4,5 @@
 --require rails_helper
 --format documentation
 --format Nc
---format NyanCatFormatter
+--format Fuubar
+#--format NyanCatFormatter

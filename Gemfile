@@ -78,6 +78,7 @@ group :development, :test do
   gem 'redcarpet', '~> 2.1.1'
   gem 'sdoc-templates-42floors'
   gem 'growl'
+  gem 'json_spec'
 end
 
 group :test do

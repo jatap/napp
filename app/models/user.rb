@@ -10,11 +10,24 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # Check role
+  # Validations
+  validates :fullname, presence: true, uniqueness: true
+
+  # Roles callbacks to handle minimum existence of one element
+  after_initialize :check_role!
   after_create :check_role!
+  after_update :check_role!
+  after_save :check_role!
 
   # Mail notification to main admin user
   after_create :admin_notify
+
+  # To string representation of model.
+  #
+  # @return [String] the username
+  def to_s
+    fullname
+  end
 
   # Check if user has admin role.
   #
@@ -52,5 +65,4 @@ class User < ActiveRecord::Base
     add_role :user if roles.blank?
   end
   private :check_role!
-
 end

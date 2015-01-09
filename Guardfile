@@ -38,7 +38,7 @@ group :red_green_refactor, halt_on_fail: true do
   # RSpec
   guard :rspec,
     cmd:              'bin/spring rspec -f html -o ./tmp/spec_results.html --fail-fast',
-    launchy:          './tmp/spec_results.html',
+    launchy:          false,
     all_on_start:     false,
     failed_mode:      :focus,
     notification:     true do

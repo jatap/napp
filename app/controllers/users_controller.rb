@@ -1,13 +1,7 @@
 # Users Controller Class.
 #
 # @author julio.antunez.tarin@gmail.com
-class UsersController < ApplicationController
-  # Layout
-  layout 'backend'
-
-  # Authentication
-  before_filter :authenticate_user!
-
+class UsersController < AuthenticationController
   # Set user
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
