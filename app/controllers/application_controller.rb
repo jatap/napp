@@ -16,6 +16,9 @@ class ApplicationController < ActionController::Base
   # Internationalization
   before_action :set_locale
 
+  # Internationalization in JS (gon)
+  before_action :set_js_locale
+
   # Avoid set up locale automaticallty from url param when available
   # @see route_translator
   skip_around_filter :set_locale_from_url
@@ -55,6 +58,17 @@ class ApplicationController < ActionController::Base
     I18n.locale = params[:locale] || I18n.default_locale
   end
   protected :set_locale
+
+  # Set locale and default_locale in JS.
+  #
+  # @visibility protected
+  #
+  # @return [Symbol] the locale, `:en` or `:es` as default ones
+  def set_js_locale
+    gon.default_locale = I18n.default_locale
+    gon.locale         = I18n.locale
+  end
+  protected :set_js_locale
 
   # Set default URL options.
   #

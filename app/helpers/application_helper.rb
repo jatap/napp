@@ -2,7 +2,39 @@
 #
 # @author julio.antunez.tarin@gmail.com
 module ApplicationHelper
-  # Create switch locale links.
+  # Create switch locale links (frontend).
+  #
+  # @note Deprecated use of link_to_unless_current
+  #
+  # @return [String] the HTML result with switch locale links.
+  def switch_locale_frontend
+    html = ''
+
+    locales.each_with_index do |locale, _index|
+      link = link_to(locale.to_s.upcase, { locale: locale.to_s },
+                     data: { no_turbolink: true })
+      link = link.gsub(/\/(\?locale=)/, '/')
+
+      if current_locale? locale
+        html += "<li class='active'>"
+        html += link.gsub(/\/(#{locales.join('|')})/, '/')
+      elsif default_locale_on_path? locale
+        html += '<li>'
+        html += link.gsub(%r{/(#{locales.join('|')})/}, '/')
+      elsif default_locale_on_root_path? locale
+        html += '<li>'
+        html += link.gsub(/\/(#{locales.join('|')})/, '/')
+      else
+        html += '<li>'
+        html += link
+      end
+
+      html += '</li>'
+    end
+    raw(html)
+  end
+
+  # Create switch locale links (backend).
   #
   # @note Deprecated use of link_to_unless_current
   #

@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+  <%= link_to fa_icon("unlock"), destroy_user_session_path, :method => 'delete',
+              class: 'logout-nav btn btn-border btn-hoki btn-small btn-circle' %>
+  <%= link_to fa_icon("user"), edit_user_registration_path,
+              class: 'profile-nav btn btn-border btn-hoki btn-small btn-circle' %>
+<% else %>
+  <%= link_to fa_icon("group"), new_user_registration_path,
+              class: 'register-nav btn btn-border btn-hoki btn-small btn-circle' %>
+  <%= link_to fa_icon("lock"), new_user_session_path,
+              class: 'login-nav btn btn-border btn-hoki btn-small btn-circle' %>
+<% end %>

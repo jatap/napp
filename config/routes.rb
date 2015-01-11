@@ -19,11 +19,9 @@ Rails.application.routes.draw do
     get 'backend/dashboard'
 
     devise_for :users,  path: "backend/users", controllers: {
-      confirmations:      "users/confirmations",
       passwords:          "users/passwords",
       registrations:      "users/registrations",
-      sessions:           "users/sessions",
-      unlocks:            "users/unlocks"
+      sessions:           "users/sessions"
     }
 
 

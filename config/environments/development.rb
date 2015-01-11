@@ -36,4 +36,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Generate I18n-js translations.js file (rake i18n:js:export)
+  config.middleware.use I18n::JS::Middleware
 end
