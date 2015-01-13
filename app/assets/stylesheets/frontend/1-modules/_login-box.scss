@@ -1,0 +1,45 @@
+.login-page,
+.register-page,
+.change-password-page {
+  .data {
+    .page-header {
+      border-bottom: 1px dotted $extra-light-gray;
+      padding: 0 0 0.75em;
+      margin-bottom: 3.5em;
+      i {
+        color: $extra-light-gray;
+        float: right;
+        display: inline-block;
+      }
+    }
+    form {
+      @include clearfix;
+      .user_remember_me {
+        margin: 2em 0;
+      }
+      .form-actions {
+        margin: 2.5em 0 2em;
+      }
+    }
+    .user-actions {
+      i {
+        padding-right: 0.5em;
+      }
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.875em;
+      border-top: 1px dotted $extra-light-gray;
+      padding: 3em 0 1em;
+      margin-top: 3em;
+    }
+  }
+}
+
+.login-page .wrapper .data,
+.register-page .wrapper .data,
+.change-password-page .wrapper .data {
+  @include pad(2em);
+  margin-top: 3em;
+  margin-bottom: 3em;
+  background: white;
+}

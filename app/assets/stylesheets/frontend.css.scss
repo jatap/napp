@@ -1,5 +1,7 @@
 @import "font-awesome";
-@import "frontend_bootstrap";
-@import "icheck/flat/_all";
-@import "frontend_base";
-@import "frontend_media_queries";
+
+@import "normalize-rails";
+
+@import "frontend/0-plugins/plugins-dir";
+@import "frontend/1-modules/modules-dir";
+@import "frontend/2-layouts/layouts-dir";

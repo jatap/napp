@@ -7,3 +7,5 @@ en:
       about: "About"
       admin: "Admin"
       jobs: "Trabajos"
+      search:
+        placeholder: "Search ..."

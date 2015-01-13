@@ -1,6 +1,12 @@
-<div class="jumbotron text-center">
-  <%= image_tag "Responsive.png" %>
-  <h1><%= t "frontend.app.title" %></h1>
-  <p><%= t "frontend.home.app.name" %></p>
-  <p><%= link_to fa_icon("toggle-on", text: t("frontend.home.button")), locale_root_path, class: "btn btn-primary btn-lg" %></p>
+<% content_for :body_class, "home-page" %>
+
+<div class="hero texture">
+  <div class="hero-inner texture-normal">
+    <div class="hero-copy">
+      <h1><%= t "frontend.app.title" %></h1>
+      <p><%= t "frontend.home.app.name" %></p>
+    </div>
+    <%= link_to fa_icon("toggle-on"), locale_root_path,
+                class: "btn btn-radical-red btn-circle btn-giant btn-longshadow" %>
+  </div>
 </div>

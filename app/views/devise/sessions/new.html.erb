@@ -1,24 +1,28 @@
+<% content_for :body_class, "login-page" %>
+
 <%= render 'layouts/sidebar_main' %>
 
 <div class="page-header">
-    <h2><%= t "sign_in.title" %></h2>
+  <h2><%= t "sign_in.title" %><%= fa_icon "lock" %></h2>
 </div>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email, required: true, wrapper: :vertical_input_group do %>
-        <span class="input-group-addon"><%= fa_icon "envelope" %></span>
         <%= f.input_field :email, class: "form-control", autofocus: "autofocus" %>
     <% end %>
     <%= f.input :password, required: true, wrapper: :vertical_input_group do %>
-        <span class="input-group-addon"><%= fa_icon "key" %></span>
         <%= f.input_field :password, class: "form-control" %>
     <% end %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%= f.input :remember_me, as: :boolean, inline_label: true,
+                wrapper: :horizontal_radio_and_checkboxes_bourbon if devise_mapping.rememberable? %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, t("sign_in.submit.add") %>
+    <%= button_tag(type: 'submit', id: 'submit-sign-in',
+                   class: "btn btn-radical-red btn-plain btn-circle btn-longshadow") do %>
+      <%= fa_icon "check" %>
+    <% end %>
   </div>
 <% end %>
 

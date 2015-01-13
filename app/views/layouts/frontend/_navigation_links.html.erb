@@ -1,0 +1,5 @@
+<li class="nav-link"><%= link_to_unless_current t("frontend.nav.home"), locale_root_path %></li>
+<li class="nav-link"><%= link_to_unless_current t("frontend.nav.about"), frontend_about_path %></li>
+<% if user_signed_in? %>
+  <li class="nav-link dashboard-nav-link"><%= link_to_unless_current t("frontend.nav.admin"), backend_dashboard_path %></li>
+<% end %>

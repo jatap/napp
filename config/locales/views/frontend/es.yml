@@ -7,3 +7,5 @@ es:
       about: "Acerca de"
       admin: "Administración"
       jobs: "Trabajos"
+      search:
+        placeholder: "Buscar ..."

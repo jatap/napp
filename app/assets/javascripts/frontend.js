@@ -14,7 +14,10 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
-//= require common-error-flash-messages.js
-//= require icheck
-//= require icheck-app
+//= require i18n
+//= require i18n/translations
+//= require buttons/buttons
+//= require frontend/flash-messages
+//= require frontend/nav
+//= require frontend/languages
+//= require typekit

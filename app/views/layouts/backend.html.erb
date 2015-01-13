@@ -4,18 +4,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><%= content_for?(:title) ? yield(:title) : t("backend.app.title") %></title>
         <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t("backend.app.title") %>">
+
+        <%= include_gon %>
+
         <%= stylesheet_link_tag 'backend', media: 'all', 'data-turbolinks-track' => true %>
         <%= javascript_include_tag 'backend', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
 
-        <script type="text/javascript">
-            I18n.defaultLocale = "<%= I18n.default_locale %>";
-            I18n.locale = "<%= I18n.locale %>";
-        </script>
+        <%= javascript_tag do %>
+            I18n.defaultLocale = gon.default_locale;
+            I18n.locale        = gon.locale;
+        <% end %>
     </head>
     <body>
         <header>
-            <%= render 'layouts/backend_navigation' %>
+            <%= render 'layouts/backend/navigation' %>
         </header>
 
         <div class="wrapper">
@@ -26,7 +29,7 @@
             <div class="clearfix"></div>
 
             <div class="content">
-                <%= render 'layouts/messages' %>
+                <%= render 'layouts/backend/messages' %>
                 <div class="main-content">
                     <%= yield %>
                 </div>

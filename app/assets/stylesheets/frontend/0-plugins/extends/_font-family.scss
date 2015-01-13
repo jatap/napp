@@ -1,0 +1,14 @@
+// Custom fonts
+$custom-sans-serif: "proxima-nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$custom-serif: "proxima-nova-alt", Georgia, Cambria, "Times New Roman", Times, serif;
+$custom-extra: "proxima-nova", "proxima-nova-alt", Georgia, Cambria, "Times New Roman", Times, serif;
+
+body {
+    font-weight: normal;
+}
+h1, h2, h3 {
+    font-weight: 900;
+}
+h4, h5, h6 {
+    font-weight: 300;
+}

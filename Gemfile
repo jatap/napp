@@ -33,6 +33,13 @@ gem 'kaminari'
 gem 'i18n-js', '>= 3.0.0.rc8'
 gem 'backburner'
 gem 'beanstalkd_view'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+gem 'refills'
+gem 'normalize-rails'
+gem 'typekit-rails'
+gem 'gon'
 
 group :development do
   gem 'spring'

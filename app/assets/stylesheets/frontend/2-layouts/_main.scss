@@ -1,0 +1,14 @@
+.top {
+    @include outer-container;
+}
+
+.wrapper {
+    @include outer-container;
+    .data {
+        @include span-columns(12);
+    }
+}
+
+.bottom {
+    @include outer-container;
+}

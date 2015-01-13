@@ -121,6 +121,15 @@ SimpleForm.setup do |config|
     end
   end
 
+  config.wrappers :horizontal_radio_and_checkboxes_bourbon, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+    b.use :html5
+    b.optional :readonly
+
+    b.use :input, class: "checkbox"
+    b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
+    b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+  end
+
   config.wrappers :inline_form, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
     b.use :html5
     b.use :placeholder
