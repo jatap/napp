@@ -1,7 +1,15 @@
 <% if user_signed_in? %>
-    <li><%= link_to fa_icon("user") + current_user.email, edit_user_registration_path, class: 'user-edit' %></li>
-    <li><%= link_to fa_icon("unlock"), destroy_user_session_path, :method => 'delete', class: 'user-logout' %></li>
+  <li><%= link_to fa_icon("user") + current_user.email, edit_user_registration_path,
+    class: 'user-edit', id: 'user-edit' %>
+  </li>
+  <li><%= link_to fa_icon("unlock"), destroy_user_session_path,
+    method: 'delete', class: 'user-logout', id: 'user-logout' %>
+  </li>
 <% else %>
-    <li><%= link_to fa_icon("lock"), new_user_session_path, class: 'user-login' %></li>
-    <li><%= link_to fa_icon("group"), new_user_registration_path, class: 'user-register' %></li>
+  <li><%= link_to fa_icon("lock"), new_user_session_path,
+    class: 'user-login', id: 'user-login' %>
+  </li>
+  <li><%= link_to fa_icon("group"), new_user_registration_path,
+    class: 'user-register', id: 'user-register' %>
+  </li>
 <% end %>

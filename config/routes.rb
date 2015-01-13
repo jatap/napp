@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   # Root
   get '/en' => 'frontend#home', locale: :en, as: 'root_en'
+  get '/es' => 'frontend#home', locale: :es, as: 'root_es'
   root to: 'frontend#home'
 
   # Beanstalkd

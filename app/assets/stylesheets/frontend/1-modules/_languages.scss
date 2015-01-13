@@ -121,7 +121,7 @@
 
   .dropdown-menu li {
     border-bottom: $dropdown-inner-border;
-    color: $dropdown-color; 
+    color: $dropdown-color;
     padding: $dropdown-padding / 2;
   }
 
@@ -145,3 +145,11 @@
   }
 }
 // Inspired by code by www.HUSAMUI.com
+
+.language-nav {
+  color: white;
+  .current-locale {
+    padding: 1em 0.5em;
+    display: inline-block;
+  }
+}

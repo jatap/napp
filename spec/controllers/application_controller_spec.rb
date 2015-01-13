@@ -16,10 +16,11 @@ RSpec.describe ApplicationController, type: :controller do
 
   describe '#default_url_options' do
     it 'set locale param if equal to default locale' do
-      I18n.locale  = :es
-      user         = create(:user_with_admin_role)
+      I18n.default_locale = :es
+      I18n.locale         = :es
+      user                = create(:user_with_admin_role)
       sign_in user
-      path         = root_path
+      path = root_path
       expect(response.request.env['rack.session.options'][:path]).to eq path
     end
   end

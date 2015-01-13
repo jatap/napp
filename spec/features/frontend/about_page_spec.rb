@@ -8,6 +8,7 @@ feature 'About page' do
   #   When I visit the 'about' page
   #   Then I see "About the Website"
   scenario 'Visit the about page' do
+    I18n.locale         = :en
     visit frontend_about_en_path
     expect(page).to have_content 'About the Website'
   end

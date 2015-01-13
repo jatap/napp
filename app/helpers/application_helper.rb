@@ -11,19 +11,19 @@ module ApplicationHelper
     html = ''
 
     locales.each_with_index do |locale, _index|
-      link = link_to(locale.to_s.upcase, { locale: locale.to_s },
-                     data: { no_turbolink: true })
+      locale_string = locale.to_s
+      link = link_to(locale_string.upcase, { locale: locale_string },
+                     data: { no_turbolink: true },
+                     id: "frontend-language-#{locale_string.downcase}")
       link = link.gsub(/\/(\?locale=)/, '/')
 
       if current_locale? locale
         html += "<li class='active'>"
-        html += link.gsub(/\/(#{locales.join('|')})/, '/')
-      elsif default_locale_on_path? locale
+        html += "<span class='current-locale'>#{locale_string.upcase}</span>"
+      elsif default_locale_on_path?(locale) ||
+            default_locale_on_root_path?(locale)
         html += '<li>'
-        html += link.gsub(%r{/(#{locales.join('|')})/}, '/')
-      elsif default_locale_on_root_path? locale
-        html += '<li>'
-        html += link.gsub(/\/(#{locales.join('|')})/, '/')
+        html += link.gsub(%r{/(#{locales.join('|')})/?}, '/')
       else
         html += '<li>'
         html += link
@@ -39,23 +39,23 @@ module ApplicationHelper
   # @note Deprecated use of link_to_unless_current
   #
   # @return [String] the HTML result with switch locale links.
-  def switch_locale
+  def switch_locale_backend
     html = ''
 
     locales.each_with_index do |locale, _index|
-      link = link_to(locale.to_s.upcase, { locale: locale.to_s },
-                     data: { no_turbolink: true })
+      locale_string = locale.to_s
+      link = link_to(locale_string.upcase, { locale: locale_string },
+                     data: { no_turbolink: true },
+                     id: "backend-language-#{locale_string.downcase}")
       link = link.gsub(/\/(\?locale=)/, '/')
 
       if current_locale? locale
         html += "<li class='current-locale'>"
-        html += "<span class='current-locale'>#{locale.to_s.upcase}</span>"
-      elsif default_locale_on_path? locale
+        html += "<span class='current-locale'>#{locale_string.upcase}</span>"
+      elsif default_locale_on_path?(locale) ||
+            default_locale_on_root_path?(locale)
         html += '<li>'
         html += link.gsub(%r{/(#{locales.join('|')})/}, '/')
-      elsif default_locale_on_root_path? locale
-        html += '<li>'
-        html += link.gsub(/\/(#{locales.join('|')})/, '/')
       else
         html += '<li>'
         html += link
