@@ -3,3 +3,7 @@ en:
     tabs:
       general: "General data"
       roles: "Roles"
+      date-audit:
+        title: "Dated audit"
+        created: "Account created %{time} ago"
+        updated: "Last update %{time} ago"

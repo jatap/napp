@@ -3,3 +3,7 @@ es:
     tabs:
       general: "Datos generales"
       roles: "Roles"
+      date-audit:
+        title: "Histórico de fechas"
+        created: "Cuenta creada hace %{time}"
+        updated: "Última modificación realizada hace %{time}"

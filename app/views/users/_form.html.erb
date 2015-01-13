@@ -14,6 +14,12 @@
                 <%= fa_icon 'toggle-on' %>
             </a>
         </li>
+        <li role="presentation">
+            <a href="#date-audit" aria-controls="roles" role="tab" data-toggle="tab">
+                <%= t 'crud.tabs.date-audit.title' %>
+                <%= fa_icon 'calendar-o' %>
+            </a>
+        </li>
     </ul>
 
     <%= simple_form_for(@user, html: { class: 'user_crud' }) do |f| %>
@@ -34,6 +40,17 @@
             <div role="tabpanel" class="tab-pane" id="roles">
                 <div class="form-inputs">
                     <%= f.association :roles, as: :check_boxes, label: false %>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="date-audit">
+                <div class="form-inputs">
+                  <ul class="nav">
+                    <li><%= fa_icon 'calendar'%> <%= t('crud.tabs.date-audit.created',
+                                                       time: time_ago_in_words(@user.created_at)) %>.</li>
+                    <li><%= fa_icon 'bolt'%> <%= t('crud.tabs.date-audit.updated',
+                                                   time: time_ago_in_words(@user.updated_at)) %>.</li>
+                  </ul>
                 </div>
             </div>
 

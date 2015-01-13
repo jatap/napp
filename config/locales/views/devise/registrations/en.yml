@@ -6,6 +6,10 @@ en:
       edit: "Update"
     edit:
       title: "Edit %{model}"
+      date-audit:
+        title: "Dated audit"
+        created: "Account created %{time} ago"
+        updated: "Last update %{time} ago"
     cancel_account:
       title: "Cancel my account"
       question: "Unhappy?"

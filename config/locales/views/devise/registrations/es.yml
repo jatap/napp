@@ -6,6 +6,10 @@ es:
       edit: "Actualizar"
     edit:
       title: "Editar %{model}"
+      date-audit:
+        title: "Histórico de fechas"
+        created: "Cuenta creada hace %{time}"
+        updated: "Última modificación realizada hace %{time}"
     cancel_account:
       title: "Cancelar mi cuenta"
       question: "¿No eres feliz?"

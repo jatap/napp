@@ -267,7 +267,24 @@ img {
         padding-right: 0.5em;
     }
 }
-
+form.edit_user {
+  .user-date-audit {
+    margin: 3em 0 3.5em;
+    i {
+      padding-right: 0.33em;
+      font-size: 0.875em;
+      color: $brand-success;
+    }
+  }
+}
+#date-audit {
+  margin-bottom: 1em;
+  i {
+    padding-right: 0.33em;
+    font-size: 0.875em;
+    color: $brand-success;
+  }
+}
 /**
  * Icons
  * -----------------------------------------------------------------------------
