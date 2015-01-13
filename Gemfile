@@ -38,7 +38,6 @@ gem 'neat'
 gem 'bitters'
 gem 'refills'
 gem 'normalize-rails'
-gem 'typekit-rails'
 gem 'gon'
 
 group :development do

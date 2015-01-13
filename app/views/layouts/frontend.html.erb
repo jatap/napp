@@ -5,7 +5,7 @@
         <title><%= content_for?(:title) ? yield(:title) : t("frontend.app.title") %></title>
         <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t("frontend.app.title") %>">
 
-        <%= typekit ENV['typekit_id'] %>
+        <%= typekit %>
         <%= include_gon %>
 
         <%= stylesheet_link_tag 'frontend', media: 'all', 'data-turbolinks-track' => true %>

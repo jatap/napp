@@ -432,7 +432,6 @@ GEM
     turbolinks (2.5.3)
       coffee-rails
     twitter-bootstrap-rails-confirm (1.0.4)
-    typekit-rails (0.0.2)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.0)
@@ -532,6 +531,5 @@ DEPENDENCIES
   sqlite3
   turbolinks
   twitter-bootstrap-rails-confirm
-  typekit-rails
   uglifier (>= 1.3.0)
   yard

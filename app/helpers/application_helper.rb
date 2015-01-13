@@ -73,6 +73,16 @@ module ApplicationHelper
     I18n.locale == I18n.default_locale ? '/' : "/#{I18n.locale}"
   end
 
+  # Set typekit.
+  #
+  # @return [String] the HTML code
+  def typekit
+    onload = "onload='try{Typekit.load();}catch(e){}'"
+    src = "//use.typekit.com/#{ENV['typekit_id']}.js"
+    html = "<script async #{onload} src='#{src}'></script>"
+    raw(html)
+  end
+
   # Check if requested locale is current locale.
   #
   # @param locale [Symbol] locale

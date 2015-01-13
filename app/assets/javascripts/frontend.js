@@ -20,4 +20,3 @@
 //= require frontend/flash-messages
 //= require frontend/nav
 //= require frontend/languages
-//= require typekit
