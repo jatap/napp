@@ -39,5 +39,8 @@ module Napp
 
     # ActiveJob (Beanstalk)
     config.active_job.queue_adapter = :backburner
+
+    # Cumtom error pages
+    config.exceptions_app = self.routes
   end
 end

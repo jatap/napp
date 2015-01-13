@@ -2,3 +2,8 @@ es:
   time:
     formats:
       short: "%Y-%m-%d %H:%M:%S"
+  errors:
+    messages:
+      '404': 'El recurso solicitado no existe.'
+      '422': 'Entidad no procesable por errores semánticos.'
+      '500': 'Ha ocurrido un error en la aplicación.'
