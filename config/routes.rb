@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   get '/es' => 'frontend#home', locale: :es, as: 'root_es'
   root to: 'frontend#home'
 
+  # Error pages
+  %w( 404 422 500 ).each do |code|
+    get code, to: 'errors#show', code: code
+  end
+
+
   # Beanstalkd
   scope '/backend' do
     mount BeanstalkdView::Server, at: "/jobs"

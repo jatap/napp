@@ -2,3 +2,8 @@ en:
   time:
     formats:
       short: "%Y-%m-%d %H:%M:%S"
+  errors:
+    messages:
+      '404': 'Requested resource is not valid.'
+      '422': 'Unprocessable entity due to sematic errors.'
+      '500': 'Application error.'
