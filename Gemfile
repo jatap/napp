@@ -67,6 +67,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'colorize'
   gem 'awesome_print'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
