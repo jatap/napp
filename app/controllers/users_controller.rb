@@ -106,7 +106,7 @@ class UsersController < AuthenticationController
   #
   # @return [void]
   def set_user
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
   private :set_user
 
@@ -115,7 +115,7 @@ class UsersController < AuthenticationController
   #
   # @return [void]
   def user_params
-    params.require(:user).permit(:fullname, :email, :password,
+    params.require(:user).permit(:fullname, :email, :password, :slug,
                                  :password_confirmation, role_ids: [])
   end
   private :user_params

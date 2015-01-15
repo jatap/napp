@@ -1,5 +1,4 @@
 <div role="tabpanel" class="backend-crud-tabs">
-
     <!-- Nav tabs -->
     <ul class="nav nav-pills" role="tablist">
         <li role="presentation" class="active">
@@ -14,12 +13,14 @@
                 <%= fa_icon 'toggle-on' %>
             </a>
         </li>
+        <% unless @user.created_at.blank? %>
         <li role="presentation">
             <a href="#date-audit" aria-controls="roles" role="tab" data-toggle="tab">
                 <%= t 'crud.tabs.date-audit.title' %>
                 <%= fa_icon 'calendar-o' %>
             </a>
         </li>
+        <% end %>
     </ul>
 
     <%= simple_form_for(@user, html: { class: 'user_crud' }) do |f| %>
@@ -31,6 +32,7 @@
 
                 <div class="form-inputs">
                     <%= f.input :fullname, required: false, autofocus: true %>
+                    <%= f.input :slug %>
                     <%= f.input :email, required: true %>
                     <%= f.input :password, autocomplete: "off", hint: t(:password_blank), required: false %>
                     <%= f.input :password_confirmation, required: false %>

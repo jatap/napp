@@ -20,6 +20,7 @@ en:
         username: 'Username to sign in.'
         password: 'No special chars, please.'
         email: 'Valid address.'
+        slug: 'Leave it blank to regenerate.'
     include_blanks:
       defaults:
         age: 'I would rather not to say'

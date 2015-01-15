@@ -11,14 +11,16 @@ class UserDatatable < AjaxDatatablesRails::Base
   #
   # @return [void]
   def sortable_columns
-    @sortable_columns ||= ['users.fullname', 'users.email', 'roles.name']
+    @sortable_columns ||= ['users.fullname', 'users.slug', 'users.email',
+                           'roles.name']
   end
 
   # Set searchable columns.
   #
   # @return [void]
   def searchable_columns
-    @searchable_columns ||= ['users.fullname', 'users.email', 'roles.name']
+    @searchable_columns ||= ['users.fullname', 'users.slug', 'users.email',
+                             'roles.name']
   end
 
   # Set data.
@@ -28,8 +30,9 @@ class UserDatatable < AjaxDatatablesRails::Base
     records.includes(:roles).map do |record|
       [
         record.fullname,
+        record.slug,
         record.email,
-        record.roles.join(', '),
+        record.roles.distinct.join(', '),
         build_record_actions(record)
       ]
     end

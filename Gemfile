@@ -40,6 +40,7 @@ gem 'refills'
 gem 'normalize-rails'
 gem 'gon'
 gem 'traceroute'
+gem 'friendly_id', '>= 5.0.0'
 
 group :development do
   gem 'spring'

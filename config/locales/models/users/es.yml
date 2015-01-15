@@ -11,3 +11,4 @@ es:
         password_confirmation: "Confirma la contraseña"
         remember_me: "Recordar contraseña"
         current_password: "Contraseña actual"
+        slug: "Nombre normalizado"

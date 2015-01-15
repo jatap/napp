@@ -20,6 +20,7 @@ es:
         username: 'Nombre de usuario para conectar.'
         password: 'Sin carácteres especiales, por favor.'
         email: 'Dirección válida.'
+        slug: 'Déjalo en blanco para regenar el valor.'
     include_blanks:
       defaults:
         age: 'Prefiero no decirla'

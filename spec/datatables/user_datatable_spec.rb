@@ -9,7 +9,7 @@ RSpec.describe UserDatatable do
 
     it 'returns custom columns' do
       expect(@datatable.sortable_columns).to eq(
-        ['users.fullname', 'users.email', 'roles.name'])
+        ['users.fullname', 'users.slug', 'users.email', 'roles.name'])
     end
   end
 
@@ -21,7 +21,7 @@ RSpec.describe UserDatatable do
 
     it 'returns custom columns' do
       expect(@datatable.searchable_columns).to eq(
-        ['users.fullname', 'users.email', 'roles.name'])
+        ['users.fullname', 'users.slug', 'users.email', 'roles.name'])
     end
   end
 

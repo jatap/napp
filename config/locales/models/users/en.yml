@@ -11,3 +11,4 @@ en:
         password_confirmation: "Confirm password"
         remember_me: "Remember me"
         current_password: "Current password"
+        slug: "Slug"

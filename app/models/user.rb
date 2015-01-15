@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   # Validations
   validates :fullname, presence: true, uniqueness: true
+  validates :slug, uniqueness: true
 
   # Roles callbacks to handle minimum existence of one element
   after_initialize :check_role!
@@ -21,6 +22,10 @@ class User < ActiveRecord::Base
 
   # Mail notification to main admin user
   after_create :admin_notify
+
+  # Slug
+  extend FriendlyId
+  friendly_id :fullname, use: [:slugged]
 
   # To string representation of model.
   #
@@ -48,6 +53,13 @@ class User < ActiveRecord::Base
   # @return (see #is_admin?)
   def user?
     has_role? :user
+  end
+
+  # Check when regenerate slug.
+  #
+  # @return [Boolean] the check result
+  def should_generate_new_friendly_id?
+    slug.blank?
   end
 
   # Send a notification mail when a user signs up.
