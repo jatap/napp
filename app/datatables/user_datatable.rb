@@ -23,26 +23,43 @@ class UserDatatable < AjaxDatatablesRails::Base
 
   # Set data.
   #
-  # :nocov:
   # @return [void]
   def data
-    records.map do |record|
+    records.includes(:roles).map do |record|
       [
         record.fullname,
         record.email,
         record.roles.join(', '),
-        content_tag(:span, link_to(fa_icon('ellipsis-h'), user_path(record))) +
-          content_tag(:span, link_to(fa_icon('edit'), edit_user_path(record))) +
-          content_tag(:span, link_to(fa_icon('remove'), user_path(record),
-                                     method: :delete,
-                                     data: {
-                                       confirm: t('crud.link.destroy.confirm')
-                                     }))
+        build_record_actions(record)
       ]
     end
   end
   private :data
-  # :nocov:
+
+  # Build record actions
+  #
+  # @param [User] record the user record
+  # @return [String] the action links
+  def build_record_actions(record)
+    show_link   = link_to(fa_icon('ellipsis-h'), user_path(record))
+    show        = content_tag(:span, show_link)
+
+    edit_link   = link_to(fa_icon('edit'), edit_user_path(record))
+    edit        = content_tag(:span, edit_link)
+
+    delete_link = link_to(
+      fa_icon('remove'),
+      user_path(record),
+      method: :delete,
+      data: {
+        confirm: t('crud.link.destroy.confirm')
+      }
+    )
+    delete      = content_tag(:span, delete_link)
+
+    "#{show}#{edit}#{delete}"
+  end
+  private :build_record_actions
 
   # Get raw records.
   #

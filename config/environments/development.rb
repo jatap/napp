@@ -1,5 +1,6 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  # Settings specified here will take precedence over those in
+  # config/application.rb.
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -39,4 +40,16 @@ Rails.application.configure do
 
   # Generate I18n-js translations.js file (rake i18n:js:export)
   config.middleware.use I18n::JS::Middleware
+
+  # Web console
+  config.web_console.whitelisted_ips = %w( 127.0.0.1 )
+
+  config.after_initialize do
+    Bullet.enable        = true
+    Bullet.alert         = true
+    Bullet.bullet_logger = true
+    Bullet.console       = false
+    Bullet.rails_logger  = true
+    Bullet.add_footer    = true
+  end
 end

@@ -39,6 +39,7 @@ gem 'bitters'
 gem 'refills'
 gem 'normalize-rails'
 gem 'gon'
+gem 'traceroute'
 
 group :development do
   gem 'spring'
@@ -52,6 +53,9 @@ group :development do
   gem 'flay'
   gem 'flog'
   gem 'yard'
+  gem 'bullet'
+  gem 'rubycritic', require: false
+  gem 'excellent'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
@@ -59,6 +63,7 @@ group :development do
   gem 'guard-rubocop'
   gem 'guard-brakeman'
   gem 'guard-cane'
+  gem 'guard-rubycritic'
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'rb-fchange', :require=>false

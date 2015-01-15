@@ -44,6 +44,10 @@ GEM
     astrolabe (1.3.0)
       parser (>= 2.2.0.pre.3, < 3.0)
     awesome_print (1.6.1)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
     backburner (0.4.6)
       beaneater (~> 0.3.1)
       dante (~> 0.1.5)
@@ -73,18 +77,21 @@ GEM
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
-    brakeman (3.0.0)
+    brakeman (2.6.1)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
       haml (>= 3.0, < 5.0)
       highline (~> 1.6.20)
       multi_json (~> 1.2)
-      ruby2ruby (~> 2.1.1)
+      ruby2ruby (~> 2.0.5)
       ruby_parser (~> 3.5.0)
       sass (~> 3.0)
       slim (>= 1.3.6, < 3.0)
       terminal-table (~> 1.4)
     builder (3.2.2)
+    bullet (4.14.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (>= 1.6.0)
     byebug (3.5.1)
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
@@ -102,6 +109,8 @@ GEM
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -115,6 +124,8 @@ GEM
     database_cleaner (1.4.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -125,7 +136,12 @@ GEM
     devise-i18n (0.11.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    equalizer (0.0.9)
     erubis (2.7.0)
+    excellent (2.1.1)
+      hashr (>= 0.0.10)
+      ruby_parser (>= 3.0)
+      sexp_processor (>= 4.0)
     execjs (2.2.2)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -142,7 +158,7 @@ GEM
     flay (2.6.0)
       ruby_parser (~> 3.0)
       sexp_processor (~> 4.0)
-    flog (4.3.1)
+    flog (4.2.0)
       ruby_parser (~> 3.1, > 3.1.0)
       sexp_processor (~> 4.4)
     font-awesome-rails (4.2.0.0)
@@ -179,7 +195,7 @@ GEM
       cane
       guard (>= 2.10.0)
       guard-compat (~> 1.1)
-    guard-compat (1.2.0)
+    guard-compat (1.2.1)
     guard-rails (0.7.0)
       guard (~> 2.0)
     guard-rspec (4.5.0)
@@ -189,17 +205,22 @@ GEM
     guard-rubocop (1.2.0)
       guard (~> 2.0)
       rubocop (~> 0.20)
+    guard-rubycritic (0.0.1)
+      guard (~> 2.6)
+      rubycritic (~> 0.0)
     guard-yard (2.1.4)
       guard (>= 1.1.0)
       yard (>= 0.7.0)
     haml (4.0.6)
       tilt
+    hashr (0.0.22)
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.7.0)
     i18n-js (3.0.0.rc8)
       i18n (~> 0.6)
+    ice_nine (0.11.1)
     icheck-rails (1.0.2.1)
       jquery-rails
       rails (>= 3.1.0)
@@ -321,11 +342,15 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     redcarpet (2.1.1)
+    reek (1.3.6)
+      ruby2ruby (~> 2.0.7)
+      ruby_parser (~> 3.2)
+      sexp_processor
     refills (0.0.2)
     request_store (1.1.0)
     responders (2.0.2)
       railties (>= 4.2.0.alpha, < 5)
-    rolify (3.5.1)
+    rolify (3.5.2)
     route_translator (4.0.0)
       actionpack (>= 3.0, < 5.0)
       activesupport (>= 3.0, < 5.0)
@@ -359,11 +384,15 @@ GEM
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.4)
     ruby-progressbar (1.7.1)
-    ruby2ruby (2.1.3)
+    ruby2ruby (2.0.8)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
     ruby_parser (3.5.0)
       sexp_processor (~> 4.1)
+    rubycritic (0.0.6)
+      flog (= 4.2.0)
+      reek (= 1.3.6)
+      virtus (~> 1.0)
     rubyzip (1.1.6)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -429,6 +458,8 @@ GEM
     tilt (1.4.1)
     timers (4.0.1)
       hitimes
+    traceroute (0.4.0)
+      rails (>= 3.0.0)
     turbolinks (2.5.3)
       coffee-rails
     twitter-bootstrap-rails-confirm (1.0.4)
@@ -437,8 +468,14 @@ GEM
     uglifier (2.7.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uniform_notifier (1.6.2)
     vegas (0.1.11)
       rack (>= 1.0.0)
+    virtus (1.0.4)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.0.0)
@@ -466,6 +503,7 @@ DEPENDENCIES
   bootswatch-rails
   bourbon
   brakeman
+  bullet
   byebug
   cane
   capybara
@@ -474,6 +512,7 @@ DEPENDENCIES
   database_cleaner
   devise
   devise-i18n
+  excellent
   factory_girl_rails
   faker
   fastri
@@ -490,6 +529,7 @@ DEPENDENCIES
   guard-rails
   guard-rspec
   guard-rubocop
+  guard-rubycritic
   guard-yard
   i18n-js (>= 3.0.0.rc8)
   icheck-rails
@@ -524,6 +564,7 @@ DEPENDENCIES
   rspec-nc
   rspec-rails
   rubocop
+  rubycritic
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   sdoc-templates-42floors
@@ -534,6 +575,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   sqlite3
+  traceroute
   turbolinks
   twitter-bootstrap-rails-confirm
   uglifier (>= 1.3.0)

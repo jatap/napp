@@ -10,7 +10,6 @@ Rails.application.routes.draw do
     get code, to: 'errors#show', code: code
   end
 
-
   # Beanstalkd
   scope '/backend' do
     mount BeanstalkdView::Server, at: "/jobs"

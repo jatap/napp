@@ -34,6 +34,12 @@ guard :cane do
   watch(%r{^(.+)\.rb$})
 end
 
+# Rubycritic
+guard 'rubycritic' do
+  watch(%r{^app/(.+)\.rb$})
+  watch(%r{^lib/(.+)\.rb$})
+end
+
 group :red_green_refactor, halt_on_fail: true do
   # RSpec
   guard :rspec,
