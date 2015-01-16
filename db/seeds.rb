@@ -11,6 +11,11 @@
 end
 
 User.create! fullname: "Administrador", email: "julio.antunez.tarin@gmail.com",
-             password: "Malament", roles: [ Role.find_by_name(:user),
-                                            Role.find_by_name(:editor),
-                                            Role.find_by_name(:admin) ]
+             password: "Malament",
+             profile:  UserProfile.create!(first_name: 'Administrador',
+                                            last_name: 'Sistemas'),
+             roles: [
+               Role.find_by_name(:user),
+               Role.find_by_name(:editor),
+               Role.find_by_name(:admin)
+             ]

@@ -1,10 +1,64 @@
-/**
- * Media Queries
- * -----------------------------------------------------------------------------
- */
+// Navbar
+.navbar-fixed-top {
+    padding-left: 1em;
+    padding-right: 0.66em;
+
+    .navbar-brand {
+        font-size: inherit;
+    }
+
+    .collapse {
+        .nav-user-links {
+            margin-right: 0%;
+
+            .user-edit {
+                font-size: 0.75em;
+
+                i {
+                    padding-right: 0.5em;
+                    font-size: 1.275em;
+                }
+            }
+
+            a {
+                color: #ffffff;
+                &:hover {
+                    color: #ffffff;
+                    background-color: $brand-warning;
+                }
+            }
+        }
+        .nav-lang-links {
+            padding: 0.66em 1em 0.66em 0.66em;
+
+            .btn-group {
+                .dropdown-menu {
+                    padding: 2em 0;
+                    a {
+                        padding-left: 0.33em;
+                        color: #ffffff;
+                        &:hover {
+                            color: $brand-primary;
+                        }
+                    }
+                }
+            }
+            i {
+                padding-right: 0.5em;
+            }
+
+            .current-locale {
+                color: $brand-primary;
+                background-color: none;
+                padding-top: 0.33em;
+                padding-left: 0.2em;
+                padding-bottom: 0.33em;
+            }
+        }
+    }
+}
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    // Navbar
     .navbar-fixed-top {
         padding-left: 0.33em;
         padding-right: 1em;
@@ -45,57 +99,11 @@
                     padding-bottom: 0;
                 }
             }
-        }
-    }
-
-    // Wrapper
-    .wrapper {
-        padding: 0.63em 0.5em 0em 5em;
-        width: 100%;
-        margin-top: 51px;
-
-        // Sidebar
-        .sidebar {
-            @include make-xs-column(12);
-            margin-left: -56px;
-            left: 56px;
-            width: 56px;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-            z-index: 1000;
-
-            .sidebar-nav {
-                position: absolute;
-                left: 0;
-                ul li {
-                    padding: 0;
-                    a {
-                        width: 56px;
-                        color: #FFFFFF;
-                        &:hover {
-                            background: $gray-lighter;
-                            color: $brand-primary;
-                        }
-                    }
-                }
-                ul li.active a {
-                    background: $gray-lighter;
-                    color: $brand-primary;
-                }
-            }
-        }
-
-        // Content
-        .content {
-            margin-top: 0;
-            padding: 0 1.5em 0 0.5em;
         }
     }
 }
 
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    // Navbar
     .navbar-fixed-top {
         padding-left: 0.33em;
         padding-right: 1em;
@@ -136,57 +144,11 @@
                     padding-bottom: 0;
                 }
             }
-        }
-    }
-
-    // Wrapper
-    .wrapper {
-        padding: 0.63em 0.5em 0em 5em;
-        width: 100%;
-        margin-top: 51px;
-
-        // Sidebar
-        .sidebar {
-            @include make-xs-column(12);
-            margin-left: -56px;
-            left: 56px;
-            width: 56px;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-            z-index: 1000;
-
-            .sidebar-nav {
-                position: absolute;
-                left: 0;
-                ul li {
-                    padding: 0;
-                    a {
-                        width: 56px;
-                        color: #FFFFFF;
-                        &:hover {
-                            background: $gray-lighter;
-                            color: $brand-primary;
-                        }
-                    }
-                }
-                ul li.active a {
-                    background: $gray-lighter;
-                    color: $brand-primary;
-                }
-            }
-        }
-
-        // Content
-        .content {
-            margin-top: 0;
-            padding: 0 1.5em 0 0.5em;
         }
     }
 }
 
 @media (min-width: $screen-lg-min) {
-    // Navbar
     .navbar-fixed-top {
         padding-left: 0.33em;
         padding-right: 1em;
@@ -227,51 +189,6 @@
                     padding-bottom: 0;
                 }
             }
-        }
-    }
-
-    // Wrapper
-    .wrapper {
-        padding: 0.63em 0.5em 0em 5em;
-        width: 100%;
-        margin-top: 51px;
-
-        // Sidebar
-        .sidebar {
-            @include make-xs-column(12);
-            margin-left: -56px;
-            left: 56px;
-            width: 56px;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-            z-index: 1000;
-
-            .sidebar-nav {
-                position: absolute;
-                left: 0;
-                ul li {
-                    padding: 0;
-                    a {
-                        width: 56px;
-                        color: #FFFFFF;
-                        &:hover {
-                            background: $gray-lighter;
-                            color: $brand-primary;
-                        }
-                    }
-                }
-                ul li.active a {
-                    background: $gray-lighter;
-                    color: $brand-primary;
-                }
-            }
-        }
-
-        // Content
-        .content {
-            margin-top: 0;
-            padding: 0 1.5em 0 0.5em;
         }
     }
 }

@@ -1,0 +1,30 @@
+.dataTables_wrapper {
+  .dataTables_paginate {
+    .paginate_button {
+      padding: 0.5em 0;
+      display: inline;
+    }
+  }
+}
+
+.dataTables_info {
+  @extend .label;
+  @extend .label-default;
+  display: inline-block;
+  color: #FFFFFF !important;
+  padding-top: 0.3em !important;
+  margin-top: 3em !important;
+}
+
+.dataTables_wrapper .dataTables_processing {
+  background: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  padding-bottom: 3em;
+  i {
+    padding: 0.5em;
+  }
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border: none !important;
+}

@@ -44,7 +44,7 @@ class UserDatatable < AjaxDatatablesRails::Base
   # @param [User] record the user record
   # @return [String] the action links
   def build_record_actions(record)
-    show_link   = link_to(fa_icon('ellipsis-h'), user_path(record))
+    show_link   = link_to(fa_icon('dot-circle-o'), user_path(record))
     show        = content_tag(:span, show_link)
 
     edit_link   = link_to(fa_icon('edit'), edit_user_path(record))

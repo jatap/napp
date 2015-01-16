@@ -1,0 +1,39 @@
+.wrapper {
+    @extend .container-fluid;
+
+    .sidebar {
+        @include make-row();
+    }
+
+    .content {
+        @include make-row();
+    }
+
+    footer {
+        @include make-xs-column(12);
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .wrapper {
+        .sidebar {
+            @include make-xs-column(12);
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .wrapper {
+        .sidebar {
+            @include make-xs-column(12);
+        }
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .wrapper {
+        .sidebar {
+            @include make-xs-column(12);
+        }
+    }
+}

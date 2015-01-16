@@ -3,27 +3,27 @@
     <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active">
             <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-                <%= fa_icon 'ellipsis-v' %>
-                <%= t 'crud.tabs.general' %>
+              <%= fa_icon 'star' %>
+                <span><%= t 'crud.tabs.general' %></span>
             </a>
         </li>
         <li role="presentation">
             <a href="#roles" aria-controls="roles" role="tab" data-toggle="tab">
-                <%= fa_icon 'sitemap' %>
-                <%= t 'crud.tabs.roles' %>
+              <%= fa_icon 'group' %>
+              <span><%= t 'crud.tabs.roles' %></span>
             </a>
         </li>
         <li role="presentation">
             <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
                 <%= fa_icon 'list' %>
-                <%= t 'crud.tabs.profile' %>
+                <span><%= t 'crud.tabs.profile' %></span>
             </a>
         </li>
         <% unless @user.created_at.blank? %>
         <li role="presentation">
             <a href="#date-audit" aria-controls="date-audit" role="tab" data-toggle="tab">
                 <%= fa_icon 'calendar-o' %>
-                <%= t 'crud.tabs.date-audit.title' %>
+                <span><%= t 'crud.tabs.date-audit.title' %></span>
             </a>
         </li>
         <% end %>

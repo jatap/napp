@@ -16,7 +16,7 @@
             I18n.locale        = gon.locale;
         <% end %>
     </head>
-    <body>
+    <body class="<%= yield (:body_class) %>">
         <header>
             <%= render 'layouts/backend/navigation' %>
         </header>

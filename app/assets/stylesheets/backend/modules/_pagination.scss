@@ -1,0 +1,15 @@
+.pagination-totals {
+  margin-bottom: 2em;
+  @extend .text-right;
+}
+
+div.dataTables_paginate ul.pagination,
+.dataTables_info {
+  margin-top: 2em;
+}
+
+ul.pagination {
+  @extend pagination-sm;
+  white-space: normal !important;
+  margin-right: -1em !important;
+}

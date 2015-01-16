@@ -1,7 +1,9 @@
+<% content_for :body_class, "backend-users-show-page" %>
+
 <%= render 'layouts/sidebar_main' %>
 
 <div class="page-header">
-  <h2><%= fa_icon 'ellipsis-h' %> <%= t "crud.show.title", model: User.model_name.human.pluralize %></h2>
+  <h2><%= fa_icon 'dot-circle-o' %> <%= t "crud.show.title", model: User.model_name.human.pluralize %></h2>
 </div>
 
 <h4 class="page-header"><%= t 'crud.tabs.general' %></h4>
