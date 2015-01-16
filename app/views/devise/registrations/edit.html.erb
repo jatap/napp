@@ -21,10 +21,13 @@
     <%= f.input :password_confirmation, required: false %>
     <%= f.input :current_password, hint: t(:current_password_required), required: true %>
 
+    <legend><%= t 'sign_up.edit.profile' %></legend>
+    <%= render "users/profile", form: f, resource: resource %>
+
     <div class="form-group user-date-audit">
-      <label class="control-label">
+      <legend class="control-label">
         <%= t 'sign_up.edit.date-audit.title' %>
-      </label>
+      </legend>
       <ul class="nav">
         <li><%= fa_icon 'calendar'%> <%= t('sign_up.edit.date-audit.created', time: time_ago_in_words(resource.created_at)) %>.</li>
         <li><%= fa_icon 'bolt'%> <%= t('sign_up.edit.date-audit.updated', time: time_ago_in_words(resource.updated_at)) %>.</li>

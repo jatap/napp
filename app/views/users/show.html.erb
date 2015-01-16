@@ -20,6 +20,24 @@
   <dd><%= @user.roles.join ', ' %></dd>
 </dl>
 
+<h4 class="page-header"><%= t 'crud.tabs.profile' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= User.human_attribute_name('user_profile.first_name') %></dt>
+  <dd><%= @user.profile.first_name %></dd>
+  <dt><%= User.human_attribute_name('user_profile.last_name') %></dt>
+  <dd><%= @user.profile.last_name %></dd>
+  <dt><%= User.human_attribute_name('user_profile.website') %></dt>
+  <dd><%= @user.profile.website %></dd>
+  <dt><%= User.human_attribute_name('user_profile.twitter') %></dt>
+  <dd><%= @user.profile.twitter %></dd>
+  <dt><%= User.human_attribute_name('user_profile.facebook') %></dt>
+  <dd><%= @user.profile.facebook %></dd>
+  <dt><%= User.human_attribute_name('user_profile.google') %></dt>
+  <dd><%= @user.profile.google %></dd>
+  <dt><%= User.human_attribute_name('user_profile.phone') %></dt>
+  <dd><%= @user.profile.phone %></dd>
+</dl>
+
 <h4 class="page-header"><%= t 'crud.tabs.date-audit.title' %></h4>
 <dl class="dl-horizontal">
   <dt><%= fa_icon 'calendar' %></dt>

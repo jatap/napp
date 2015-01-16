@@ -21,6 +21,8 @@ es:
         password: 'Sin carácteres especiales, por favor.'
         email: 'Dirección válida.'
         slug: 'Déjalo en blanco para regenar el valor.'
+      profile:
+        website: 'Incluye el protocolo.'
     include_blanks:
       defaults:
         age: 'Prefiero no decirla'

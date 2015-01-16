@@ -1,9 +1,10 @@
 es:
   crud:
     tabs:
-      general: "Datos generales"
+      general: "General"
       roles: "Roles"
+      profile: "Perfil"
       date-audit:
-        title: "Histórico de fechas"
+        title: "Histórico"
         created: "Cuenta creada hace %{time}"
         updated: "Última modificación realizada hace %{time}"

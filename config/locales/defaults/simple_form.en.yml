@@ -21,6 +21,8 @@ en:
         password: 'No special chars, please.'
         email: 'Valid address.'
         slug: 'Leave it blank to regenerate.'
+      profile:
+        website: 'Include protocol.'
     include_blanks:
       defaults:
         age: 'I would rather not to say'

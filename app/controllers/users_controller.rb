@@ -115,8 +115,11 @@ class UsersController < AuthenticationController
   #
   # @return [void]
   def user_params
-    params.require(:user).permit(:fullname, :email, :password, :slug,
-                                 :password_confirmation, role_ids: [])
+    params.require(:user).permit(
+      :fullname, :email, :password, :slug, :password_confirmation,
+      role_ids: [],
+      profile_attributes: [:first_name, :last_name, :website, :twitter,
+                           :facebook, :google, :phone])
   end
   private :user_params
 

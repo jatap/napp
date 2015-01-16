@@ -10,6 +10,7 @@ es:
         title: "Histórico de fechas"
         created: "Cuenta creada hace %{time}"
         updated: "Última modificación realizada hace %{time}"
+      profile: 'Datos de perfil'
     cancel_account:
       title: "Cancelar mi cuenta"
       question: "¿No eres feliz?"

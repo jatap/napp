@@ -1,9 +1,10 @@
 en:
   crud:
     tabs:
-      general: "General data"
+      general: "General"
       roles: "Roles"
+      profile: "Profile"
       date-audit:
-        title: "Dated audit"
+        title: "Audit"
         created: "Account created %{time} ago"
         updated: "Last update %{time} ago"

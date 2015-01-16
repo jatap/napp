@@ -47,8 +47,11 @@ module Users
     #
     # @return [void]
     def account_update_params
-      params.require(:user).permit(:fullname, :email, :password, :slug,
-                                   :password_confirmation, :current_password)
+      params.require(:user).permit(
+        :fullname, :email, :password, :slug,
+        :password_confirmation, :current_password,
+        profile_attributes: [:first_name, :last_name, :website, :twitter,
+                             :facebook, :google, :phone])
     end
     private :account_update_params
   end

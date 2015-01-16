@@ -1,23 +1,29 @@
 <div role="tabpanel" class="backend-crud-tabs">
     <!-- Nav tabs -->
-    <ul class="nav nav-pills" role="tablist">
+    <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active">
             <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-                <%= t 'crud.tabs.general' %>
                 <%= fa_icon 'ellipsis-v' %>
+                <%= t 'crud.tabs.general' %>
             </a>
         </li>
         <li role="presentation">
             <a href="#roles" aria-controls="roles" role="tab" data-toggle="tab">
+                <%= fa_icon 'sitemap' %>
                 <%= t 'crud.tabs.roles' %>
-                <%= fa_icon 'toggle-on' %>
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                <%= fa_icon 'list' %>
+                <%= t 'crud.tabs.profile' %>
             </a>
         </li>
         <% unless @user.created_at.blank? %>
         <li role="presentation">
-            <a href="#date-audit" aria-controls="roles" role="tab" data-toggle="tab">
-                <%= t 'crud.tabs.date-audit.title' %>
+            <a href="#date-audit" aria-controls="date-audit" role="tab" data-toggle="tab">
                 <%= fa_icon 'calendar-o' %>
+                <%= t 'crud.tabs.date-audit.title' %>
             </a>
         </li>
         <% end %>
@@ -42,6 +48,12 @@
             <div role="tabpanel" class="tab-pane" id="roles">
                 <div class="form-inputs">
                     <%= f.association :roles, as: :check_boxes, label: false %>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="form-inputs">
+                    <%= render "users/profile", form: f, resource: @user %>
                 </div>
             </div>
 

@@ -10,6 +10,7 @@ en:
         title: "Dated audit"
         created: "Account created %{time} ago"
         updated: "Last update %{time} ago"
+      profile: 'Profile data'
     cancel_account:
       title: "Cancel my account"
       question: "Unhappy?"

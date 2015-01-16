@@ -1,0 +1,15 @@
+es:
+  activerecord:
+    models:
+      user_profile:
+        one: "Perfil de usuario"
+        other: "Perfil de usuarios"
+    attributes:
+      user_profile:
+        first_name: "Nombre"
+        last_name: "Apellidos"
+        website: "Sitio web"
+        twitter: "Twitter"
+        facebook: "Facebook"
+        google: "Google"
+        phone: "Teléfono"

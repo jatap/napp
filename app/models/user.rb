@@ -23,6 +23,11 @@ class User < ActiveRecord::Base
   # Mail notification to main admin user
   after_create :admin_notify
 
+  # Profile association
+  has_one :profile, validate: true, dependent: :destroy, inverse_of: :user,
+                    class_name: 'UserProfile'
+  accepts_nested_attributes_for :profile
+
   # Slug
   extend FriendlyId
   friendly_id :fullname, use: [:slugged]
