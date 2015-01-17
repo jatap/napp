@@ -28,3 +28,4 @@
 //= require backend/icheck/app
 //= require backend/flash-messages
 //= require backend/crud
+//= require dropzone

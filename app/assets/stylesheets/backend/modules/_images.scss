@@ -6,5 +6,13 @@ img {
     img {
         margin: 0;
         @extend .img-circle;
+        border: 9px solid $gray-light;
+    }
+}
+.user_crud {
+    img {
+        margin: 1em auto;
+        @extend .img-circle;
+        border: 9px solid $gray-lighter;
     }
 }

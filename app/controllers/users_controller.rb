@@ -26,6 +26,11 @@ class UsersController < AuthenticationController
   #
   # @return [void]
   def show
+    @user = User.friendly.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   # New action.
@@ -76,7 +81,7 @@ class UsersController < AuthenticationController
     respond_to do |format|
       if successfully_updated
         format.html { redirect_to users_path, notice: t('crud.flash.edit') }
-        format.json { render :show, status: :ok, location: @user }
+        format.json { render :edit, status: :ok, location: @user, json: @user }
       else
         format.html { render :edit }
         format.json { render json: @user.errors, status: :unprocessable_entity }

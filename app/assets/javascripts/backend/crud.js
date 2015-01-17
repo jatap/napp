@@ -1,13 +1,13 @@
 /**
  * Functions
  */
-function form_actions(){
+function form_actions() {
     $(".fa-navicon").click(function() {
         $(".form-actions").toggle();
     });
 }
 
-function form_list_grid(){
+function form_list_grid() {
     $('.datatable').DataTable({
         dom: 'Rlfrtip',
         stateSave: true,
@@ -48,10 +48,65 @@ function form_list_grid(){
     });
 }
 
-function custom_select2(){
+function custom_select2() {
     $("select").select2({
         dropdownCssClass: 'dropdown-inverse'
     });
+}
+
+function upload_images() {
+
+  Dropzone.autoDiscover = false;
+
+  // Set default options
+  $(".dropzone").dropzone({
+
+    // Options
+    maxFiles: 1,
+    maxFilesize: 1,
+    paramName: "user[avatar]",
+    addRemoveLinks: true,
+    previewsContainer: '.dropzone-previews',
+    autoProcessQueue: true,
+
+    // Translations
+    dictDefaultMessage: I18n.t('crud.tabs-content.media.input.file'),
+    dictFallbackMessage: I18n.t('crud.tabs-content.media.fallback-message'),
+    dictFallbackText: I18n.t('crud.tabs-content.media.fallback-text'),
+    dictInvalidFileType: I18n.t('crud.tabs-content.media.error.invalid-file-type'),
+    dictFileTooBig: I18n.t('crud.tabs-content.media.error.file-too-big'),
+    dictResponseError: I18n.t('crud.tabs-content.media.error.response'),
+    dictCancelUpload: I18n.t('crud.tabs-content.media.cancel.upload'),
+    dictCancelUploadConfirmation: I18n.t('crud.tabs-content.media.cancel.upload-confirmation'),
+    dictRemoveFile: I18n.t('crud.tabs-content.media.input.checkbox'),
+    dictMaxFilesExceeded: I18n.t('crud.tabs-content.media.error.max-files'),
+
+    success: function(file, response, event) {
+      // Update image src
+      var avatar = $(".avatar-previews .attachment");
+
+      if (avatar.length + 0) {
+        var new_src_array = avatar.attr("src").split("/");
+        var old_id = new_src_array[new_src_array.length - 2];
+        var old_filename = new_src_array[new_src_array.length - 1];
+
+        new_src_array[new_src_array.length - 2] = response.avatar_id;
+        new_src_array[new_src_array.length - 1] = encodeURI(response.avatar_filename);
+        var new_src = new_src_array.join("/");
+      }
+
+      avatar.attr("src", new_src);
+    }
+  });
+
+  // Move generated div inside crud edit media tag
+  var dropzone_message      = $(".dz-message");
+  var dropzone_message_html = "<label class='control-label control-label-file-input'>"
+    + dropzone_message.prop('outerHTML') + "</label>";
+  var media_tab             = $("#media #user_avatar");
+  media_tab.after(dropzone_message_html);
+  dropzone_message.remove();
+
 }
 
 /**
@@ -59,8 +114,9 @@ function custom_select2(){
  */
 $(function(){
 
-    form_actions();
-    form_list_grid();
-    custom_select2();
+  form_actions();
+  form_list_grid();
+  custom_select2();
+  upload_images();
 
 });

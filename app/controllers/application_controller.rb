@@ -75,7 +75,8 @@ class ApplicationController < ActionController::Base
   # @param [Hash] options.
   # @return [void]
   def default_url_options(options = {})
-    if I18n.locale.to_sym.eql?(I18n.default_locale.to_sym)
+    if I18n.locale.to_sym.eql?(I18n.default_locale.to_sym) ||
+       params[:locale]
       {}.merge(options)
     else
       { locale: I18n.locale }.merge(options)

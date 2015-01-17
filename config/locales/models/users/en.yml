@@ -14,4 +14,4 @@ en:
         slug: "Slug"
         avatar: "Image"
         remote_avatar_url: "Image URL"
-        remove_avatar: "Eliminar imagen"
+        remove_avatar: "Delete image"

@@ -17,6 +17,18 @@
         background: #FFFFFF;
         padding: 2em;
     }
+
+    .dz-message {
+        border-bottom: 1px dotted $brand-primary;
+        &:hover {
+            color: $brand-default;
+            border-color: $brand-default;
+        }
+    }
+
+    #user_remove_avatar {
+        margin-right: 0.5em;
+    }
 }
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {

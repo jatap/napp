@@ -9,3 +9,19 @@ es:
         title: "Histórico"
         created: "Cuenta creada hace %{time}"
         updated: "Última modificación realizada hace %{time}"
+    tabs-content:
+      media:
+        input:
+          file: "Pulsa para seleccionar una imagen"
+          text: "O escribe una URL remota"
+          checkbox: "Borrar"
+        fallback-message: "El navegador no soporta arrastrar archivos para subirlos."
+        fallback-text: "Utiliza el formulario de abajo para subir los archivos."
+        cancel:
+          upload: "Cancelar la descarga"
+          upload-confirmation: "¿Estás seguro en cancelar la descarga?"
+        error:
+          max-files: "Sólo se permite subir una imágen."
+          invalid-file-type: "El tipo de archivo no es correcto."
+          file-too-big: "El archivo es demasiado grande."
+          response: "La respuesta del servidor es inválida."
