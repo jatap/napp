@@ -41,6 +41,8 @@ gem 'normalize-rails'
 gem 'gon'
 gem 'traceroute'
 gem 'friendly_id', '>= 5.0.0'
+gem 'mini_magick'
+gem 'refile', require: ['refile/rails', 'refile/image_processing']
 
 group :development do
   gem 'spring'

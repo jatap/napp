@@ -2,3 +2,9 @@ img {
     @extend .img-responsive;
     margin: 0 auto;
 }
+.backend-users-show-page {
+    img {
+        margin: 0;
+        @extend .img-circle;
+    }
+}

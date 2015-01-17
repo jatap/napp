@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116004118) do
+ActiveRecord::Schema.define(version: 20150117114609) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -67,6 +67,10 @@ ActiveRecord::Schema.define(version: 20150116004118) do
     t.datetime "updated_at"
     t.string   "fullname"
     t.string   "slug",                                null: false
+    t.string   "avatar_id"
+    t.string   "avatar_filename"
+    t.integer  "avatar_size"
+    t.string   "avatar_content_type"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

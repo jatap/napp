@@ -32,6 +32,9 @@ class User < ActiveRecord::Base
   extend FriendlyId
   friendly_id :fullname, use: [:slugged]
 
+  # Image
+  attachment :avatar, content_type: ['image/jpeg', 'image/png', 'image/gif']
+
   # To string representation of model.
   #
   # @return [String] the username

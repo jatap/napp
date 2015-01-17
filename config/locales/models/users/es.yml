@@ -12,3 +12,6 @@ es:
         remember_me: "Recordar contraseña"
         current_password: "Contraseña actual"
         slug: "Nombre normalizado"
+        avatar: "Imagen"
+        remote_avatar_url: "URL de la imagen"
+        remove_avatar: "Eliminar imagen"

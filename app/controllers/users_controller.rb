@@ -117,6 +117,7 @@ class UsersController < AuthenticationController
   def user_params
     params.require(:user).permit(
       :fullname, :email, :password, :slug, :password_confirmation,
+      :avatar, :remove_avatar, :remote_avatar_url,
       role_ids: [],
       profile_attributes: [:first_name, :last_name, :website, :twitter,
                            :facebook, :google, :phone])

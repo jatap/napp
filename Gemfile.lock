@@ -271,6 +271,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     method_source (0.8.2)
     mime-types (2.4.3)
+    mini_magick (4.0.2)
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.10.1)
@@ -358,6 +359,9 @@ GEM
       parser (~> 2.2.0.pre.7)
       rainbow (>= 1.99, < 3.0)
       unparser (~> 0.1.16)
+    refile (0.5.2)
+      mime-types
+      sinatra (~> 1.4.5)
     refills (0.0.2)
     request_store (1.1.0)
     responders (2.0.2)
@@ -563,6 +567,7 @@ DEPENDENCIES
   json_spec
   kaminari
   launchy
+  mini_magick
   neat
   normalize-rails
   nyan-cat-formatter
@@ -581,6 +586,7 @@ DEPENDENCIES
   rb-inotify
   rcodetools
   redcarpet (~> 2.1.1)
+  refile
   refills
   rolify
   route_translator

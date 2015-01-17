@@ -12,3 +12,6 @@ en:
         remember_me: "Remember me"
         current_password: "Current password"
         slug: "Slug"
+        avatar: "Image"
+        remote_avatar_url: "Image URL"
+        remove_avatar: "Eliminar imagen"

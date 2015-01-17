@@ -2,6 +2,7 @@ es:
   crud:
     tabs:
       general: "General"
+      media: "Media"
       roles: "Roles"
       profile: "Perfil"
       date-audit:
