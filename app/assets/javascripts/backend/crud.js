@@ -55,19 +55,6 @@ function custom_select2() {
 }
 
 function uploader() {
-  $(document).on('change', '.btn-file :file', function() {
-    var input = $(this),
-        files = input.get(0).files,
-        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-    input.trigger('fileselect', [files, label]);
-  });
-
-  $(document).ready( function() {
-    $('.btn-file :file').on('fileselect', function(event, files, label) {
-      $(".avatar-previews img").remove();
-      $(".avatar-previews p").html(label);
-    });
-  });
 }
 
 /**
