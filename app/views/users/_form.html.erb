@@ -35,7 +35,7 @@
         <% end %>
     </ul>
 
-    <%= simple_form_for(@user, html: { class: 'user_crud', multipart: true }) do |f| %>
+    <%= simple_form_for(@user, html: { class: 'user_crud', id: 'edit-user-form', multipart: true }) do |f| %>
         <%= f.error_notification %>
 
         <!-- Tab panes -->
@@ -53,15 +53,18 @@
 
             <div role="tabpanel" class="tab-pane" id="media">
                 <div class="form-inputs">
-                    <%= f.attachment_field :avatar, direct: true %>
+                    <span class="btn btn-default btn-file btn-xs btn-info">
+                      <%= fa_icon 'upload' %>
+                      <%= f.label :avatar %>
+                      <%= f.attachment_field :avatar, direct: true %>
+                    </span>
 
                     <% unless @user.avatar.blank? %>
                     <div class="avatar-previews">
                       <%= attachment_image_tag(@user, :avatar, :fill, 100, 100) %>
+                      <p><%= @user.avatar_filename %></p>
                     </div>
                     <% end %>
-
-                    <div class="avatar-previews"></div>
 
                     <%= f.input :remote_avatar_url, label: t('crud.tabs-content.media.input.text') %>
 

@@ -21,6 +21,18 @@
     #user_remove_avatar {
         margin-right: 0.5em;
     }
+
+    .user_remote_avatar_url {
+        margin-top: 1em;
+    }
+
+    .avatar-previews {
+        p {
+            text-align: center;
+            font-variant: small-caps;
+            margin-bottom: 1em;
+        }
+    }
 }
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
