@@ -43,7 +43,6 @@ gem 'traceroute'
 gem 'friendly_id', '>= 5.0.0'
 gem 'mini_magick'
 gem 'refile', require: ['refile/rails', 'refile/image_processing']
-gem 'dropzonejs-rails'
 
 group :development do
   gem 'spring'
