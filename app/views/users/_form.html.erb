@@ -25,6 +25,12 @@
                 <span><%= t 'crud.tabs.profile' %></span>
             </a>
         </li>
+        <li role="presentation">
+            <a href="#social-network" aria-controls="social-network" role="tab" data-toggle="tab">
+                <%= fa_icon 'cloud' %>
+                <span><%= t 'crud.tabs.social-network' %></span>
+            </a>
+        </li>
         <% unless @user.created_at.blank? %>
         <li role="presentation">
             <a href="#date-audit" aria-controls="date-audit" role="tab" data-toggle="tab">
@@ -63,9 +69,9 @@
                 </div>
             </div>
 
-            <div role="tabpanel" class="tab-pane" id="profile">
+            <div role="tabpanel" class="tab-pane" id="social-network">
                 <div class="form-inputs">
-                    <%= render "users/profile", form: f, resource: @user %>
+                    <%= render "users/social_network", form: f, resource: @user %>
                 </div>
             </div>
 
@@ -85,6 +91,12 @@
                 </div>
             </div>
             <% end %>
+
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="form-inputs">
+                    <%= render "users/profile", form: f, resource: @user %>
+                </div>
+            </div>
 
             <div class="label label-default form-actions-header">
               <%= fa_icon "navicon" %><%= t 'crud.column.actions' %>

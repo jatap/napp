@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    models:
+      user_profile:
+        one: "Social network"
+        other: "Social networks"
+    attributes:
+      user_profile:
+        twitter: "Twitter"
+        facebook: "Facebook"
+        google_plus: "Google Plus"
+        instagram: "Instagram"
+        youtube: "Youtube"
+        whatsup: "Whatsup"
+        linkedin: "Linkedin"
+        pinterest: "Pinterest"
+        flickr: "Flickr"
+        digg: "Digg"
+        reddit: "Reddit"

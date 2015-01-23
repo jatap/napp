@@ -12,9 +12,6 @@ RSpec.describe UserProfile, type: :model do
     [:first_name,
      :last_name,
      :website,
-     :twitter,
-     :facebook,
-     :google,
      :phone].each do |expected_attribute|
       it { expect(@user_profile).to respond_to expected_attribute }
     end

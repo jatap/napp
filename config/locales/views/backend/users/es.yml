@@ -5,6 +5,7 @@ es:
       media: "Media"
       roles: "Roles"
       profile: "Perfil"
+      social-network: "Red social"
       date-audit:
         title: "Histórico"
         created: "Cuenta creada hace %{time}"

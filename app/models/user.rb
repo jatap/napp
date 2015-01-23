@@ -38,6 +38,12 @@ class User < ActiveRecord::Base
                     class_name: 'Picture'
   accepts_nested_attributes_for :picture
 
+  # Social network
+  has_one :social_network, validate: true, dependent: :destroy,
+                           inverse_of: :user,
+                           class_name: 'UserSocialNetwork'
+  accepts_nested_attributes_for :social_network
+
   # To string representation of model.
   #
   # @return [String] the username

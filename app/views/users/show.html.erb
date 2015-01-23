@@ -30,6 +30,7 @@
   <dd><%= @user.roles.join ', ' %></dd>
 </dl>
 
+<% unless @user.profile.blank? %>
 <h4 class="page-header"><%= t 'crud.tabs.profile' %></h4>
 <dl class="dl-horizontal">
   <dt><%= User.human_attribute_name('user_profile.first_name') %></dt>
@@ -38,15 +39,38 @@
   <dd><%= @user.profile.last_name %></dd>
   <dt><%= User.human_attribute_name('user_profile.website') %></dt>
   <dd><%= @user.profile.website %></dd>
-  <dt><%= User.human_attribute_name('user_profile.twitter') %></dt>
-  <dd><%= @user.profile.twitter %></dd>
-  <dt><%= User.human_attribute_name('user_profile.facebook') %></dt>
-  <dd><%= @user.profile.facebook %></dd>
-  <dt><%= User.human_attribute_name('user_profile.google') %></dt>
-  <dd><%= @user.profile.google %></dd>
   <dt><%= User.human_attribute_name('user_profile.phone') %></dt>
   <dd><%= @user.profile.phone %></dd>
 </dl>
+<% end %>
+
+<% unless @user.social_network.blank? %>
+<h4 class="page-header"><%= t 'crud.tabs.social-network' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= User.human_attribute_name('user_social_network.twitter') %></dt>
+  <dd><%= @user.social_network.twitter %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.facebook') %></dt>
+  <dd><%= @user.social_network.facebook %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.google_plus') %></dt>
+  <dd><%= @user.social_network.google_plus %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.instagram') %></dt>
+  <dd><%= @user.social_network.instagram %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.youtube') %></dt>
+  <dd><%= @user.social_network.youtube %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.whatsup') %></dt>
+  <dd><%= @user.social_network.whatsup %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.linkedin') %></dt>
+  <dd><%= @user.social_network.linkedin %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.pinterest') %></dt>
+  <dd><%= @user.social_network.pinterest %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.flickr') %></dt>
+  <dd><%= @user.social_network.flickr %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.digg') %></dt>
+  <dd><%= @user.social_network.digg %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.reddit') %></dt>
+  <dd><%= @user.social_network.reddit %></dd>
+</dl>
+<% end %>
 
 <h4 class="page-header"><%= t 'crud.tabs.date-audit.title' %></h4>
 <dl class="dl-horizontal">

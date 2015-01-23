@@ -5,6 +5,7 @@ en:
       media: "Media"
       roles: "Roles"
       profile: "Profile"
+      social-network: "Social network"
       date-audit:
         title: "Audit"
         created: "Account created %{time} ago"

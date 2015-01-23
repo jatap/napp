@@ -1,7 +1,6 @@
 # UserProfile Model
 #
 # @author julio.antunez.tarin@gmail.com
-#
 class UserProfile < ActiveRecord::Base
   # Master association
   belongs_to :user, inverse_of: :profile

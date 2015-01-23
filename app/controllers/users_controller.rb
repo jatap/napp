@@ -158,7 +158,10 @@ class UsersController < AuthenticationController
       :remove_picture,
       profile_attributes: [:first_name, :last_name, :website, :twitter,
                            :facebook, :google, :phone],
-      role_ids: [], picture_attributes: [:avatar])
+      role_ids: [], picture_attributes: [:avatar],
+      social_network_attributes: [:twitter, :facebook, :google_plus,
+                                  :instagram, :youtube, :whatsup, :linkedin,
+                                  :pinterest, :flickr, :digg, :reddit])
   end
   private :user_params
 

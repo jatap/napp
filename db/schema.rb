@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150122014023) do
+ActiveRecord::Schema.define(version: 20150123021018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,9 +57,6 @@ ActiveRecord::Schema.define(version: 20150122014023) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "website"
-    t.string   "twitter"
-    t.string   "facebook"
-    t.string   "google"
     t.string   "phone"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -67,6 +64,25 @@ ActiveRecord::Schema.define(version: 20150122014023) do
   end
 
   add_index "user_profiles", ["user_id"], name: "index_user_profiles_on_user_id", using: :btree
+
+  create_table "user_social_networks", force: :cascade do |t|
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "google_plus"
+    t.string   "instagram"
+    t.string   "youtube"
+    t.string   "whatsup"
+    t.string   "linkedin"
+    t.string   "pinterest"
+    t.string   "flickr"
+    t.string   "digg"
+    t.string   "reddit"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "user_social_networks", ["user_id"], name: "index_user_social_networks_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -98,4 +114,5 @@ ActiveRecord::Schema.define(version: 20150122014023) do
 
   add_foreign_key "pictures", "users"
   add_foreign_key "user_profiles", "users"
+  add_foreign_key "user_social_networks", "users"
 end
