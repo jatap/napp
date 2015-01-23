@@ -8,6 +8,12 @@
             </a>
         </li>
         <li role="presentation">
+            <a href="#media" aria-controls="media" role="tab" data-toggle="tab">
+              <%= fa_icon 'photo' %>
+              <span><%= t 'crud.tabs.media' %></span>
+            </a>
+        </li>
+        <li role="presentation">
             <a href="#roles" aria-controls="roles" role="tab" data-toggle="tab">
               <%= fa_icon 'group' %>
               <span><%= t 'crud.tabs.roles' %></span>
@@ -29,7 +35,7 @@
         <% end %>
     </ul>
 
-    <%= simple_form_for(@user, html: { class: 'user_crud' }) do |f| %>
+    <%= simple_form_for(@user, html: { class: 'user_crud', id: 'edit-user-form', multipart: true }) do |f| %>
         <%= f.error_notification %>
 
         <!-- Tab panes -->
@@ -42,6 +48,12 @@
                     <%= f.input :email, required: true %>
                     <%= f.input :password, autocomplete: "off", hint: t(:password_blank), required: false %>
                     <%= f.input :password_confirmation, required: false %>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="media">
+                <div class="form-inputs">
+                    <%= render "users/picture", form: f, resource: @user %>
                 </div>
             </div>
 

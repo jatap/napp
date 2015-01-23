@@ -26,6 +26,11 @@ class UsersController < AuthenticationController
   #
   # @return [void]
   def show
+    @user = User.friendly.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   # New action.
@@ -46,6 +51,9 @@ class UsersController < AuthenticationController
   # @return [void]
   def create
     @user = User.new(user_params)
+
+    check_and_remove_picture!
+
     respond_to do |format|
       if @user.save
         format.html { redirect_to users_path, notice: t('crud.flash.add') }
@@ -67,6 +75,9 @@ class UsersController < AuthenticationController
       user_params.delete(:password_confirmation)
     end
 
+    update_picture_avatar!
+    check_and_remove_picture!
+
     successfully_updated = if needs_password?(@user, user_params)
                              @user.update(user_params)
                            else
@@ -76,7 +87,7 @@ class UsersController < AuthenticationController
     respond_to do |format|
       if successfully_updated
         format.html { redirect_to users_path, notice: t('crud.flash.edit') }
-        format.json { render :show, status: :ok, location: @user }
+        format.json { render :edit, status: :ok, location: @user, json: @user }
       else
         format.html { render :edit }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -102,6 +113,30 @@ class UsersController < AuthenticationController
     @sidebar_active = 'users'
   end
 
+  # Update picture avatar (remove related param when data comes empty).
+  #
+  # @return [void]
+  def update_picture_avatar!
+    return unless params[:user][:picture_attributes].present?
+    avatar = params[:user][:picture_attributes][:avatar]
+    params[:user].delete :picture_attributes if avatar.blank?
+  end
+  private :update_picture_avatar!
+
+  # Check and remove picture.
+  #
+  # Check from request params and remove from model instance.
+  #
+  # @return [void]
+  def check_and_remove_picture!
+    if params[:user][:remove_picture] == '1'
+      params[:user].delete :picture_attributes
+      @user.picture.avatar = nil if @user.picture.present?
+    end
+    params[:user].delete :remove_picture
+  end
+  private :check_and_remove_picture!
+
   # Use callbacks to share common setup or constraints between actions.
   #
   # @return [void]
@@ -117,9 +152,10 @@ class UsersController < AuthenticationController
   def user_params
     params.require(:user).permit(
       :fullname, :email, :password, :slug, :password_confirmation,
-      role_ids: [],
+      :remove_picture,
       profile_attributes: [:first_name, :last_name, :website, :twitter,
-                           :facebook, :google, :phone])
+                           :facebook, :google, :phone],
+      role_ids: [], picture_attributes: [:avatar])
   end
   private :user_params
 

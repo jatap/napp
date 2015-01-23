@@ -12,3 +12,5 @@ es:
         remember_me: "Recordar contraseña"
         current_password: "Contraseña actual"
         slug: "Nombre normalizado"
+        picture: "Imagen"
+        remove_picture: "Eliminar imagen"

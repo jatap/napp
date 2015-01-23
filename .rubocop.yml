@@ -30,3 +30,6 @@ Metrics/AbcSize:
 
 Style/AccessorMethodName:
   Enabled: false
+
+ClassLength:
+  Enabled: false

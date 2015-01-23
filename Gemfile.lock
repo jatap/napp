@@ -78,7 +78,7 @@ GEM
       sass (~> 3.2)
     bootswatch-rails (3.2.4)
       railties (>= 3.1)
-    bourbon (3.2.3)
+    bourbon (3.2.4)
       sass (~> 3.2)
       thor
     brakeman (3.0.0)
@@ -112,6 +112,10 @@ GEM
       timers (~> 4.0.0)
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.5)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
@@ -171,7 +175,7 @@ GEM
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
     formatador (0.2.5)
-    friendly_id (5.0.4)
+    friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     fuubar (2.0.0)
       rspec (~> 3.0)
@@ -277,7 +281,7 @@ GEM
     neat (1.5.1)
       bourbon (>= 3.1)
       sass (~> 3.2.19)
-    nenv (0.1.1)
+    nenv (0.2.0)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     normalize-rails (3.0.1)
@@ -287,9 +291,15 @@ GEM
     nyan-cat-formatter (0.11)
       rspec (>= 2.99, >= 2.14.2, < 4)
     orm_adapter (0.5.0)
+    paperclip (4.2.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     parallel (1.3.3)
     parser (2.2.0.2)
       ast (>= 1.1, < 3.0)
+    pg (0.18.1)
     powerpack (0.0.9)
     procto (0.0.2)
     pry (0.10.1)
@@ -354,10 +364,10 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     redcarpet (2.1.1)
-    reek (1.6.0)
+    reek (1.6.3)
       parser (~> 2.2.0.pre.7)
       rainbow (>= 1.99, < 3.0)
-      unparser (~> 0.1.16)
+      unparser (~> 0.2.2)
     refills (0.0.2)
     request_store (1.1.0)
     responders (2.0.2)
@@ -401,11 +411,11 @@ GEM
       sexp_processor (~> 4.0)
     ruby_parser (3.5.0)
       sexp_processor (~> 4.1)
-    rubycritic (1.2.0)
+    rubycritic (1.2.1)
       flay (= 2.4.0)
       flog (= 4.2.1)
-      parser (>= 2.2.0.pre.5, < 3.0)
-      reek (= 1.6.0)
+      parser (>= 2.2.0, < 3.0)
+      reek (= 1.6.3)
       ruby2ruby (>= 2.1.1, < 3.0)
       virtus (~> 1.0)
     rubyzip (1.1.6)
@@ -427,7 +437,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
-    sexp_processor (4.4.4)
+    sexp_processor (4.4.5)
     shellany (0.0.1)
     simple_form (3.1.0)
       actionpack (~> 4.0)
@@ -464,7 +474,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.10)
     temple (0.6.10)
     terminal-notifier (1.6.2)
     terminal-table (1.4.5)
@@ -484,12 +493,13 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     uniform_notifier (1.6.2)
-    unparser (0.1.16)
+    unparser (0.2.2)
       abstract_type (~> 0.0.7)
       adamantium (~> 0.2.0)
       concord (~> 0.1.5)
+      diff-lcs (~> 1.2.5)
       equalizer (~> 0.0.9)
-      parser (~> 2.2.0.pre.7)
+      parser (~> 2.2.0.2)
       procto (~> 0.0.2)
     vegas (0.1.11)
       rack (>= 1.0.0)
@@ -566,6 +576,8 @@ DEPENDENCIES
   neat
   normalize-rails
   nyan-cat-formatter
+  paperclip (>= 4.2)
+  pg
   pry
   pry-byebug
   pry-doc
@@ -597,7 +609,6 @@ DEPENDENCIES
   simplecov
   spring
   spring-commands-rspec
-  sqlite3
   traceroute
   turbolinks
   twitter-bootstrap-rails-confirm

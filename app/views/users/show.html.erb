@@ -16,6 +16,14 @@
   <dd><%= @user.email %></dd>
 </dl>
 
+<% unless @user.picture.blank? %>
+<h4 class="page-header"><%= t 'crud.tabs.media' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= Picture.human_attribute_name(:avatar) %></dt>
+  <dd><%= image_tag @user.picture.avatar.url(:thumb) %></dd>
+</dl>
+<% end %>
+
 <h4 class="page-header"><%= t 'crud.tabs.roles' %></h4>
 <dl class="dl-horizontal">
   <dt><%= User.human_attribute_name(:roles) %></dt>

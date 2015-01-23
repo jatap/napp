@@ -1,0 +1,10 @@
+es:
+  activerecord:
+    models:
+      picture:
+        one: "Imagen"
+        others: "Imágenes"
+    attributes:
+      picture:
+        avatar: "Imagen"
+        avatar_url: "URL de la imagen"

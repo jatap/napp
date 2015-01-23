@@ -42,5 +42,8 @@ module Napp
 
     # Cumtom error pages
     config.exceptions_app = self.routes
+
+    # ActiveRecord after_commit callbacks errors
+    config.active_record.raise_in_transactional_callbacks = true
   end
 end

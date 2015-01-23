@@ -17,6 +17,27 @@
         background: #FFFFFF;
         padding: 2em;
     }
+
+    #user_remove_avatar {
+        margin-right: 0.5em;
+    }
+
+    .control-label[for="user_picture_attributes_avatar"] {
+        border-bottom: 1px dotted $brand-primary;
+        margin-bottom: 2em;
+        &:hover {
+            color: $brand-default;
+            border-bottom-color: $brand-default;
+        }
+    }
+
+    .avatar-previews {
+        p {
+            text-align: center;
+            font-variant: small-caps;
+            margin-bottom: 1em;
+        }
+    }
 }
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
