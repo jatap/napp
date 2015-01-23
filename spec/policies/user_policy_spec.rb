@@ -8,7 +8,22 @@ describe UserPolicy do
 
     subject { UserPolicy }
 
-    permissions :show?, :edit?, :update?, :destroy?, :new?, :create?, :index? do
+    permissions :show?, :edit?, :update? do
+      it 'grants access if user is an admin or owner' do
+        expect(subject).to permit(admin, admin)
+        expect(subject).to permit(editor, editor)
+        expect(subject).to permit(user, user)
+      end
+
+      it 'denies access if user is not admin or owner' do
+        expect(subject).not_to permit(user, admin)
+        expect(subject).not_to permit(user, editor)
+        expect(subject).not_to permit(editor, admin)
+        expect(subject).not_to permit(editor, user)
+      end
+    end
+
+    permissions :destroy?, :new?, :create?, :index? do
       it 'grants access if user is an admin' do
         expect(subject).to permit(admin, admin)
       end

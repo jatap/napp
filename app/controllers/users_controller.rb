@@ -11,6 +11,9 @@ class UsersController < AuthenticationController
   # Authorization
   before_filter :set_authorization
 
+  # ACL
+  after_filter :verify_authorized
+
   # Index action.
   #
   # @note AJAX proccess via DataTables.
@@ -86,7 +89,7 @@ class UsersController < AuthenticationController
 
     respond_to do |format|
       if successfully_updated
-        format.html { redirect_to users_path, notice: t('crud.flash.edit') }
+        format.html { redirect_to user_path, notice: t('crud.flash.edit') }
         format.json { render :edit, status: :ok, location: @user, json: @user }
       else
         format.html { render :edit }

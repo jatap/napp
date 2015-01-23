@@ -133,7 +133,7 @@ RSpec.describe UsersController, type: :controller do
       it 'redirects to the updated user' do
         patch :update, locale: :en, id: @admin_user,
                        user: attributes_for(:user_with_admin_role)
-        expect(response).to redirect_to users_en_path
+        expect(response).to redirect_to user_en_path
       end
 
       context 'with picture' do

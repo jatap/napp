@@ -58,5 +58,7 @@
 
 <div class="form-links">
   <%= link_to fa_icon('edit') + t('crud.link.edit'), edit_user_path, class: 'label label-info' %>
+  <% if policy(@user).index? %>
   <%= link_to fa_icon('chevron-left') + t('crud.link.back'), users_path, class: 'label label-primary' %>
+  <% end %>
 </div>

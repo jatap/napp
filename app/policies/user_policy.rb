@@ -10,21 +10,21 @@ class UserPolicy < ApplicationPolicy
   #
   # @return [Boolean] the permission (only :admin).
   def show?
-    user.admin?
+    user.admin? || user.fullname == record.fullname
   end
 
   # Edit method policy.
   #
   # @return [Boolean] the permission (only :admin).
   def edit?
-    user.admin?
+    user.admin? || user.fullname == record.fullname
   end
 
   # Update method policy.
   #
   # @return [Boolean] the permission (only :admin).
   def update?
-    user.admin?
+    user.admin? || user.fullname == record.fullname
   end
 
   # Destroy method policy.

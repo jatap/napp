@@ -2,7 +2,7 @@
   <%= link_to fa_icon("unlock"), destroy_user_session_path, :method => 'delete',
     class: 'logout-nav btn btn-border btn-hoki btn-small btn-circle',
     id: 'user-logout' %>
-  <%= link_to fa_icon("user"), edit_user_registration_path,
+  <%= link_to fa_icon("user"), edit_user_path(current_user),
     class: 'profile-nav btn btn-border btn-hoki btn-small btn-circle',
     id: 'user-edit' %>
 <% else %>
