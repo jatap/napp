@@ -103,6 +103,31 @@ function readFileImage(input, element) {
   }
 }
 
+function rich_editor() {
+    if (gon.full_locale != 'en-US') {
+        locale = gon.full_locale;
+    } else {
+        locale = '';
+    }
+
+    var summer_note;
+    summer_note = $('.summernote');
+    summer_note.summernote({
+      height: 500,
+      lang: locale,
+      codemirror: {
+        lineNumbers: true,
+        tabSize: 2,
+        theme: "solarized light"
+      }
+    });
+    summer_note.code(summer_note.val());
+    return summer_note.closest('form').submit(function() {
+      summer_note.val(summer_note.code());
+      return true;
+    });
+}
+
 /**
  * Loader
  */
@@ -112,5 +137,6 @@ $(function(){
   form_list_grid();
   custom_select2();
   user_uploader();
+  rich_editor();
 
 });

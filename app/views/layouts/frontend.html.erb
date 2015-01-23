@@ -15,6 +15,7 @@
         <%= javascript_tag do %>
             I18n.defaultLocale = gon.default_locale;
             I18n.locale        = gon.locale;
+            I18n.full_locale   = gon.full_locale;
         <% end %>
     </head>
     <body class="<%= yield (:body_class) %>">

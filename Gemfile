@@ -42,6 +42,8 @@ gem 'gon'
 gem 'traceroute'
 gem 'friendly_id', '>= 5.0.0'
 gem 'paperclip', '>= 4.2'
+gem 'summernote-rails'
+gem 'codemirror-rails'
 
 group :development do
   gem 'spring'

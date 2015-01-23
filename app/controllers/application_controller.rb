@@ -67,6 +67,7 @@ class ApplicationController < ActionController::Base
   def set_js_locale
     gon.default_locale = I18n.default_locale
     gon.locale         = I18n.locale
+    gon.full_locale    = I18n.full_locale
   end
   protected :set_js_locale
 
