@@ -24,7 +24,6 @@
 //= require dataTables/extras/dataTables.colReorder
 //= require dataTables/extras/dataTables.responsive
 //= require icheck
-//= require refile
 //= require backend/icheck/app
 //= require backend/flash-messages
 //= require backend/crud

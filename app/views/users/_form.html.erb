@@ -53,22 +53,7 @@
 
             <div role="tabpanel" class="tab-pane" id="media">
                 <div class="form-inputs">
-                    <%= f.label :avatar %>
-                    <%= f.attachment_field :avatar, direct: true %>
-
-                    <% unless @user.avatar.blank? %>
-                    <div class="avatar-previews">
-                      <%= attachment_image_tag(@user, :avatar, :fill, 100, 100) %>
-                      <p><%= @user.avatar_filename %></p>
-                    </div>
-                    <% end %>
-
-                    <%= f.input :remote_avatar_url, label: t('crud.tabs-content.media.input.text') %>
-
-                    <% unless @user.avatar.blank? %>
-                    <%= f.check_box :remove_avatar %>
-                    <%= f.label :remove_avatar %>
-                    <% end %>
+                    <%= render "users/picture", form: f, resource: @user %>
                 </div>
             </div>
 

@@ -1,0 +1,18 @@
+<% resource.build_picture if resource.picture.nil? %>
+<%= form.simple_fields_for :picture do |picture| %>
+  <span id="user-file-upload" class="btn btn-default btn-file">
+    <span class="user-file-upload-icon"><%= fa_icon 'cloud-upload' %></span>
+    <%= User.human_attribute_name('picture.avatar') %>
+    <%= picture.file_field :avatar, direct: true %>
+  </span>
+
+  <% unless resource.picture.avatar.blank? %>
+    <div class="avatar-previews">
+      <%= image_tag resource.picture.avatar.url(:thumb), id: 'user-form-image' %>
+      <p><%= resource.picture.avatar_file_name %></p>
+    </div>
+  <% end %>
+
+  <%= form.input :remove_picture, as: :boolean %>
+<% end %>
+

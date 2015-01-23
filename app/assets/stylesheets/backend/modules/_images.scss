@@ -10,7 +10,7 @@ img {
     }
 }
 .user_crud {
-    img {
+    img#user-form-image {
         margin: 1em auto;
         @extend .img-circle;
         border: 9px solid $gray-lighter;

@@ -22,8 +22,13 @@
         margin-right: 0.5em;
     }
 
-    .user_remote_avatar_url {
-        margin-top: 1em;
+    .control-label[for="user_picture_attributes_avatar"] {
+        border-bottom: 1px dotted $brand-primary;
+        margin-bottom: 2em;
+        &:hover {
+            color: $brand-default;
+            border-bottom-color: $brand-default;
+        }
     }
 
     .avatar-previews {

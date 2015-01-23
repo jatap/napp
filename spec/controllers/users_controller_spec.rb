@@ -135,6 +135,37 @@ RSpec.describe UsersController, type: :controller do
                        user: attributes_for(:user_with_admin_role)
         expect(response).to redirect_to users_en_path
       end
+
+      context 'with picture' do
+        let(:picture_param) { { picture_attributes: { avatar: '', avatar_url: '' } } }
+        let(:remove_picture_param) { { remove_picture: '1' } }
+
+        it 'deletes picture param when it comes empty' do
+          patch :update,
+                locale: :en,
+                id: @admin_user,
+                user: attributes_for(:user_with_admin_role).merge(picture_param)
+          expect(@admin_user.picture).to be_nil
+        end
+
+        it 'removes picture param when remove image checkbox is checked' do
+          patch :update,
+                locale: :en,
+                id: @admin_user,
+                user: attributes_for(:user_with_admin_role)
+                  .merge(picture_param)
+                  .merge(remove_picture_param)
+          expect(@admin_user.picture).to be_nil
+        end
+
+        it 'removes picture when remove image checkbox is checked' do
+          patch :update,
+                locale: :en,
+                id: @admin_user,
+                user: attributes_for(:user_with_admin_role).merge(picture_param)
+          expect(@admin_user.picture).to be_nil
+        end
+      end
     end
 
     describe 'with invalid attributes' do

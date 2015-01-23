@@ -33,7 +33,10 @@ class User < ActiveRecord::Base
   friendly_id :fullname, use: [:slugged]
 
   # Image
-  attachment :avatar, content_type: ['image/jpeg', 'image/png', 'image/gif']
+  attr_accessor :remove_picture
+  has_one :picture, validate: true, dependent: :destroy, inverse_of: :user,
+                    class_name: 'Picture'
+  accepts_nested_attributes_for :picture
 
   # To string representation of model.
   #
