@@ -44,6 +44,7 @@ gem 'friendly_id', '>= 5.0.0'
 gem 'paperclip', '>= 4.2'
 gem 'summernote-rails'
 gem 'codemirror-rails'
+gem 'annotate', '>= 2.6.5'
 
 group :development do
   gem 'spring'
