@@ -41,6 +41,7 @@
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require dataTables/extras/dataTables.colReorder
 //= require dataTables/extras/dataTables.responsive
+//= require cocoon
 //= require icheck
 //= require backend/icheck/app
 //= require backend/flash-messages

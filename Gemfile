@@ -46,6 +46,7 @@ gem 'summernote-rails'
 gem 'codemirror-rails'
 gem 'annotate', '>= 2.6.5'
 gem 'draper', '>= 1.3'
+gem 'cocoon'
 
 group :development do
   gem 'spring'
