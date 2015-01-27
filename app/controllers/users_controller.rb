@@ -29,7 +29,7 @@ class UsersController < AuthenticationController
   #
   # @return [void]
   def show
-    @user = User.friendly.find(params[:id])
+    @user = User.friendly.find(params[:id]).decorate
     respond_to do |format|
       format.html
       format.json
@@ -40,13 +40,14 @@ class UsersController < AuthenticationController
   #
   # @return [void]
   def new
-    @user = User.new
+    @user = User.new.decorate
   end
 
   # Edit action.
   #
   # @return [void]
   def edit
+    @user = User.friendly.find(params[:id]).decorate
   end
 
   # Create action.
