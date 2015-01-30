@@ -38,6 +38,12 @@
             margin-bottom: 1em;
         }
     }
+
+    .form-inputs {
+      ul li:first-child {
+        padding-bottom: 1em;
+      }
+    }
 }
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
