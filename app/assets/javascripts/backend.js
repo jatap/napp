@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require i18n
+//= require i18n/translations
+//= require js-routes
 //= require codemirror
 //= require codemirror/modes/ruby
 //= require codemirror/modes/sass
@@ -32,8 +35,6 @@
 //= require codemirror/modes/php
 //= require summernote
 //= require lang/summernote-es-ES
-//= require i18n
-//= require i18n/translations
 //= require select2
 //= require bootstrap-sprockets
 //= require twitter/bootstrap/rails/confirm

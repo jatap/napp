@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require i18n
 //= require i18n/translations
+//= require js-routes
 //= require buttons/buttons
 //= require frontend/flash-messages
 //= require frontend/nav
