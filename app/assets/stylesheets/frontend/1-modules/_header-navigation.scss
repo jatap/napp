@@ -46,7 +46,7 @@ header.navigation {
   .logo {
     float: left;
     max-height: $navigation-height;
-    padding-left: $navigation-padding;
+    padding-left: 1em;
     padding-right: 2em;
 
     img {
@@ -289,7 +289,7 @@ header.navigation {
     display: block;
     height: $navigation-height;
     padding-left: $navigation-padding/2;
-    padding-right: $navigation-padding;
+    padding-right: $navigation-padding/2;
 
     @include media($large-screen) {
       background: transparent;
@@ -331,8 +331,8 @@ header.navigation {
     $search-bar-background: lighten($search-bar-border-color, 10);
 
     float: left;
-    padding: .85em .6em .7em .6em;
-    width: 60%;
+    padding: .85em .6em .7em 0;
+    width: 50%;
 
     form {
       position: relative;
