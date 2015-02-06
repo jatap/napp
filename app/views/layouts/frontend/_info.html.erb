@@ -1,11 +1,11 @@
 <div class="info">
     <div class="info-text">
-        <%= raw t('frontend.app.info.message') %>
+        <%= raw @site.banner %>
     </div>
     <div class="info-social">
-        <%= link_to fa_icon('twitter'), 'http://google.com' %>
-        <%= link_to fa_icon('facebook'), 'http://google.com' %>
-        <%= link_to fa_icon('linkedin'), 'http://google.com' %>
-        <%= link_to fa_icon('google-plus'), 'http://google.com' %>
+        <%= link_to fa_icon('twitter'), @site.twitter %>
+        <%= link_to fa_icon('facebook'), @site.facebook %>
+        <%= link_to fa_icon('linkedin'), @site.linkedin %>
+        <%= link_to fa_icon('google-plus'), @site.google_plus %>
     </div>
 </div>

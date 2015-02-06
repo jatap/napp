@@ -7,3 +7,4 @@ en:
       '404': 'Requested resource is not valid.'
       '422': 'Unprocessable entity due to sematic errors.'
       '500': 'Application error.'
+      url: "is not a valid URL"

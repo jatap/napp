@@ -48,6 +48,8 @@ gem 'annotate', '>= 2.6.5'
 gem 'draper', '>= 1.3'
 gem 'cocoon'
 gem 'js-routes'
+gem 'email_validator'
+gem 'validate_url'
 
 group :development do
   gem 'spring'
