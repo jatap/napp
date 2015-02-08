@@ -51,9 +51,10 @@ gem 'js-routes'
 gem 'email_validator'
 gem 'validate_url'
 gem 'globalize', '>= 5.0.0'
+gem 'lograge'
 
 group :development do
-  gem 'spring'
+  gem 'spring', '>= 1.3.0'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'rubocop', require: false
