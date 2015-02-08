@@ -6,7 +6,6 @@
 #  name        :string
 #  version     :string
 #  author      :string
-#  banner      :string
 #  email       :string
 #  twitter     :string
 #  facebook    :string

@@ -40,6 +40,7 @@ Rails.application.routes.draw do
     scope '/backend' do
       scope '/crud' do
         resources :users, concerns: :paginatable
+        resources :sites, only: [ :edit, :update, :show ]
       end
     end
   end

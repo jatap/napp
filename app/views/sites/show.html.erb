@@ -1,0 +1,43 @@
+<% content_for :body_class, "backend-sites-show-page" %>
+
+<%= render 'layouts/sidebar_main' %>
+
+<div class="page-header">
+  <h2><%= fa_icon 'dot-circle-o' %> <%= t "crud.show.title", model: Site.model_name.human.pluralize %></h2>
+</div>
+
+<h4 class="page-header"><%= t 'crud.tabs.general' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= Site.human_attribute_name(:name) %></dt>
+  <dd><%= @site.name %></dd>
+  <dt><%= Site.human_attribute_name(:version) %></dt>
+  <dd><%= @site.version %></dd>
+  <dt><%= Site.human_attribute_name(:author) %></dt>
+  <dd><%= @site.author %></dd>
+  <dt><%= Site.human_attribute_name(:banner) %></dt>
+  <dd><%= @site.banner %></dd>
+</dl>
+
+<h4 class="page-header"><%= t 'crud.tabs.social-network' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= Site.human_attribute_name('site.twitter') %></dt>
+  <dd><%= @site.twitter %></dd>
+  <dt><%= Site.human_attribute_name('site.facebook') %></dt>
+  <dd><%= @site.facebook %></dd>
+  <dt><%= Site.human_attribute_name('site.linkedin') %></dt>
+  <dd><%= @site.linkedin %></dd>
+  <dt><%= Site.human_attribute_name('site.google_plus') %></dt>
+  <dd><%= @site.google_plus %></dd>
+</dl>
+
+<h4 class="page-header"><%= t 'crud.tabs.date-audit.title' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= fa_icon 'calendar' %></dt>
+  <dd><%= t 'crud.tabs.date-audit.created', time: time_ago_in_words(@site.created_at) %></dd>
+  <dt><%= fa_icon 'bolt' %></dt>
+  <dd><%= t 'crud.tabs.date-audit.updated', time: time_ago_in_words(@site.updated_at) %></dd>
+</dl>
+
+<div class="form-links">
+  <%= link_to fa_icon('edit') + t('crud.link.edit'), edit_site_path, class: 'label label-info' %>
+</div>

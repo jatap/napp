@@ -6,7 +6,6 @@
 #  name        :string
 #  version     :string
 #  author      :string
-#  banner      :string
 #  email       :string
 #  twitter     :string
 #  facebook    :string
@@ -24,6 +23,9 @@
 #
 # @author julio.antunez.tarin@gmail.com
 class Site < ActiveRecord::Base
+  # Translations
+  translates :banner
+
   # Validations
   validates :name, presence: true, uniqueness: true
   validates :banner, presence: true

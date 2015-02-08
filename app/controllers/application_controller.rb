@@ -19,6 +19,9 @@ class ApplicationController < ActionController::Base
   # Internationalization in JS (gon)
   before_action :set_js_locale
 
+  # Load site
+  before_action :load_site
+
   # Avoid set up locale automaticallty from url param when available
   # @see route_translator
   skip_around_filter :set_locale_from_url
@@ -101,4 +104,12 @@ class ApplicationController < ActionController::Base
   end
   private :user_not_authorized
   # :nocov:
+
+  # Load site model
+  #
+  # @return [void]
+  def load_site
+    @site = Site.first
+  end
+  private :load_site
 end
