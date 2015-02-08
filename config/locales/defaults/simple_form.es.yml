@@ -23,6 +23,8 @@ es:
         slug: 'Déjalo en blanco para regenar el valor.'
       profile:
         website: 'Incluye el protocolo.'
+      site:
+        banner: 'Campo a traducir.'
     include_blanks:
       defaults:
         age: 'Prefiero no decirla'

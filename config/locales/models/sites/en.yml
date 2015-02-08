@@ -9,7 +9,7 @@ en:
         name: "Name"
         version: "Version"
         author: "Author"
-        banner: "Banner"
+        banner: "Message"
         email: "Email"
         twitter: "Twitter"
         facebook: "Facebook"

@@ -47,6 +47,7 @@ class UsersController < AuthenticationController
   #
   # @return [void]
   def edit
+    #@user = User.friendly.find(params[:id])
     @user = User.friendly.find(params[:id]).decorate
   end
 

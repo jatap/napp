@@ -3,7 +3,7 @@
 <%= render 'layouts/sidebar_main' %>
 
 <div class="page-header">
-  <h2><%= fa_icon 'dot-circle-o' %> <%= t "crud.show.title", model: User.model_name.human.pluralize %></h2>
+  <h2><%= fa_icon 'dot-circle-o' %> <%= t "crud.show.title", model: User.model_name.human %></h2>
 </div>
 
 <h4 class="page-header"><%= t 'crud.tabs.general' %></h4>
@@ -16,7 +16,7 @@
   <dd><%= @user.email %></dd>
 </dl>
 
-<% unless @user.picture.blank? %>
+<% unless @user.picture.avatar.blank? %>
 <h4 class="page-header"><%= t 'crud.tabs.media' %></h4>
 <dl class="dl-horizontal">
   <dt><%= Picture.human_attribute_name(:avatar) %></dt>

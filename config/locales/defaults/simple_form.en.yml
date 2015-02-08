@@ -23,6 +23,8 @@ en:
         slug: 'Leave it blank to regenerate.'
       profile:
         website: 'Include protocol.'
+      site:
+        banner: 'Translatable field.'
     include_blanks:
       defaults:
         age: 'I would rather not to say'

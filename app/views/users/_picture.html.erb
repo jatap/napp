@@ -1,4 +1,4 @@
-<% resource.build_picture if resource.picture.nil? %>
+<% resource.build_picture if resource.model.picture.nil? %>
 <%= form.simple_fields_for :picture do |picture| %>
   <span id="user-file-upload" class="btn btn-default btn-file">
     <span class="user-file-upload-icon"><%= fa_icon 'cloud-upload' %></span>
