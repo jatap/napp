@@ -2,10 +2,12 @@ es:
   frontend:
     app:
       title: "Napp"
+      info:
+        message: "Incluidas <strong>gemas</strong> muy útiles."
     nav:
       home: "Portada"
       about: "Acerca de"
       admin: "Administración"
       jobs: "Trabajos"
       search:
-        placeholder: "Buscar ..."
+        placeholder: "..."

@@ -1,0 +1,13 @@
+<% content_for :body_class, "backend-sites-edit-page" %>
+
+<%= render 'layouts/sidebar_main' %>
+
+<div class="page-header">
+    <h2><%= fa_icon 'edit' %> <%= t "crud.edit.title", model: Site.model_name.human %></h2>
+</div>
+
+<%= render 'form' %>
+
+<div class="form-links">
+    <%= link_to fa_icon('dot-circle-o') + t('crud.link.show'), @site, class: 'label label-info' %>
+</div>

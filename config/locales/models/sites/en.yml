@@ -1,0 +1,17 @@
+en:
+  activerecord:
+    models:
+      site:
+        one: "Site"
+        others: "Sites"
+    attributes:
+      site:
+        name: "Name"
+        version: "Version"
+        author: "Author"
+        banner: "Banner"
+        email: "Email"
+        twitter: "Twitter"
+        facebook: "Facebook"
+        linkedin: "Linkedin"
+        google_plus: "Google Plus"
