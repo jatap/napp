@@ -7,6 +7,12 @@
                 <span><%= t 'crud.tabs.general' %></span>
             </a>
         </li>
+        <li role="presentation">
+            <a href="#social-network" aria-controls="social-network" role="tab" data-toggle="tab">
+                <%= fa_icon 'cloud' %>
+                <span><%= t 'crud.tabs.social-network' %></span>
+            </a>
+        </li>
         <% unless @site.created_at.blank? %>
         <li role="presentation">
             <a href="#date-audit" aria-controls="date-audit" role="tab" data-toggle="tab">
@@ -25,11 +31,16 @@
             <div role="tabpanel" class="tab-pane active" id="home">
 
                 <div class="form-inputs">
-                    <%= f.input :name, required: true, autofocus: true %>
+                    <%= f.input :name, autofocus: true %>
                     <%= f.input :version %>
                     <%= f.input :author %>
                     <%= f.input :banner %>
                     <%= f.input :email %>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="social-network">
+                <div class="form-inputs">
                     <%= f.input :twitter %>
                     <%= f.input :facebook %>
                     <%= f.input :linkedin %>

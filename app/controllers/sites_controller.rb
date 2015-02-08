@@ -47,7 +47,7 @@ class SitesController < AuthenticationController
   #
   # @return [void]
   def set_sidebar_active_action
-    @sidebar_active = 'sites'
+    @sidebar_active = 'site'
   end
 
   # Never trust parameters from the scary internet, only allow the white list

@@ -2,8 +2,8 @@
 <div class="sidebar-nav">
     <ul class="nav">
         <li class="<%= @sidebar_active == 'config' ? 'active' : '' %> text-center"><%= link_to fa_icon("code lg"), locale_root_path %></li>
-        <li class="<%= @sidebar_active == 'code' ? 'active' : '' %> text-center"><%= link_to fa_icon("code-fork lg"), locale_root_path %></li>
         <% if current_user && policy(current_user).index? %>
+        <li class="<%= @sidebar_active == 'site' ? 'active' : '' %> text-center"><%= link_to fa_icon("globe lg"), site_path(@site) %></li>
         <li class="<%= @sidebar_active == 'users' ? 'active' : '' %> text-center"><%= link_to fa_icon("group lg"), users_path %></li>
         <% end %>
     </ul>
