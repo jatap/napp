@@ -52,6 +52,8 @@ gem 'email_validator'
 gem 'validate_url'
 gem 'globalize', '>= 5.0.0'
 gem 'lograge'
+gem 'rails-settings-cached'
+gem 'rails-settings-ui', '>= 0.3.0'
 
 group :development do
   gem 'spring', '>= 1.3.0'
