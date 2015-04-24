@@ -1,0 +1,130 @@
+.main-content form {
+    margin-bottom: 2em;
+
+    .form-actions {
+        margin-top: 2em;
+    }
+}
+
+.control-label-checkbox {
+    padding-left: 0.5em;
+    margin-top: 0.5em;
+}
+
+.user_roles span label {
+    padding-left: 2em;
+
+    & > div {
+        left: -0.5em;
+    }
+}
+
+.edit_crud {
+    .label {
+        display: inline-block;
+        margin: 1em 0 0;
+        border-radius: 0;
+    }
+    .form-actions-header {
+        i {
+            padding-right: 0.5em;
+            cursor: pointer;
+        }
+        padding-top: 0.3em;
+        padding-bottom: 0.4em;
+    }
+    .form-actions {
+        margin-top: 0 !important;
+        padding: 1.5em;
+        background: $brand-default;
+
+        .btn-default {
+            .btn-pre {
+                background: darken($brand-default, 6%);
+            }
+        }
+        .btn-primary {
+            .btn-pre {
+                background: darken($brand-primary, 6%);
+            }
+        }
+        .btn-success {
+            .btn-pre {
+                background: darken($brand-success, 6%);
+            }
+        }
+        .btn-warning {
+            .btn-pre {
+                background: darken($brand-warning, 6%);
+            }
+        }
+        .btn-default,
+        .btn-primary,
+        .btn-success,
+        .btn-warning {
+            .btn-pre {
+                padding: 0.58em 0.66em 0.66em;
+            }
+            .btn-content {
+                padding: 1em 1em 1em 0.66em;
+            }
+        }
+    }
+}
+
+.form-links {
+    margin-top: 3em;
+    i {
+        padding-right: 0.5em;
+    }
+}
+
+form.edit_user {
+  .user-date-audit {
+    margin: 3em 0 3.5em;
+    i {
+      padding-right: 0.33em;
+      font-size: 0.875em;
+      color: $brand-success;
+    }
+  }
+}
+
+#date-audit {
+  margin-bottom: 1em;
+  i {
+    padding-right: 0.33em;
+    font-size: 0.875em;
+    color: $brand-success;
+  }
+}
+
+.tab-content {
+    .form-actions {
+        display: none;
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .tab-content {
+        .form-actions {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .tab-content {
+        .form-actions {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .tab-content {
+        .form-actions {
+            display: block;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  # Settings specified here will take precedence over those in
+  # config/application.rb.
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -14,7 +15,8 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Print deprecation notices to the Rails logger.
@@ -35,4 +37,19 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Generate I18n-js translations.js file (rake i18n:js:export)
+  config.middleware.use I18n::JS::Middleware
+
+  # Web console
+  config.web_console.whitelisted_ips = %w( 127.0.0.1 )
+
+  config.after_initialize do
+    Bullet.enable        = true
+    Bullet.alert         = true
+    Bullet.bullet_logger = true
+    Bullet.console       = false
+    Bullet.rails_logger  = true
+    Bullet.add_footer    = true
+  end
 end

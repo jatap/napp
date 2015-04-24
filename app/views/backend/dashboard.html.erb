@@ -1,7 +1,9 @@
+<% content_for :body_class, "backend-dashboard-page" %>
+
 <%= render 'layouts/sidebar_main' %>
 
-<% content_for :title do %>Admin Dashboard<% end %>
+<% content_for :title do %><%= t 'backend.dashboard.title' %><% end %>
 
 <div class="page-header">
-    <h2><%= t "backend.dashboard.title" %></h2>
+    <h2><%= t 'backend.dashboard.title' %></h2>
 </div>

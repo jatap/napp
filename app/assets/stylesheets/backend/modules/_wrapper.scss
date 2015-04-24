@@ -1,0 +1,30 @@
+.wrapper {
+    background-color: #eee;
+    padding: 0.63em 1em 3em;
+    width: 100%;
+    margin-top: 51px;
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .wrapper {
+        padding: 0.63em 0.5em 0em 5em;
+        width: 100%;
+        margin-top: 51px;
+    }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .wrapper {
+        padding: 0.63em 0.5em 0em 5em;
+        width: 100%;
+        margin-top: 51px;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .wrapper {
+        padding: 0.63em 0.5em 0em 5em;
+        width: 100%;
+        margin-top: 51px;
+    }
+}

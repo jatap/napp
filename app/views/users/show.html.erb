@@ -1,16 +1,28 @@
+<% content_for :body_class, "backend-users-show-page" %>
+
 <%= render 'layouts/sidebar_main' %>
 
 <div class="page-header">
-  <h2><%= fa_icon 'ellipsis-h' %> <%= t "crud.show.title", model: User.model_name.human.pluralize %></h2>
+  <h2><%= fa_icon 'dot-circle-o' %> <%= t "crud.show.title", model: User.model_name.human %></h2>
 </div>
 
 <h4 class="page-header"><%= t 'crud.tabs.general' %></h4>
 <dl class="dl-horizontal">
   <dt><%= User.human_attribute_name(:fullname) %></dt>
   <dd><%= @user.fullname %></dd>
+  <dt><%= User.human_attribute_name(:slug) %></dt>
+  <dd><%= @user.slug %></dd>
   <dt><%= User.human_attribute_name(:email) %></dt>
   <dd><%= @user.email %></dd>
 </dl>
+
+<% unless @user.picture.avatar.blank? %>
+<h4 class="page-header"><%= t 'crud.tabs.media' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= Picture.human_attribute_name(:avatar) %></dt>
+  <dd><%= image_tag @user.picture.avatar.url(:thumb) %></dd>
+</dl>
+<% end %>
 
 <h4 class="page-header"><%= t 'crud.tabs.roles' %></h4>
 <dl class="dl-horizontal">
@@ -18,7 +30,59 @@
   <dd><%= @user.roles.join ', ' %></dd>
 </dl>
 
+<% unless @user.profile.blank? %>
+<h4 class="page-header"><%= t 'crud.tabs.profile' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= User.human_attribute_name('user_profile.first_name') %></dt>
+  <dd><%= @user.profile.first_name %></dd>
+  <dt><%= User.human_attribute_name('user_profile.last_name') %></dt>
+  <dd><%= @user.profile.last_name %></dd>
+  <dt><%= User.human_attribute_name('user_profile.website') %></dt>
+  <dd><%= @user.profile.website %></dd>
+  <dt><%= User.human_attribute_name('user_profile.phone') %></dt>
+  <dd><%= @user.profile.phone %></dd>
+</dl>
+<% end %>
+
+<% unless @user.social_network.blank? %>
+<h4 class="page-header"><%= t 'crud.tabs.social-network' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= User.human_attribute_name('user_social_network.twitter') %></dt>
+  <dd><%= @user.social_network.twitter %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.facebook') %></dt>
+  <dd><%= @user.social_network.facebook %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.google_plus') %></dt>
+  <dd><%= @user.social_network.google_plus %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.instagram') %></dt>
+  <dd><%= @user.social_network.instagram %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.youtube') %></dt>
+  <dd><%= @user.social_network.youtube %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.whatsup') %></dt>
+  <dd><%= @user.social_network.whatsup %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.linkedin') %></dt>
+  <dd><%= @user.social_network.linkedin %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.pinterest') %></dt>
+  <dd><%= @user.social_network.pinterest %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.flickr') %></dt>
+  <dd><%= @user.social_network.flickr %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.digg') %></dt>
+  <dd><%= @user.social_network.digg %></dd>
+  <dt><%= User.human_attribute_name('user_social_network.reddit') %></dt>
+  <dd><%= @user.social_network.reddit %></dd>
+</dl>
+<% end %>
+
+<h4 class="page-header"><%= t 'crud.tabs.date-audit.title' %></h4>
+<dl class="dl-horizontal">
+  <dt><%= fa_icon 'calendar' %></dt>
+  <dd><%= t 'crud.tabs.date-audit.created', time: time_ago_in_words(@user.created_at) %></dd>
+  <dt><%= fa_icon 'bolt' %></dt>
+  <dd><%= t 'crud.tabs.date-audit.updated', time: time_ago_in_words(@user.updated_at) %></dd>
+</dl>
+
 <div class="form-links">
   <%= link_to fa_icon('edit') + t('crud.link.edit'), edit_user_path, class: 'label label-info' %>
+  <% if policy(@user).index? %>
   <%= link_to fa_icon('chevron-left') + t('crud.link.back'), users_path, class: 'label label-primary' %>
+  <% end %>
 </div>

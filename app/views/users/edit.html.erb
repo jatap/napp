@@ -1,12 +1,16 @@
+<% content_for :body_class, "backend-users-edit-page" %>
+
 <%= render 'layouts/sidebar_main' %>
 
 <div class="page-header">
-    <h2><%= fa_icon 'edit' %> <%= t "crud.edit.title", model: User.to_s.humanize.constantize.model_name.human %></h2>
+    <h2><%= fa_icon 'edit' %> <%= t "crud.edit.title", model: User.model_name.human %></h2>
 </div>
 
 <%= render 'form' %>
 
 <div class="form-links">
-    <%= link_to fa_icon('ellipsis-h') + t('crud.link.show'), @user, class: 'label label-info' %>
+    <%= link_to fa_icon('dot-circle-o') + t('crud.link.show'), @user, class: 'label label-info' %>
+    <% if policy(@user).index? %>
     <%= link_to fa_icon('chevron-left') + t('crud.link.back'), users_path, class: 'label label-primary' %>
+    <% end %>
 </div>

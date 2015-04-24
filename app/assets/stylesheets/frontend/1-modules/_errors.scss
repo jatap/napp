@@ -1,0 +1,18 @@
+.errors-page {
+  text-align: center;
+
+  .page-header {
+    margin: 1.5em 0 2em;
+  }
+
+  .error-message {
+    .error-logo {
+      font-size: 5em;
+      margin-bottom: .5em;
+      color: $radical-red;
+    }
+    .error-text {
+      margin-bottom: 3em;
+    }
+  }
+}

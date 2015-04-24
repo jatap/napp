@@ -1,0 +1,15 @@
+<% content_for :body_class, "errors-page" %>
+
+<div class="page-header">
+  <h1 class="422-error">Error 422</h1>
+</div>
+
+<div class="error-message">
+  <p class="error-logo">
+    <span class="fa-stack fa-lg">
+      <%= fa_icon 'circle stack-2x' %>
+      <%= fa_icon 'unlink stack-1x inverse' %>
+    </span>
+  </p>
+  <p class="error-text"><%= t 'errors.messages.422' %></p>
+</div>

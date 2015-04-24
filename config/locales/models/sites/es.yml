@@ -1,0 +1,17 @@
+es:
+  activerecord:
+    models:
+      site:
+        one: "Sitio"
+        others: "Sitios"
+    attributes:
+      site:
+        name: "Nombre"
+        version: "Versión"
+        author: "Autor"
+        banner: "Mensaje"
+        email: "Correo electrónico"
+        twitter: "Twitter"
+        facebook: "Facebook"
+        linkedin: "Linkedin"
+        google_plus: "Google Plus"

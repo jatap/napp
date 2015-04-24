@@ -1,0 +1,50 @@
+.top {
+    @include outer-container;
+
+    .info {
+        @include span-columns(12);
+
+        .info-text {
+            @include span-columns(12 of 12);
+
+            @include media($medium-screen) {
+                @include span-columns(6 of 12);
+            }
+            @include media($large-screen) {
+                @include span-columns(6 of 12);
+            }
+            @include media($extra-screen) {
+                @include span-columns(6 of 12);
+            }
+        }
+
+        .info-social {
+            @include span-columns(12 of 12);
+
+            @include media($medium-screen) {
+                @include span-columns(6 of 12);
+            }
+            @include media($large-screen) {
+                @include span-columns(6 of 12);
+            }
+            @include media($extra-screen) {
+                @include span-columns(6 of 12);
+            }
+        }
+    }
+    .navigation {
+        @include clearfix;
+        @include span-columns(12);
+    }
+}
+
+.wrapper {
+    @include outer-container;
+    .data {
+        @include span-columns(12);
+    }
+}
+
+.bottom {
+    @include outer-container;
+}

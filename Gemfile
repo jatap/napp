@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
-ruby '2.1.4'
+ruby '2.1.5'
 
-gem 'rails', '4.1.8'
-gem 'sqlite3'
+gem 'rails', '~> 4.2'
+gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'puma'
 gem 'simple_form'
@@ -31,14 +31,52 @@ gem 'ajax-datatables-rails'
 gem 'select2-rails'
 gem 'kaminari'
 gem 'i18n-js', '>= 3.0.0.rc8'
+gem 'backburner'
+gem 'beanstalkd_view'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+gem 'refills'
+gem 'normalize-rails'
+gem 'gon'
+gem 'traceroute'
+gem 'friendly_id', '>= 5.0.0'
+gem 'paperclip', '>= 4.2'
+gem 'codemirror-rails'
+gem 'annotate', '>= 2.6.5'
+gem 'draper', '>= 1.3'
+gem 'cocoon'
+gem 'js-routes'
+gem 'email_validator'
+gem 'validate_url'
+gem 'globalize', '>= 5.0.0'
+gem 'lograge'
+gem 'rails-settings-cached'
+gem 'summernote-rails'
 
 group :development do
-  gem 'spring'
+  gem 'spring', '>= 1.3.0'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'rubocop', require: false
+  gem 'brakeman', require: false
+  gem 'cane'
+  gem 'rcodetools'
+  gem 'fastri'
+  gem 'flay'
+  gem 'flog'
+  gem 'yard'
+  gem 'bullet'
+  gem 'rubycritic', require: false
+  gem 'excellent'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
+  gem 'guard-yard'
+  gem 'guard-rubocop'
+  gem 'guard-brakeman'
+  gem 'guard-cane'
+  gem 'guard-rubycritic'
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'rb-fchange', :require=>false
@@ -47,6 +85,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'colorize'
   gem 'awesome_print'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
@@ -55,11 +94,16 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-nc'
   gem 'nyan-cat-formatter'
+  gem 'fuubar'
   gem 'byebug'
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+  gem 'redcarpet', '~> 2.1.1'
+  gem 'sdoc-templates-42floors'
+  gem 'growl'
+  gem 'json_spec'
 end
 
 group :test do
@@ -67,4 +111,5 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'simplecov', require: false
 end

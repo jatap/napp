@@ -1,3 +1,5 @@
+<% content_for :body_class, "backend-devise-users-edit-page" %>
+
 <%= render 'layouts/sidebar_main' %>
 
 <div class="page-header">
@@ -9,6 +11,7 @@
 
   <div class="form-inputs">
     <%= f.input :fullname, required: false, autofocus: true %>
+    <%= f.input :slug, required: false %>
 
     <%= f.input :email, required: true %>
 
@@ -20,6 +23,18 @@
     <%= f.input :password_confirmation, required: false %>
     <%= f.input :current_password, hint: t(:current_password_required), required: true %>
 
+    <legend><%= t 'sign_up.edit.profile' %></legend>
+    <%= render "users/profile", form: f, resource: resource %>
+
+    <div class="form-group user-date-audit">
+      <legend class="control-label">
+        <%= t 'sign_up.edit.date-audit.title' %>
+      </legend>
+      <ul class="nav">
+        <li><%= fa_icon 'calendar'%> <%= t('sign_up.edit.date-audit.created', time: time_ago_in_words(resource.created_at)) %>.</li>
+        <li><%= fa_icon 'bolt'%> <%= t('sign_up.edit.date-audit.updated', time: time_ago_in_words(resource.updated_at)) %>.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="form-actions">
@@ -34,5 +49,3 @@
     registration_path(resource_name), 
     data: { confirm: t("sign_up.cancel_account.confirm") }, method: :delete %>
 </p>
-
-<%= link_to t("backend.link.back"), :back %>

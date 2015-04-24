@@ -1,0 +1,29 @@
+production:
+  domain_name: 'http://napp.com'
+  secret_key_base: 3640ae26c9c0676ecabdc9c5e72e081a93fe0a9a0e9af2599efd7d6138c00f1646ca7d95091e4825ebaea9990122744b6dbebbaa305ee97ca39e053d6bf7b8sh5
+  puma_workers: 3
+  min_threads: 1
+  max_threads: 16
+  port: 80
+  rack_env: 'production'
+  BEANSTALK_URL: 'beanstalk://localhost/11300'
+  typekit_id: ''
+  database_password: ''
+development:
+  puma_workers: 3
+  min_threads: 1
+  max_threads: 16
+  port: 80
+  rack_env: 'development'
+  BEANSTALK_URL: 'beanstalk://localhost/11300'
+  typekit_id: ''
+  database_password: ''
+test:
+  puma_workers: 3
+  min_threads: 1
+  max_threads: 16
+  port: 3000
+  rack_env: 'test'
+  BEANSTALK_URL: 'beanstalk://localhost/11300'
+  typekit_id: ''
+  database_password: ''

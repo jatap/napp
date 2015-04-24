@@ -1,0 +1,80 @@
+<div role="tabpanel" class="backend-crud-tabs">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+              <%= fa_icon 'star' %>
+                <span><%= t 'crud.tabs.general' %></span>
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#social-network" aria-controls="social-network" role="tab" data-toggle="tab">
+                <%= fa_icon 'cloud' %>
+                <span><%= t 'crud.tabs.social-network' %></span>
+            </a>
+        </li>
+        <% unless @site.created_at.blank? %>
+        <li role="presentation">
+            <a href="#date-audit" aria-controls="date-audit" role="tab" data-toggle="tab">
+                <%= fa_icon 'calendar-o' %>
+                <span><%= t 'crud.tabs.date-audit.title' %></span>
+            </a>
+        </li>
+        <% end %>
+    </ul>
+
+    <%= simple_form_for(@site, html: { class: 'edit_crud', id: 'edit-site-form', multipart: true }) do |f| %>
+        <%= f.error_notification %>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+
+                <div class="form-inputs">
+                    <%= f.input :name, autofocus: true %>
+                    <%= f.input :version %>
+                    <%= f.input :author %>
+                    <%= f.input :banner %>
+                    <%= f.input :email %>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="social-network">
+                <div class="form-inputs">
+                    <%= f.input :twitter %>
+                    <%= f.input :facebook %>
+                    <%= f.input :linkedin %>
+                    <%= f.input :google_plus %>
+                </div>
+            </div>
+
+            <% unless @site.created_at.blank? %>
+            <div role="tabpanel" class="tab-pane" id="date-audit">
+                <div class="form-inputs">
+                  <ul class="nav">
+                    <li>
+                      <%= fa_icon 'calendar'%>
+                      <%= t('crud.tabs.date-audit.created', time: time_ago_in_words(@site.created_at)) %>.
+                    </li>
+                    <li>
+                      <%= fa_icon 'bolt'%>
+                      <%= t('crud.tabs.date-audit.updated', time: time_ago_in_words(@site.updated_at)) %>.
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            <% end %>
+
+            <div class="label label-default form-actions-header">
+              <%= fa_icon "navicon" %><%= t 'crud.column.actions' %>
+            </div>
+            <div class="form-actions">
+                <%= button_tag(type: 'submit', class: "btn-custom btn-default") do %>
+                    <span class="btn-pre"><%= fa_icon "pencil" %></span>
+                    <span class="btn-content"><%= t("sign_up.submit.edit") %></span>
+                <% end %>
+            </div>
+        </div>
+
+    <% end %>
+</div>

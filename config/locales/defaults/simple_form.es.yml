@@ -6,10 +6,11 @@ es:
       text: 'requerido'
       mark: '*'
     error_notification:
-      default_message: "Por favor revisa los problemas de validación:"
+      default_message: "Por favor, revisa los problemas de validación."
     labels:
       defaults:
         password: 'Contraseña'
+        admin_mail: "Mail de administración"
     user:
       new:
         email: 'Correo electrónico con el que conectar.'
@@ -20,6 +21,11 @@ es:
         username: 'Nombre de usuario para conectar.'
         password: 'Sin carácteres especiales, por favor.'
         email: 'Dirección válida.'
+        slug: 'Déjalo en blanco para regenar el valor.'
+      profile:
+        website: 'Incluye el protocolo.'
+      site:
+        banner: 'Campo a traducir.'
     include_blanks:
       defaults:
         age: 'Prefiero no decirla'

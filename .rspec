@@ -4,5 +4,5 @@
 --require rails_helper
 --format documentation
 --format Nc
---format NyanCatFormatter
-#--format RspecAbhakungszeichenFormatter
+--format Fuubar
+#--format NyanCatFormatter

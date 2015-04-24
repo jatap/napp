@@ -1,0 +1,59 @@
+.info {
+    background: #FFFFFF;
+    color: $ebony-clay;
+    font-size: 0.875em;
+
+    .info-text {
+        padding: 1.125em 1.125em 1.125em 1.125em;
+        background: #FFFFFF;
+        color: $hoki;
+        text-align: center;
+
+        @include media($medium-screen) {
+            text-align: left;
+        }
+        @include media($large-screen) {
+            text-align: left;
+        }
+        @include media($extra-screen) {
+            text-align: left;
+        }
+    }
+
+    .info-social {
+        padding: 1.125em 1.125em 1.125em 2.125em;
+        background: $radical-red;
+        a {
+            color: #FFFFFF;
+            padding-left: 0.66em;
+        }
+        text-align: center;
+
+        @include media($medium-screen) {
+            background: #FFFFFF;
+            a {
+                color: $gray;
+            }
+            text-align: right;
+        }
+        @include media($large-screen) {
+            background: #FFFFFF;
+            a {
+                color: $gray;
+            }
+            text-align: right;
+        }
+        @include media($extra-screen) {
+            background: #FFFFFF;
+            a {
+                color: $gray;
+            }
+            text-align: right;
+        }
+    }
+}
+
+.sticky {
+    position: fixed !important;
+    top: 0;
+}

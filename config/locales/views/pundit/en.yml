@@ -1,0 +1,12 @@
+en:
+  pundit:
+    default: "You are not autorized to perform this action."
+    user_policy:
+      show?: "You cannot show a user."
+      edit?: "You cannot edit a user."
+      update?: "You cannot update a user."
+      destroy?: "You cannot destroy a user."
+      new?: "You cannot add a user."
+      create?: "You cannot create a user."
+      index?: "You cannot show users."
+

@@ -1,7 +1,9 @@
+<% content_for :body_class, "backend-users-new-page" %>
+
 <%= render 'layouts/sidebar_main' %>
 
 <div class="page-header">
-    <h2><%= fa_icon 'dot-circle-o' %> <%= t "crud.add.title", model: User.to_s.humanize.constantize.model_name.human %></h2>
+    <h2><%= fa_icon 'dot-circle-o' %> <%= t "crud.add.title", model: User.model_name.human %></h2>
 </div>
 
 <%= render 'form' %>

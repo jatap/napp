@@ -10,6 +10,7 @@ en:
     labels:
       defaults:
         password: 'Password'
+        admin_mail: 'Admin mail'
     user:
       new:
         email: 'Email to sign in.'
@@ -20,6 +21,11 @@ en:
         username: 'Username to sign in.'
         password: 'No special chars, please.'
         email: 'Valid address.'
+        slug: 'Leave it blank to regenerate.'
+      profile:
+        website: 'Include protocol.'
+      site:
+        banner: 'Translatable field.'
     include_blanks:
       defaults:
         age: 'I would rather not to say'

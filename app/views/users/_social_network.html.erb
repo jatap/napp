@@ -1,0 +1,14 @@
+<% resource.build_social_network if resource.social_network.nil? %>
+<%= form.simple_fields_for :social_network do |social_network| %>
+  <%= social_network.input :twitter %>
+  <%= social_network.input :facebook %>
+  <%= social_network.input :google_plus %>
+  <%= social_network.input :instagram %>
+  <%= social_network.input :youtube %>
+  <%= social_network.input :whatsup %>
+  <%= social_network.input :linkedin %>
+  <%= social_network.input :pinterest %>
+  <%= social_network.input :flickr %>
+  <%= social_network.input :digg %>
+  <%= social_network.input :reddit %>
+<% end %>

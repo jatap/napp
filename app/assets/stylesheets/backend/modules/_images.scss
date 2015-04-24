@@ -1,0 +1,18 @@
+img {
+    @extend .img-responsive;
+    margin: 0 auto;
+}
+.backend-users-show-page {
+    img {
+        margin: 0;
+        @extend .img-circle;
+        border: 9px solid $gray-light;
+    }
+}
+.edit_crud {
+    img#user-form-image {
+        margin: 1em auto;
+        @extend .img-circle;
+        border: 9px solid $gray-lighter;
+    }
+}

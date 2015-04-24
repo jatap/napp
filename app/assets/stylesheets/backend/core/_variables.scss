@@ -1,0 +1,13 @@
+/**
+ * Variables
+ * -----------------------------------------------------------------------------
+ */
+
+// Extra colors
+$brand-success-semi-dark: darken($brand-success, 4%);
+.btn-success-semi-dark {
+    @extend .btn-success;
+    background-color: $brand-success-semi-dark;
+    border-color: $brand-success-semi-dark;
+}
+$brand-default: $btn-default-bg;

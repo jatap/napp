@@ -1,8 +1,19 @@
 Rails.application.routes.draw do
 
   # Root
-  get '/:locale' => 'frontend#home'
+  get '/en' => 'frontend#home', locale: :en, as: 'root_en'
+  get '/es' => 'frontend#home', locale: :es, as: 'root_es'
   root to: 'frontend#home'
+
+  # Error pages
+  %w( 404 422 500 ).each do |code|
+    get code, to: 'errors#show', code: code
+  end
+
+  # Beanstalkd
+  scope '/backend' do
+    mount BeanstalkdView::Server, at: "/jobs"
+  end
 
   # Translated routes
   localized do
@@ -14,13 +25,10 @@ Rails.application.routes.draw do
     get 'backend/dashboard'
 
     devise_for :users,  path: "backend/users", controllers: {
-      confirmations:      "users/confirmations",
       passwords:          "users/passwords",
       registrations:      "users/registrations",
-      sessions:           "users/sessions",
-      unlocks:            "users/unlocks"
+      sessions:           "users/sessions"
     }
-
 
     # CRUD
 
@@ -31,6 +39,12 @@ Rails.application.routes.draw do
     scope '/backend' do
       scope '/crud' do
         resources :users, concerns: :paginatable
+        resources :sites, only: [ :edit, :update, :show ]
+      end
+
+      scope '/settings' do
+        get   '/'           => 'settings#index',      as: :all_settings
+        patch '/update_all' => 'settings#update_all', as: :update_all_settings
       end
     end
   end

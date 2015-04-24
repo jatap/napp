@@ -1,7 +1,9 @@
+<% content_for :body_class, "change-password-page" %>
+
 <%= render 'layouts/sidebar_main' %>
 
 <div class="page-header">
-    <h2><%= t "password.title" %></h2>
+    <h2><%= t "password.title" %><%= fa_icon "key" %></h2>
 </div>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -9,13 +11,14 @@
 
   <div class="form-inputs">
     <%= f.input :email, required: true, wrapper: :vertical_input_group do %>
-        <span class="input-group-addon"><%= fa_icon "envelope" %></span>
         <%= f.input_field :email, class: "form-control", autofocus: "autofocus" %>
     <% end %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, t("password.submit") %>
+    <%= button_tag(type: 'submit', class: "btn btn-radical-red btn-plain btn-circle btn-longshadow") do %>
+      <%= fa_icon "check" %>
+    <% end %>
   </div>
 <% end %>
 

@@ -1,0 +1,7 @@
+<% resource.build_profile if resource.profile.nil? %>
+<%= form.simple_fields_for :profile do |profile| %>
+  <%= profile.input :first_name %>
+  <%= profile.input :last_name %>
+  <%= profile.input :website %>
+  <%= profile.input :phone %>
+<% end %>

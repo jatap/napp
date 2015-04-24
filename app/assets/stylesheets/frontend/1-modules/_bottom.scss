@@ -1,0 +1,5 @@
+.bottom {
+    background: $blue;
+    color: #F0F0F0;
+    @include pad(2em 2em 1.5em 2em);
+}
