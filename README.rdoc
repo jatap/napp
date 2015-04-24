@@ -1,3 +1,11 @@
-== Napp
+= Napp
 
-Base Rails 4.1 Application.
+Napp is a Rails application with best practices in mind.
+
+=== TODO
+
+Create a http://github.com/jatap/rgentpl generator.
+
+=== Installation
+
+This project is a core (alpha project).
