@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (140):
+Julio Antúnez Tarín (143):
       rails_apps_composer: initial commit
       rails_apps_composer: Gemfile
       rails_apps_composer: generators
@@ -139,4 +139,7 @@ Julio Antúnez Tarín (140):
       Add custom settings domain logic.
       Merge branch 'feature-settings' into develop
       Exclude assets directory from scripts dependencies command.
+      Bumped to version 1.0.1.
+      Merge branch 'release-1.0.1' into develop
+      Update readme files with basic info.
 
