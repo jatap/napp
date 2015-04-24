@@ -43,9 +43,9 @@ class User < ActiveRecord::Base
 
   # Roles callbacks to handle minimum existence of one element
   after_initialize :check_role!
-  after_create :check_role!
-  after_update :check_role!
-  after_save :check_role!
+  before_create :check_role!
+  before_update :check_role!
+  before_save :check_role!
 
   # Mail notification to main admin user
   after_create :admin_notify
@@ -119,6 +119,10 @@ class User < ActiveRecord::Base
   # @return [void]
   def check_role!
     add_role :user if roles.blank?
+    if has_role?(:admin)
+      add_role :editor unless has_role?(:editor)
+      add_role :user unless has_role?(:user)
+    end
   end
   private :check_role!
 end

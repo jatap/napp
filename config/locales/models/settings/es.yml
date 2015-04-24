@@ -1,0 +1,8 @@
+es:
+  activerecord:
+    models:
+      setting:
+        one: "Ajuste"
+        others: "Ajustes"
+    attributes:
+      setting:

@@ -10,12 +10,12 @@ describe SitePolicy do
 
     permissions :show?, :edit?, :update? do
       it 'grants access if user is an admin' do
-        expect(subject).to permit(admin)
+        expect(subject).to permit(admin, Site.new)
       end
 
       it 'denies access if user is not admin' do
-        expect(subject).not_to permit(user)
-        expect(subject).not_to permit(editor)
+        expect(subject).not_to permit(user, Site.new)
+        expect(subject).not_to permit(editor, Site.new)
       end
     end
   end

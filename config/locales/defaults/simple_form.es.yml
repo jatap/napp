@@ -10,6 +10,7 @@ es:
     labels:
       defaults:
         password: 'Contraseña'
+        admin_mail: "Mail de administración"
     user:
       new:
         email: 'Correo electrónico con el que conectar.'

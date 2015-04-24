@@ -6,24 +6,24 @@ production:
   max_threads: 16
   port: 80
   rack_env: 'production'
-  admin_mail: 'julio.antunez.tarin@gmail.com'
   BEANSTALK_URL: 'beanstalk://localhost/11300'
   typekit_id: ''
+  database_password: ''
 development:
   puma_workers: 3
   min_threads: 1
   max_threads: 16
   port: 80
   rack_env: 'development'
-  admin_mail: 'julio.antunez.tarin@gmail.com'
   BEANSTALK_URL: 'beanstalk://localhost/11300'
   typekit_id: ''
+  database_password: ''
 test:
   puma_workers: 3
   min_threads: 1
   max_threads: 16
   port: 3000
   rack_env: 'test'
-  admin_mail: 'julio.antunez.tarin@gmail.com'
   BEANSTALK_URL: 'beanstalk://localhost/11300'
   typekit_id: ''
+  database_password: ''

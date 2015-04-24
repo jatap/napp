@@ -33,10 +33,10 @@
 //= require codemirror/modes/yaml
 //= require codemirror/modes/slim
 //= require codemirror/modes/php
-//= require summernote
-//= require lang/summernote-es-ES
 //= require select2
 //= require bootstrap-sprockets
+//= require summernote
+//= require summernote/locales/es-ES
 //= require twitter/bootstrap/rails/confirm
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap

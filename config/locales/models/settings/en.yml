@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    models:
+      setting:
+        one: "Setting"
+        others: "Settings"
+    attributes:
+      setting:
