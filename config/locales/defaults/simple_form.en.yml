@@ -10,6 +10,7 @@ en:
     labels:
       defaults:
         password: 'Password'
+        admin_mail: 'Admin mail'
     user:
       new:
         email: 'Email to sign in.'

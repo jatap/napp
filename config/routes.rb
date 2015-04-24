@@ -30,7 +30,6 @@ Rails.application.routes.draw do
       sessions:           "users/sessions"
     }
 
-
     # CRUD
 
     concern :paginatable do
@@ -41,6 +40,11 @@ Rails.application.routes.draw do
       scope '/crud' do
         resources :users, concerns: :paginatable
         resources :sites, only: [ :edit, :update, :show ]
+      end
+
+      scope '/settings' do
+        get   '/'           => 'settings#index',      as: :all_settings
+        patch '/update_all' => 'settings#update_all', as: :update_all_settings
       end
     end
   end

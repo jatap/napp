@@ -1,0 +1,14 @@
+<% content_for :body_class, "backend-settings-edit-page" %>
+
+<%= render 'layouts/sidebar_main' %>
+
+<div class="page-header">
+    <h2><%= fa_icon 'edit' %> <%= t "crud.edit.title", model: Setting.model_name.human %></h2>
+</div>
+
+<%= render 'form' %>
+
+<div class="form-links">
+  <%= link_to fa_icon('chevron-left') + t('crud.link.back'), backend_dashboard_path,
+              class: 'label label-primary' %>
+</div>

@@ -14,7 +14,7 @@ class UserMailer < ActionMailer::Base
   def signup_notification(user)
     @user = user
 
-    mail to: ENV['admin_mail'],
+    mail to: Setting.admin_mail,
          subject: t('signup.notification.subject', user: user.fullname)
   end
 end

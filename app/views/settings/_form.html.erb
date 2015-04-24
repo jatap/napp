@@ -1,0 +1,14 @@
+<%= simple_form_for(:update_all_settings, url: update_all_settings_path,
+                    method: :patch, html: { class: 'form' }) do |f| %>
+
+  <% @settings.each do |setting| %>
+  <div class="form-inputs">
+    <%= f.label setting.var %>
+    <%= f.input_field setting.var, value: Setting[setting.var], class: 'form-control' %>
+  </div>
+  <% end %>
+
+  <div class="form-actions">
+    <%= f.button :submit, t('crud.button.save') %>
+  </div>
+<% end %>

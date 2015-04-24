@@ -1,11 +1,17 @@
 <% content_for :sidebar do %>
-<div class="sidebar-nav">
+  <div class="sidebar-nav">
     <ul class="nav">
-        <li class="<%= @sidebar_active == 'config' ? 'active' : '' %> text-center"><%= link_to fa_icon("code lg"), locale_root_path %></li>
-        <% if current_user && policy(current_user).index? %>
-            <li class="<%= @sidebar_active == 'site' ? 'active' : '' %> text-center"><%= link_to fa_icon("globe lg"), @site %></li>
-        <li class="<%= @sidebar_active == 'users' ? 'active' : '' %> text-center"><%= link_to fa_icon("group lg"), users_path %></li>
-        <% end %>
+      <li class="<%= @sidebar_active == 'settings' ? 'active' : '' %> text-center">
+        <%= link_to fa_icon("cog lg"), all_settings_path %>
+      </li>
+      <% if current_user && policy(current_user).index? %>
+      <li class="<%= @sidebar_active == 'site' ? 'active' : '' %> text-center">
+        <%= link_to fa_icon("globe lg"), @site %>
+      </li>
+      <li class="<%= @sidebar_active == 'users' ? 'active' : '' %> text-center">
+        <%= link_to fa_icon("group lg"), users_path %>
+      </li>
+      <% end %>
     </ul>
-</div>
+  </div>
 <% end %>

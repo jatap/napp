@@ -35,7 +35,7 @@ FactoryGirl.define do
   end
 
   factory :user_with_editor_role, parent: :user do
-    roles { [build(:role, name: 'editor')] }
+    roles { [build(:role, name: 'editor'), build(:role, name: 'user')] }
   end
 
   factory :user_with_user_role, parent: :user do
@@ -43,7 +43,8 @@ FactoryGirl.define do
   end
 
   factory :user_with_admin_role, parent: :user do
-    roles { [build(:role, name: 'admin')] }
+    roles { [build(:role, name: 'admin'), build(:role, name: 'editor'),
+             build(:role, name: 'user')] }
   end
 
   factory :user_without_password, parent: :user_with_editor_role do

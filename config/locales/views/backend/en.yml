@@ -4,6 +4,7 @@ en:
       actions: "Actions"
     button:
       new: "Add new %{model}"
+      save: "Save"
     link:
       show: "Show"
       back: "Back"
