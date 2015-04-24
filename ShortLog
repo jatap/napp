@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (48):
+Julio Antúnez Tarín (140):
       rails_apps_composer: initial commit
       rails_apps_composer: Gemfile
       rails_apps_composer: generators
@@ -47,4 +47,96 @@ Julio Antúnez Tarín (48):
       Add JS translations.
       Rebuild doc. Fix crud users back button icon.
       Merge branch 'feature-crud-users' into develop
+      Bumped to version 1.0.
+      Merge branch 'release-1.0' into develop
+      Configure mailer.
+      Configure mailer.
+      Add user mailer.
+      Add a default user role if none is supplied. Update seeds file.
+      Add user authorization domain logic.
+      Fix ajax loader markup.
+      Merge branch 'feature-user' into develop
+      Fix datatables pagination markup.
+      Add new yard doc configuration file.
+      Add documentation.
+      Merge branch 'feature-documentation' into develop
+      Add code coverage.
+      Update Rails version (4.2).
+      Add backend jobs support.
+      Fix locale in defaults.
+      Fix base tests.
+      Fix Guardfile.
+      Add spec conventions.
+      Merge branch 'feature-tests' into develop
+      Add code quality tools.
+      Configure rubocop.
+      Fix code quality advices and warnings.
+      Merge branch 'feature-code-quality' into develop
+      Fix locale message in login proccess.
+      Configure RSpec.
+      Fix current specs.
+      Prepare environments.
+      Follow specs conventions.
+      Add user specs.
+      Add spec helpers.
+      Add user controller specs.
+      Fix code metrics.
+      Fix rubocop suggests.
+      Add auth specs.
+      Add controllers specs.
+      Add rails helpers generators.
+      Add mailers specs.
+      Add policies specs.
+      Add datatables specs.
+      Fix rubocop metrics.
+      Add ctags file.
+      Merge branch 'feature-specs' into develop
+      Change frontend framework (bourbon and friends).
+      Fix specs (BDD - features).
+      Merge branch 'feature-frontend-markup' into develop
+      Add deploy settings.
+      Fix validation messages.
+      Add custom error pages.
+      Merge branch 'feature-error-pages' into develop
+      Add production assets.
+      Come back links to default values in development environment.
+      Add custom rake task to search napp matches. Add timestamps to crud views, devise included.
+      Refactorize backend scss files.
+      Add web console gem.
+      Fix add user crud.
+      Add new code metrics.
+      Add routes info to backend navigation links, only to admin users.
+      Prepare environment to pages (add slug behaviour).
+      Add outfiles to code metric rake tasks.
+      Add user profile data.
+      Refactor admin theme.
+      Add refile gem to handle file uploads.
+      Add avatar to users.
+      Remove dropzoneJS gem.
+      Refactorize uploader without extra JS plugins.
+      Remove basic uploader view functionality.
+      Add user images full support.
+      Merge branch 'feature-images' into develop
+      Change user links and policies.
+      Add user social network domain logic.
+      Integrate a rich text editor (summernote).
+      Add annotate gem.
+      Add view model.
+      Add view model specs.
+      Add gem to handle links to add and remove collection elements (cocoon).
+      Clean markup (remove media queries scss file).
+      Add a gem to handle rails routes in JS.
+      Fix date audit markup.
+      Add a new frontend top bar.
+      Add site model.
+      Add a new top menu in frontend area. Add a site domain logic.
+      Merge branch 'feature-frontend-layout-and-markup' into develop
+      Add site backend link.
+      Fix crud images handling.
+      Add lograge for production.
+      Fix sidebar link.
+      Use same callback in figaro use cases (ENV).
+      Add custom settings domain logic.
+      Merge branch 'feature-settings' into develop
+      Exclude assets directory from scripts dependencies command.
 
